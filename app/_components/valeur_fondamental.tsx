@@ -25,23 +25,25 @@ const ValeurFodamental = () => {
                     Nos Valeurs Fondamentales
                 </p>
             </div>
-            <div className="w-full py-4 grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
-                {valeur.map((item, index) => (
-                    <div key={index} className="shadow p-5 rounded-lg border-t-4 border-green-400 bg-white">
+            <div className=" md:px-32">
+                <div className=" py-4 grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
+                    {valeur.map((item, index) => (
+                        <div key={index} className="shadow p-5 rounded-lg border-t-4 border-yellow-800 bg-white">
 
-                        <div className="mt-8">
-                            <ul className="grid grid-cols-1 gap-4">
-                                <li className="inline-flex items-center text-gray-600">
-                                    {item.description}
-                                </li>
+                            <div className="mt-8">
+                                <ul className="grid grid-cols-1 gap-4">
+                                    <li className="inline-flex items-center text-gray-600">
+                                        {item.description}
+                                    </li>
 
-
-                            </ul>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
 
-                ))
-                }
+                    ))
+                    }
+                </div>
+
             </div>
         </div>
     );

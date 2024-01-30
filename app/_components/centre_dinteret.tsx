@@ -30,18 +30,21 @@ const CentreDinterer = () => {
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-              {interest.map((feature) => (
-                <div key={feature.name} className="relative pl-16">
-                  <div className="text-base flex justify-start items-center font-semibold leading-7 text-gray-900">
-                    <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-700">
-                      <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+            <div className=" flex justify-center">
+                <dl className=" w-1/2 space-y-5">
+                {interest.map((feature) => (
+                    <div key={feature.name} className=" border p-1 rounded-lg shadow px-4 ">
+                        <div className="text-base flex justify-start space-x-4 items-center font-semibold leading-7 text-gray-900">
+                            <div className=" left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-700">
+                            <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                            </div>
+                            <div>{feature.name}</div>
+                        </div>
                     </div>
-                    <div>{feature.name}</div>
-                  </div>
-                </div>
-              ))}
-            </dl>
+                ))}
+                </dl>
+
+            </div>
           </div>
         </div>
       </div>
