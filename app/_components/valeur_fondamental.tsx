@@ -18,15 +18,15 @@ const valeur = [
 
 const ValeurFodamental = () => {
     return (
-        <div className="py-10">
-            <div className="mx-auto py-10 max-w-2xl lg:text-center">
+        <div className="py-5 bg-blue-100">
+            <div className="mx-auto p-3 max-w-3xl lg:text-center">
                 <h2 className="text-base font-semibold leading-7 text-green-600">ALARM RDC</h2>
                 <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                     Nos Valeurs Fondamentales
                 </p>
             </div>
             <div className=" md:px-32">
-                <div className=" py-4 grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
+                <div className=" py-4 grid grid-cols-1 md:grid-cols-2 gap-6 px-2 mx-auto">
                     {valeur.map((item, index) => (
                         <div key={index} className="shadow p-5 rounded-lg border-t-4 border-yellow-800 bg-white">
 

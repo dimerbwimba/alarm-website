@@ -3,9 +3,19 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Camera, Locate, MapPin, Menu, PhoneIncomingIcon, XCircle } from 'lucide-react';
+import Image from 'next/image';
 
 const navigation = [
   { name: "Accueille", href: '#' },
+  {
+    name:"Mission & Vision", href:"#mission_vision"
+  },
+  {
+    name:"Valeurs Fondamentales", href:"#valeur_fondamentales"
+  },
+  {
+    name:"Centre D'interet", href:"#centre_interet"
+  },
   { name: "A Propos de nous", href: '#' },
 
 ]
@@ -32,9 +42,11 @@ export default function Example() {
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">ALARM</span>
-              <img
+              <Image
                 className="h-16 w-auto"
                 src="/alarm.png"
+                width={100}
+                height={100}
                 alt=""
               />
             </a>

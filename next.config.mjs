@@ -1,4 +1,17 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    images: {
+        remotePatterns: [
+          {
+            protocol: 'https',
+            hostname: 'files.edgestore.dev',
+          },
+          {
+            protocol:"https",
+            hostname:"i.ibb.co"
+          }
+        ],
+      },
+};
 
 export default nextConfig;

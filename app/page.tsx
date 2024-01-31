@@ -5,7 +5,7 @@ import MissionVision from "./_components/visio_mision";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex bg-white min-h-screen flex-col items-center justify-between md:p-24 py-52">
       <HeroAlarm />
       <MissionVision />
       <CentreDinterer />

@@ -18,7 +18,7 @@ const features = [
 
 const MissionVision = () => {
     return ( 
-        <div className=" w-full bg-white py-10 sm:py-10">
+        <div className=" w-full  py-10 sm:py-10">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-green-600">ALARM RDC</h2>
@@ -26,8 +26,8 @@ const MissionVision = () => {
               African Leadership And Reconciliation Ministies Vision and Mission
             </p>
           </div>
-          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl flex justify-center">
-            <dl className=" w-2/3 space-y-10">
+          <div className="mx-auto mt-16 max-w-xl sm:mt-20 lg:mt-24 lg:max-w-4xl flex justify-center">
+            <dl className=" md:w-2/3 space-y-10">
               {features.map((feature) => (
                 <div key={feature.name} className="relative pl-16">
                   <dt className="text-base font-semibold leading-7 text-gray-900">
