@@ -4,9 +4,10 @@ import Carousel from "./courousel";
 
 const slides = [
     "https://i.ibb.co/LNDK2G8/chidren-happy.jpg",
-    "https://i.ibb.co/17Ds3cs/Car-Rental-Coverage.jpg",
-    "https://i.ibb.co/HqL172k/pexels-rdne-stock-project-8231095.jpg",
-    "https://i.ibb.co/4m6bPzp/pexels-pau-delgado-18044310-compressed.jpg",
+    "https://i.ibb.co/LNDK2G8/chidren-happy.jpg",
+    "https://i.ibb.co/LNDK2G8/chidren-happy.jpg",
+
+   
 ]
 
 const CarouselMain = () => {
@@ -17,6 +18,7 @@ const CarouselMain = () => {
                     slides.map((slides)=>(
                       
                             <Image
+                            key={slides}
                                 src={slides}
                                 alt="images"
                                 width={300}
