@@ -18,7 +18,7 @@ const valeur = [
 
 const ValeurFodamental = () => {
     return (
-        <div className="py-5 bg-blue-100">
+        <div className="py-5">
             <div className="mx-auto p-3 max-w-3xl lg:text-center">
                 <h2 className="text-base font-semibold leading-7 text-green-600">ALARM RDC</h2>
                 <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

@@ -6,7 +6,7 @@ import { Camera, Locate, MapPin, Menu, PhoneIncomingIcon, XCircle } from 'lucide
 import Image from 'next/image';
 
 const navigation = [
-  { name: "Accueille", href: '#' },
+  { name: "Accueille", href: '/' },
   {
     name:"Mission & Vision", href:"#mission_vision"
   },
@@ -25,8 +25,7 @@ export default function Example() {
 
   return (
     <div className="">
-      <header className="absolute shadow inset-x-0 top-0 z-50">
-      <div className='md:flex py-3  items-center md:space-x-4 mx-2 justify-center'>
+      <div className='md:flex top-0 sticky  z-50 py-3 px-4 bg-white  items-center md:space-x-4  justify-center'>
             <div className='bg-yellow-900 mb-2 md:mb-0 rounded text-white py-1  px-2  md:space-x-4 flex items-center justify-center'>
                 <PhoneIncomingIcon className='h-6 w-6'/>
                 <p>+243 997 728 753</p>
@@ -36,8 +35,9 @@ export default function Example() {
                 <p>
                     Quartier Katingo, Avenu Beni N-212, Bloc III, Goma RDC 
                 </p>
-            </div>
+            </div>  
         </div>
+      <header className="absolute shadow inset-x-0 z-50">
         <nav className="flex items-center justify-between bg-white py-3 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
@@ -70,7 +70,7 @@ export default function Example() {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            <a href="/contactez-nous" className="text-sm font-semibold leading-6 text-gray-900">
               Contactez Nous <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
@@ -80,10 +80,12 @@ export default function Example() {
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
-                <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                <span className="sr-only">Alarm Rdc</span>
+                <Image
+                  className="h-16 w-auto"
+                  src="/alarm.png"
+                  width={100}
+                  height={100}
                   alt=""
                 />
               </a>
@@ -112,7 +114,7 @@ export default function Example() {
                 </div>
                 <div className="py-6">
                   <a
-                    href="#"
+                    href="/contactez-nous"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                    Contactez Nous

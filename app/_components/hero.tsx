@@ -6,7 +6,7 @@ const HeroAlarm = () => {
             <div className="">
                 <div className="container mx-auto h-full pt-10 px-10">
                     <nav className="flex px-4 justify-between items-center">
-                        <div className="text-4xl mt-8 font-bold">
+                        <div className="md:text-4xl text-xl mt-8 pb-10  font-bold">
                             ALARM <span className="text-yellow-700">RDC</span><span className="text-yellow-700">.</span>
                         </div>
                         <div>
