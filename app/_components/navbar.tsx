@@ -2,21 +2,20 @@
 
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
-import { Camera, Locate, MapPin, Menu, PhoneIncomingIcon, XCircle } from 'lucide-react';
+import { Camera, Contact, Locate, MapPin, Menu, PhoneIncomingIcon, XCircle, XCircleIcon } from 'lucide-react';
 import Image from 'next/image';
 
 const navigation = [
   { name: "Accueille", href: '/' },
   {
-    name:"Mission & Vision", href:"#mission_vision"
+    name: "Mission & Vision", href: "/#mission_vision"
   },
   {
-    name:"Valeurs Fondamentales", href:"#valeur_fondamentales"
+    name: "Valeurs Fondamentales", href: "/#valeur_fondamentales"
   },
   {
-    name:"Centre D'interet", href:"#centre_interet"
+    name: "Centre D'interet", href: "/#centre_interet"
   },
-  { name: "A Propos de nous", href: '#' },
 
 ]
 
@@ -24,107 +23,97 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="">
-      <div className='md:flex top-0 sticky  z-50 py-3 px-4 bg-white  items-center md:space-x-4  justify-center'>
-            <div className='bg-yellow-900 mb-2 md:mb-0 rounded text-white py-1  px-2  md:space-x-4 flex items-center justify-center'>
-                <PhoneIncomingIcon className='h-6 w-6'/>
-                <p>+243 997 728 753</p>
-            </div>
-            <div className=' bg-yellow-900 text-white flex px-2 space-x-2  rounded py-1'>
-                <MapPin className='h-6 w-6'/>
-                <p>
-                    Quartier Katingo, Avenu Beni N-212, Bloc III, Goma RDC 
-                </p>
-            </div>  
+    <div className=" top-0 sticky z-50 shadow">
+      <div className='md:flex top-0 sticky border-b py-2  z-50 px-4 bg-white  items-center md:space-x-4  justify-center'>
+        <div className='  md:mb-0 rounded py-1  px-2  md:space-x-4 flex items-center justify-center'>
+          <PhoneIncomingIcon className='h-4 w-4' />
+          <p className=' text-xs'>+243 997 728 753</p>
         </div>
-      <header className="absolute shadow inset-x-0 z-50">
-        <nav className="flex items-center justify-between bg-white py-3 lg:px-8" aria-label="Global">
-          <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">ALARM</span>
-              <Image
-                className="h-16 w-auto"
-                src="/alarm.png"
-                width={100}
-                height={100}
-                alt=""
-              />
-            </a>
-          </div>
-          <div className="flex lg:hidden">
-            <button
-              type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(true)}
-            >
-              <span className="sr-only">Open main menu</span>
-              <Menu className='h-6 w-6'/>
-              {/* <Bars3Icon className="h-6 w-6" aria-hidden="true" /> */}
-            </button>
-          </div>
-          <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
-                {item.name}
+        <div className=' flex px-2 space-x-2  rounded py-1'>
+          <MapPin className='h-4 w-4' />
+          <p className=' text-xs font-normal'>
+            Quartier Katingo, Avenu Beni N-212, Bloc III, Goma RDC
+          </p>
+        </div>
+      </div>
+
+      <header id="navbar" className="sticky bg-white inset-x-0 top-0 z-60 transition-all duration-500 py-4 flex items-center [&.nav-sticky]:bg-white/90 [&.nav-sticky]:backdrop-blur-3xl [&.nav-sticky]:shadow-md dark:[&.nav-sticky]:bg-default-50/80">
+        <div className="container">
+          <div className="flex items-center justify-between gap-4">
+            <div className="shrink">
+              {/* <!-- Navbar Brand Logo --> */}
+              <a href="index.html">
+                <img src="/alarm.png" alt="logo" className="h-10 flex dark:hidden" />
+                {/* <img src="/logo-light-82928a21.png" alt="logo" className="h-10 hidden dark:flex" /> */}
               </a>
-            ))}
-          </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="/contactez-nous" className="text-sm font-semibold leading-6 text-gray-900">
-              Contactez Nous <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
-        </nav>
-        <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-          <div className="fixed inset-0 z-50" />
-          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Alarm Rdc</span>
-                <Image
-                  className="h-16 w-auto"
-                  src="/alarm.png"
-                  width={100}
-                  height={100}
-                  alt=""
-                />
+            </div>
+
+            {/* <!-- Nevigation Menu --> */}
+            <ul className="menu lg:flex items-center justify-center hidden relative mx-auto grow">
+              {navigation.map((item) => <li key={item.name} className="menu-item text-default-800 mx-2 transition-all duration-300 hover:text-primary [&.active]:text-primary">
+                <a className="inline-flex items-center text-sm lg:text-base font-medium py-0.5 px-2 rounded-full capitalize" href={item.href}>{item.name} </a>
+              </li>)}
+            </ul>
+
+            <div className="ms-auto shrink inline-flex gap-2">
+              <a href="#" className="py-1.5 px-6 inline-flex items-center gap-2 rounded-full text-base text-white bg-primary hover:bg-primary-700 transition-all duration-500">
+                <Contact className="h-4 w-4 fill-white/40" />
+                <span className="hidden sm:block">Contactez Nous</span>
               </a>
-              <button
-                type="button"
-                className="-m-2.5 rounded-md p-2.5 text-gray-700"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <span className="sr-only">Close menu</span>
-                <XCircle className="h-6 w-6"  />
-                {/* <XMarkIcon className="h-6 w-6" aria-hidden="true" /> */}
-              </button>
+              {/* <!-- Mobile Menu Toggle Button --> */}
+             {!mobileMenuOpen ?  <button  onClick={() => setMobileMenuOpen(true)} className="lg:hidden inline-block" data-hs-overlay="#mobile-menu">
+                <Menu className="w-7 h-7 text-default-600 hover:text-default-900" />
+              </button> :  <button  onClick={() => setMobileMenuOpen(false)} className="lg:hidden inline-block" data-hs-overlay="#mobile-menu">
+                <XCircleIcon className="w-7 h-7 text-default-600 hover:text-default-900" />
+              </button>}
             </div>
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-                <div className="py-6">
-                  <a
-                    href="/contactez-nous"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                   Contactez Nous
-                  </a>
-                </div>
-              </div>
-            </div>
-          </Dialog.Panel>
-        </Dialog>
+          </div>
+        </div>
+      
       </header>
+
+      <div id="mobile-menu" className={`${!mobileMenuOpen ? "hidden" :"open"} hs-overlay hs-overlay-open:translate-x-0 -translate-x-full fixed top-0 bottom-0 left-0 transition-all transform h-screen max-w-[270px] w-full z-[61]  border-r border-default-200 bg-white dark:bg-default-50`} tabIndex={1}>
+        <div className="flex justify-center items-center border-b border-dashed border-default-200 h-16 transition-all duration-300">
+            <a href="index.html">
+                {/* <img src="assets/logo-dark-dc129ba6.png" alt="logo" className="h-10 flex dark:hidden"/> */}
+                <img src="/alarm.png" alt="logo" className="h-10"/>
+            </a>
+        </div>
+        <div className="h-[calc(100%-4rem)] overflow-y-auto">
+            <nav className="hs-accordion-group p-4 w-full h-full flex flex-col flex-wrap">
+                <ul className="space-y-1">
+                    <li className="text-sm font-medium text-default-900 rounded capitalize transition-all duration-300 hover:bg-default-100 hover:text-primary [&.active]:bg-default-100 [&.active]:text-primary">
+                        <a className="block w-full py-2.5 px-4" href="#home">home</a>
+                    </li>
+
+                    <li className="text-sm font-medium text-default-900 rounded capitalize transition-all duration-300 hover:bg-default-100 hover:text-primary [&.active]:bg-default-100 [&.active]:text-primary">
+                        <a className="block w-full py-2.5 px-4" href="#about">about</a>
+                    </li>
+
+                    <li className="text-sm font-medium text-default-900 rounded capitalize transition-all duration-300 hover:bg-default-100 hover:text-primary [&.active]:bg-default-100 [&.active]:text-primary">
+                        <a className="block w-full py-2.5 px-4" href="#Services">Services</a>
+                    </li>
+
+                    <li className="text-sm font-medium text-default-900 rounded capitalize transition-all duration-300 hover:bg-default-100 hover:text-primary [&.active]:bg-default-100 [&.active]:text-primary">
+                        <a className="block w-full py-2.5 px-4" href="#portfolio">portfolio</a>
+                    </li>
+
+                    <li className="text-sm font-medium text-default-900 rounded capitalize transition-all duration-300 hover:bg-default-100 hover:text-primary [&.active]:bg-default-100 [&.active]:text-primary">
+                        <a className="block w-full py-2.5 px-4" href="#faq">faq</a>
+                    </li>
+
+                    <li className="text-sm font-medium text-default-900 rounded capitalize transition-all duration-300 hover:bg-default-100 hover:text-primary [&.active]:bg-default-100 [&.active]:text-primary">
+                        <a className="block w-full py-2.5 px-4" href="#blog">blog</a>
+                    </li>
+
+                    <li className="text-sm font-medium text-default-900 rounded capitalize transition-all duration-300 hover:bg-default-100 hover:text-primary [&.active]:bg-default-100 [&.active]:text-primary">
+                        <a className="block w-full py-2.5 px-4" href="#contact">contact</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
     </div>
   )
 }

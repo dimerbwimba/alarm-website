@@ -18,34 +18,76 @@ const valeur = [
 
 const ValeurFodamental = () => {
     return (
-        <div className="py-5">
-            <div className="mx-auto p-3 max-w-3xl lg:text-center">
-                <h2 className="text-base font-semibold leading-7 text-green-600">ALARM RDC</h2>
-                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                    Nos Valeurs Fondamentales
-                </p>
-            </div>
-            <div className=" md:px-32">
-                <div className=" py-4 grid grid-cols-1 md:grid-cols-2 gap-6 px-2 mx-auto">
-                    {valeur.map((item, index) => (
-                        <div key={index} className="shadow p-5 rounded-lg border-t-4 border-yellow-800 bg-white">
 
-                            <div className="mt-8">
-                                <ul className="grid grid-cols-1 gap-4">
-                                    <li className="inline-flex items-center text-gray-600">
-                                        {item.description}
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-
-                    ))
-                    }
+        // <!-- Start Services -->
+        <section id="serice" className="lg:py-20 py-10">
+            <div className="container">
+                <div className="flex items-end justify-between mb-10">
+                    <div className="max-w-2xl mx-auto text-center">
+                        <span className="py-1 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-300 text-default-950">Serices</span>
+                        <h2 className="text-4xl text-default-800 font-bold mt-5">
+                            Nos Valeurs Fondamentales
+                        </h2>
+                    </div>
                 </div>
-
+                {/* <!-- flex End--> */}
+    
+                <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 items-center">
+                    <div className="relative z-0">
+                        <img src="https://i.ibb.co/1qfg6zJ/DSC-0834-compressed-1.jpg" className="rounded-md h-full w-full" alt=""/>
+                        <div className="absolute inset-0 rounded-md bg-black/40"></div>
+                    </div>
+                    {/* <!-- col End--> */}
+    
+                    <div className="lg:-ms-20 z-20">
+                        <div className="divide-y divide-default-200 bg-default-50 rounded-md shadow">
+                           { valeur.map((item, index)=> <div className="p-6 flex flex-wrap sm:flex-nowrap items-center gap-6">
+                                <div>
+                                    <div className="h-12 w-12 rounded-md flex items-center justify-center transition-all duration-500 text-xl border border-default-200 text-default-950 hover:text-primary bg-white/5 hover:bg-white">0{index+1}</div>
+                                </div>
+                                <div>
+                                    <p className="text-base font-medium text-default-800 mt-3"> {item.description}</p>
+                                </div>
+                            </div>)}
+                         
+                        </div>
+                    </div>
+                    {/* <!-- col End--> */}
+                </div>
+                {/* <!-- grid End--> */}
             </div>
-        </div>
+            {/* <!-- container End--> */}
+        </section>
+
+
+        // <div className="py-5" id="valeur_fondamentales">
+        //     <div className="mx-auto p-3 max-w-3xl lg:text-center">
+        //         <h2 className="text-base font-semibold leading-7 text-green-600">ALARM RDC</h2>
+        //         <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        //             Nos Valeurs Fondamentales
+        //         </p>
+        //     </div>
+        //     <div className=" md:px-64 ">
+        //         <div className=" py-4 grid grid-cols-1 md:grid-cols-2 gap-6 px-2 mx-auto">
+        //             {valeur.map((item, index) => (
+        //                 <div key={index} className="shadow p-5 rounded-lg border-t-4 border-yellow-800 bg-white">
+
+        //                     <div className="mt-8">
+        //                         <ul className="grid grid-cols-1 gap-4">
+        //                             <li className="inline-flex items-center text-gray-600">
+        //                                 {item.description}
+        //                             </li>
+
+        //                         </ul>
+        //                     </div>
+        //                 </div>
+
+        //             ))
+        //             }
+        //         </div>
+
+        //     </div>
+        // </div>
     );
 }
 

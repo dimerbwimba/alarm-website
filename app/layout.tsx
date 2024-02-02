@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "./style.css"
 import NavBarAlarm from "./_components/navbar";
 import FooterAlarm from "./_components/footer";
 
@@ -20,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <NavBarAlarm/>
-        <div className="md:pt-20 pt-10">
+        <div className="">
           {children}
         </div>
         <FooterAlarm/>

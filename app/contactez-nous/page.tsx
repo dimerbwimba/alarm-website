@@ -1,4 +1,22 @@
+"use client"
+import { useState } from "react";
+
 const ContactPage = () => {
+
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [subject, setSubject] = useState("")
+    const [message, setMessge] = useState("")
+
+    const onSubmiteForm= ()=>{
+
+      console.log(name, email, subject, message);
+      
+      
+
+
+    }
+
     return ( 
       <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50">
         <div className="bg-white max-w-4xl mx-auto w-full">
@@ -29,22 +47,19 @@ const ContactPage = () => {
               <h2 className="mb-14 font-bold text-4xl text-gray-900 before:block before:absolute before:bg-sky-300 before:content[''] relative before:w-20 before:h-1 before:-skew-y-3 before:-bottom-4">Entrer en contact</h2>
               <div className="grid gap-6 mb-6 grid-cols-2">
                 <div className="flex flex-col">
-                  <input className="py-4 bg-white rounded-full px-6 placeholder:text-xs" aria-placeholder="Votre nom" placeholder="Votre nom" ></input>
-                </div>
-                <div className="flex flex-col">
-                  <input className="py-4 bg-white rounded-full px-6 placeholder:text-xs" aria-placeholder="Votre nom" placeholder="Votre prénom" ></input>
+                  <input type="text" onChange={(e) => setName(e.target.value)} className="py-4 bg-white rounded-full px-6 placeholder:text-xs" aria-placeholder="Votre nom" placeholder="Votre nom" ></input>
                 </div>
               </div>
               <div className="grid gap-6 mb-6 grid-cols-2">
                 <div className="flex flex-col">
-                  <input className="py-4 bg-white rounded-full px-6 placeholder:text-xs" aria-placeholder="Votre nom" placeholder="Email Adresse" ></input>
+                  <input type="email" onChange={(e) => setEmail(e.target.value)} className="py-4 bg-white rounded-full px-6 placeholder:text-xs" aria-placeholder="Votre nom" placeholder="Email Adresse" ></input>
                 </div>
                 <div className="flex flex-col">
-                  <input className="py-4 bg-white rounded-full px-6 placeholder:text-xs" aria-placeholder="Votre nom" placeholder="Sujet" ></input>
+                  <input type="text" onChange={(e)=>setSubject(e.target.value)} className="py-4 bg-white rounded-full px-6 placeholder:text-xs" aria-placeholder="Votre nom" placeholder="Sujet" ></input>
                 </div>
               </div>
               <div className="mb-6">
-                <textarea className="w-full rounded-2xl placeholder:text-xs px-6 py-4" placeholder="Votre message ici" name="" id="" rows={8}></textarea>
+                <textarea onChange={(e)=> setMessge(e.target.value)} className="w-full rounded-2xl placeholder:text-xs px-6 py-4" placeholder="Votre message ici" name="" id="" rows={8}></textarea>
               </div>
               <div className="flex justify-center">
                 <button className="rounded-full bg-gray-900 text-white font-bold py-4 px-6 min-w-40 hover:bg-gray-800 transition-all">Valider</button>
