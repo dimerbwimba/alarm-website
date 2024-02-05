@@ -94,7 +94,7 @@ const Departements = () => {
                                         <span className="price text-3xl font-semibold mb-0">{item.name}</span>
                                         
                                     </div>
-                    <hr className="my-6 border border-dashed text-default-800 hidden xl:block"/>
+                                        <hr className="my-6 border border-dashed text-default-800 hidden xl:block"/>
 
                                     {/* <p>14 days free</p> */}
 

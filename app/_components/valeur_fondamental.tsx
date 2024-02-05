@@ -43,7 +43,8 @@ const ValeurFodamental = () => {
     
                     <div className="lg:-ms-20 z-20">
                         <div className="divide-y divide-default-200 bg-default-50 rounded-md shadow">
-                           { valeur.map((item, index)=> <div className="p-6 flex flex-wrap sm:flex-nowrap items-center gap-6">
+                           { valeur.map((item, index)=> 
+                           <div key={index} className="p-6 flex flex-wrap sm:flex-nowrap items-center gap-6">
                                 <div>
                                     <div className="h-12 w-12 rounded-md flex items-center justify-center transition-all duration-500 text-xl border border-yellow-700 bg-yellow-700 text-default-950 hover:text-primary text-white ">0{index+1}</div>
                                 </div>
