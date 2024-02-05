@@ -30,7 +30,7 @@ const HeroAlarm = () => {
                   <div className="flex-col flex items-start justify-end xl:h-full">
                     <span className="text-base font-medium uppercase tracking-wider text-default-800">Mission</span>
                     <h2 className="md:text-4xl/snug text-3xl font-semibold text-default-950 mt-6">ALARM <span className="text-yellow-700">RDC</span>.</h2>
-                    <h2 className="md:text-xl/snug text-3xl font-semibold text-default-950 mt-6">"L'Afrique <span className="text-yellow-700">sans conflits tribaux </span> et religieux violents </h2>
+                    <h2 className="md:text-xl/snug text-3xl font-semibold text-default-950 mt-6">L&quot;Afrique <span className="text-yellow-700">sans conflits tribaux </span> et religieux violents </h2>
                     <p className="md:w-3/4 text-base text-default-800 font-medium mt-5 mb-7"></p>
                     <a href="/contactez-nous" className="inline-flex items-center font-bold justify-center gap-2 border border-default-200 text-default-950 py-2 px-6 rounded-md hover:bg-primary hover:text-white transition-all duration-500">
                       Visitez Nous
