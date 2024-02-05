@@ -1,4 +1,4 @@
-import { Check, Globe, TrendingUp } from "lucide-react";
+import { Check, EyeIcon, Globe, Layers, TrendingUp } from "lucide-react";
 
 const features = [
   {
@@ -17,12 +17,13 @@ const features = [
 
 const MissionVision = () => {
   return (
-<section id="about" className="lg:py-20 py-10">
+<section id="mission_vision" className="lg:py-20 py-10">
         <div className="container">
             <div className="flex items-end justify-between mb-10">
                 <div className="max-w-2xl mx-auto text-center">
                     <span className="py-1 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-300 text-default-950">Apropos</span>
                     <h2 className="text-4xl font-medium capitalize text-default-950 my-4">Mission & Vision</h2>
+                    <hr className="my-6 border border-dashed text-default-800 hidden xl:block"/>
                 </div>
             </div>
             {/* <!-- flex End--> */}
@@ -43,14 +44,14 @@ const MissionVision = () => {
                 </div>
                 {/* <!-- grid End--> */}
 
-                <div>
+                <div className="bg-default-100 p-5">
                     <h2 className="text-3xl font-medium text-default-950">African Leadership And Reconciliation Ministies Vision and Mission</h2>
                     <div className="flex items-center justify-center gap-6 mt-10">
                         <div>
-                            <i data-lucide="component" className="h-14 w-14 text-default-950"></i>
+                            <EyeIcon className="h-14 w-14 text-yellow-700"/>
                         </div>
                         <div>
-                            <h2 className="text-xl font-medium text-default-950">Mission</h2>
+                            <h2 className="text-xl font-bold text-default-950">Mission</h2>
                             <p className="text-base font-medium text-default-800 mt-4">
                              {" La Vision D\'ALARM c\'est L\'Afrique sans conflits tribaux et religieux violents"}
                             </p>
@@ -60,10 +61,10 @@ const MissionVision = () => {
 
                     <div className="flex items-center justify-center gap-6 my-10">
                         <div>
-                            <i data-lucide="layers" className="h-14 w-14 text-default-950"></i>
+                            <Layers className="h-14 w-14 text-yellow-700"/>
                         </div>
                         <div>
-                            <h2 className="text-xl font-medium text-default-950">Vision</h2>
+                            <h2 className="text-xl font-bold text-default-950">Vision</h2>
                             <p className="text-base font-medium text-default-800 mt-4">
                               {
                                 "La Mission  D\'ALARM est de développer les Leaders Serviteurs au sein de l\'Eglise et la communauté Africaine ; des Leaders qui réconsilient et transforment les vies affectées par les conflicts et l\'injustice"

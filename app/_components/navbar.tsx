@@ -24,39 +24,43 @@ export default function Example() {
 
   return (
     <div className=" top-0 sticky z-50 shadow">
-      <div className='md:flex top-0 sticky border-b py-2  z-50 px-4 bg-white  items-center md:space-x-4  justify-center'>
-        <div className='  md:mb-0 rounded py-1  px-2  md:space-x-4 flex items-center justify-center'>
-          <PhoneIncomingIcon className='h-4 w-4' />
-          <p className=' text-xs'>+243 997 728 753</p>
-        </div>
-        <div className=' flex px-2 space-x-2  rounded py-1'>
-          <MapPin className='h-4 w-4' />
-          <p className=' text-xs font-normal'>
-            Quartier Katingo, Avenu Beni N-212, Bloc III, Goma RDC
-          </p>
+      <div className='flex md:hidden -b  z-50 px-4 bg-white  items-center md:space-x-4  justify-center'>
+        <div className='hidden lg:inline-flex'>
+          <div className='  md:mb-0 rounded py-1 my-2  px-2  md:space-x-4 flex items-center justify-center'>
+            <PhoneIncomingIcon className='h-4 w-4' />
+            <p className=' text-xs'>+243 997 728 753</p>
+          </div>
+          <div className=' flex justify-center my-2 px-2 space-x-2  rounded py-1'>
+            <MapPin className='h-4 w-4' />
+            <p className=' text-xs font-normal'>
+              Quartier Katingo, Avenu Beni N-212, Bloc III, Goma RDC
+            </p>
+          </div>
+
         </div>
       </div>
-
+      <hr className="border border-dashed text-default-800 hidden xl:block"/>
       <header id="navbar" className="sticky bg-white inset-x-0 top-0 z-60 transition-all duration-500 py-4 flex items-center [&.nav-sticky]:bg-white/90 [&.nav-sticky]:backdrop-blur-3xl [&.nav-sticky]:shadow-md dark:[&.nav-sticky]:bg-default-50/80">
         <div className="container">
-          <div className="flex items-center justify-between gap-4">
-            <div className="shrink">
+          <div className="flex items-center relative justify-between gap-4">
+            <div className=' md:w-20'></div>
+            <div className="shrink absolute">
               {/* <!-- Navbar Brand Logo --> */}
               <a href="index.html">
-                <img src="/alarm.png" alt="logo" className="h-10 flex dark:hidden" />
+                <img src="/alarm.png" alt="logo" className=" h-10 sm:h-10 md:h-24 lg:h-24 xl:h-24 flex dark:hidden" />
                 {/* <img src="/logo-light-82928a21.png" alt="logo" className="h-10 hidden dark:flex" /> */}
               </a>
             </div>
 
             {/* <!-- Nevigation Menu --> */}
             <ul className="menu lg:flex items-center justify-center hidden relative mx-auto grow">
-              {navigation.map((item) => <li key={item.name} className="menu-item text-default-800 mx-2 transition-all duration-300 hover:text-primary [&.active]:text-primary">
-                <a className="inline-flex items-center text-sm lg:text-base font-medium py-0.5 px-2 rounded-full capitalize" href={item.href}>{item.name} </a>
+              {navigation.map((item) => <li key={item.name} className="menu-item text-sm text-default-800 mx-2 transition-all duration-300 hover:text-primary [&.active]:text-primary">
+                <a className="inline-flex items-center text-sm lg:text-base font-bold py-0.5 px-2 rounded-full capitalize" href={item.href}>{item.name} </a>
               </li>)}
             </ul>
 
             <div className="ms-auto shrink inline-flex gap-2">
-              <a href="#" className="py-1.5 px-6 inline-flex items-center gap-2 rounded-full text-base text-white bg-primary hover:bg-primary-700 transition-all duration-500">
+              <a href="/contactez-nous" className="py-1.5 px-6 inline-flex items-center gap-2 rounded-full text-base text-white bg-yellow-700 hover:bg-primary-700 transition-all duration-500">
                 <Contact className="h-4 w-4 fill-white/40" />
                 <span className="hidden sm:block">Contactez Nous</span>
               </a>

@@ -1,6 +1,6 @@
 const MarqSection = () => {
     return ( 
-        <section className="lg:pb-10">
+        <section className="lg:pb-10 w-screen">
         <div className="relative gap-28 m-auto flex overflow-hidden border border-default-200 py-2">
             <div className="marquee__group gap-2 flex items-center justify-around flex-shrink-0 min-w-full">
                 <div className="py-2">

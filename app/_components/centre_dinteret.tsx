@@ -1,15 +1,15 @@
-import { Check, HandHelping, TrendingUp } from "lucide-react";
+import { Check, Component, HandHelping, Layers, LayoutGrid, TrendingUp } from "lucide-react";
 
 const CentreDinterer = () => {
     return ( 
 
       // <!-- Start Services -->
-    <section id="services" className="lg:py-20 py-10">
+    <section id="centre_interet" className="lg:py-20 py-10">
         <div className="container">
             <div className="flex items-end justify-between mb-10">
                 <div className="max-w-2xl mx-auto text-center">
                     <span className="py-1 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-300 text-default-950">Strategie</span>
-                    <h2 className="text-4xl font-medium capitalize text-default-950 my-4"> Centre D&apos;interet Strategique</h2>
+                    <h2 className="text-4xl font-bold capitalize text-default-950 my-4"> Centre D&apos;interet Strategique</h2>
                 </div>
             </div>
             {/* <!-- flex End--> */}
@@ -18,12 +18,10 @@ const CentreDinterer = () => {
                 <div className="group">
                     <div className="sm:p-10 p-8">
                         <span>
-                            <i data-lucide="component" className="h-14 w-14 text-default-950"></i>
+                            <Component className="h-14 w-14 text-yellow-700"/>
                         </span>
                         <h2 className="text-2xl text-default-950 font-medium mb-4 mt-8">Réconcilier les relations</h2>
-                        <a href="javascript:void(0);" className="text-default-950 text-lg font-medium">Read More
-                            <i data-lucide="move-right" className="group-hover:opacity-100 opacity-0 w-6 h-6 inline-block transition-all duration-500 group-hover:translate-x-2 will-change-transform"></i>
-                        </a>
+                        
                     </div>
                 </div>
                 {/* <!-- end col --> */}
@@ -31,25 +29,21 @@ const CentreDinterer = () => {
                 <div className="group">
                     <div className="sm:p-10 p-8">
                         <span>
-                            <i data-lucide="layers" className="h-14 w-14 text-default-950"></i>
+                            <Layers className="h-14 w-14 text-yellow-700"/>
                         </span>
                         <h2 className="text-2xl text-default-950 font-medium mb-4 mt-8">Developper les Leaders Serviteurs</h2>
-                        <a href="javascript:void(0);" className="text-default-950 text-lg font-medium">Read More
-                            <i data-lucide="move-right" className="group-hover:opacity-100 opacity-0 w-6 h-6 inline-block transition-all duration-500 group-hover:translate-x-2 will-change-transform"></i>
-                        </a>
+                        
                     </div>
                 </div>
                 {/* <!-- end col --> */}
 
                 <div className="group">
                     <div className="sm:p-10 p-8">
-                        <span>
-                            <i data-lucide="layout-grid" className="h-14 w-14 text-default-950"></i>
+                        <span className="">
+                            <LayoutGrid className="h-14 w-14 text-yellow-700"/>
                         </span>
                         <h2 className="text-2xl text-default-950 font-medium mb-4 mt-8">Tranformer les communautés</h2>
-                        <a href="javascript:void(0);" className="text-default-950 text-lg font-medium">Read More
-                            <i data-lucide="move-right" className="group-hover:opacity-100 opacity-0 w-6 h-6 inline-block transition-all duration-500 group-hover:translate-x-2 will-change-transform"></i>
-                        </a>
+                        
                     </div>
                 </div>
                 {/* <!-- end col --> */}

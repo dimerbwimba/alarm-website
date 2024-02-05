@@ -3,9 +3,10 @@ import HeroAlarm from "./_components/hero";
 import ValeurFodamental from "./_components/valeur_fondamental";
 import CentreDinterer from "./_components/centre_dinteret";
 import MissionVision from "./_components/vision_mision";
-import Partenaire from "./_components/partenaire";
+import Partenaires from "./_components/partenaires";
 import HeroWithBG from "./_components/hero_bg";
 import MarqSection from "./_components/marq-section";
+import Departements from "./_components/departements";
 
 export default function Home() {
   
@@ -17,7 +18,8 @@ export default function Home() {
       <HeroWithBG />
       <CentreDinterer />
       <ValeurFodamental />
-      <Partenaire />
+      <Departements/>
+      <Partenaires />
     </main>
   );
 }

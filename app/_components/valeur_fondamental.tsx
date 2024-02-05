@@ -20,16 +20,18 @@ const ValeurFodamental = () => {
     return (
 
         // <!-- Start Services -->
-        <section id="serice" className="lg:py-20 py-10">
+        <section id="valeur_fondamentales" className="lg:py-20 py-10">
             <div className="container">
-                <div className="flex items-end justify-between mb-10">
+                <div className="flex items-end justify-between">
                     <div className="max-w-2xl mx-auto text-center">
-                        <span className="py-1 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-300 text-default-950">Serices</span>
+                        <span className="py-1 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-300 text-default-950">Valeurs</span>
                         <h2 className="text-4xl text-default-800 font-bold mt-5">
                             Nos Valeurs Fondamentales
                         </h2>
+                        
                     </div>
                 </div>
+                    <hr className="my-6 border border-dashed text-default-800 hidden xl:block"/>
                 {/* <!-- flex End--> */}
     
                 <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 items-center">
@@ -43,7 +45,7 @@ const ValeurFodamental = () => {
                         <div className="divide-y divide-default-200 bg-default-50 rounded-md shadow">
                            { valeur.map((item, index)=> <div className="p-6 flex flex-wrap sm:flex-nowrap items-center gap-6">
                                 <div>
-                                    <div className="h-12 w-12 rounded-md flex items-center justify-center transition-all duration-500 text-xl border border-default-200 text-default-950 hover:text-primary bg-white/5 hover:bg-white">0{index+1}</div>
+                                    <div className="h-12 w-12 rounded-md flex items-center justify-center transition-all duration-500 text-xl border border-yellow-700 bg-yellow-700 text-default-950 hover:text-primary text-white ">0{index+1}</div>
                                 </div>
                                 <div>
                                     <p className="text-base font-medium text-default-800 mt-3"> {item.description}</p>

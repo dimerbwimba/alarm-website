@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+}
 
 body {
-  font-weight: 700;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
