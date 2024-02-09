@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
+    "@radix-ui/react-slot": "^1.0.2",
     "@react-email/components": "0.0.14",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
     "lucide": "^0.319.0",
     "lucide-react": "^0.319.0",
     "next": "14.1.0",
@@ -18,7 +21,9 @@
     "react-dom": "^18",
     "react-helmet": "^6.1.0",
     "resend": "^3.1.0",
-    "swiper": "^11.0.5"
+    "swiper": "^11.0.5",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",

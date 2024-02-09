@@ -10,7 +10,9 @@ const FooterAlarm = () => {
                             <a href="#">
                                 <img src="/alarm.png" alt="logo" className="h-20"/>
                             </a>
-                            <p className="text-base font-medium  text-default-800 mt-6">Integer auctor aliquet martor, sed lorem malesuada eros blandit eget. Proin lacinia mortoc id odio vestibulum.</p>
+                            <p className="text-base font-medium  text-default-800 mt-6">
+                            L&quot;Afrique sans conflits tribaux et religieux violents
+                            </p>
                             {/* <form className="space-y-2 mt-6">
                                 <div className="relative">
                                     <input type="email" id="subcribe" className="py-4 ps-4 pe-16 w-full h-12 placeholder:text-default-600 text-default-950 rounded-lg bg-default-100 border-default-200 focus:ring-0 focus:border-default-200" placeholder="Type Your Email" name="email"/>

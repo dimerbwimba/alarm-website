@@ -17,72 +17,74 @@ const features = [
 
 const MissionVision = () => {
   return (
-<section id="mission_vision" className="lg:py-20 py-10">
-        <div className="container">
-            <div className="flex items-end justify-between mb-10">
-                <div className="max-w-2xl mx-auto text-center">
-                    <span className="py-1 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-300 text-default-950">Apropos</span>
-                    <h2 className="text-4xl font-medium capitalize text-default-950 my-4">Mission & Vision</h2>
-                    <hr className="my-6 border border-dashed text-default-800 hidden xl:block"/>
-                </div>
-            </div>
-            {/* <!-- flex End--> */}
+    <div id="mission_vision" className=" w-full bg-gray-50">
+      <section  className="lg:py-20 py-10 ">
+          <div className="container">
+              <div className="flex items-end justify-between mb-10">
+                  <div className="max-w-2xl mx-auto text-center">
+                      <span className="py-1 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-300 text-default-950">Apropos</span>
+                      <h2 className="text-4xl font-medium capitalize text-default-950 my-4">Mission & Vision</h2>
+                      <hr className="my-6 border border-dashed text-default-800 hidden xl:block"/>
+                  </div>
+              </div>
+              {/* <!-- flex End--> */}
 
-            <div className="grid md:grid-cols-2 grid-cols-1 gap-x-10 gap-y-10">
-                <div className="grid sm:grid-cols-2 gap-6 items-center">
-                    <div className="space-y-6">
-                        <div>
-                            <img src="https://i.ibb.co/Ld3YN09/DSC6247-compressed.jpg" alt="" className="max-w-full h-full rounded-lg"/>
-                        </div>
-                        <div>
-                            <img src="https://i.ibb.co/cknvsfg/Photo-6-group-work-compressed.jpg" alt="" className="max-w-full h-full rounded-lg"/>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="https://i.ibb.co/1qfg6zJ/DSC-0834-compressed-1.jpg" alt="" className="max-w-full h-full rounded-lg"/>
-                    </div>
-                </div>
-                {/* <!-- grid End--> */}
+              <div className=" grid md:grid-cols-2 grid-cols-1 gap-x-10 gap-y-10">
+                  <div className="  grid sm:grid-cols-2 gap-6 items-center">
+                      <div className="space-y-6">
+                          <div>
+                              <img src="https://i.ibb.co/Ld3YN09/DSC6247-compressed.jpg" alt="" className="max-w-full h-full rounded-lg"/>
+                          </div>
+                          <div>
+                              <img src="https://i.ibb.co/cknvsfg/Photo-6-group-work-compressed.jpg" alt="" className="max-w-full h-full rounded-lg"/>
+                          </div>
+                      </div>
+                      <div>
+                          <img src="https://i.ibb.co/1qfg6zJ/DSC-0834-compressed-1.jpg" alt="" className="max-w-full h-full rounded-lg"/>
+                      </div>
+                  </div>
+                  {/* <!-- grid End--> */}
 
-                <div className="bg-default-100 p-5">
-                    <h2 className="text-3xl font-medium text-default-950">African Leadership And Reconciliation Ministies Vision and Mission</h2>
-                    <div className="flex items-center justify-center gap-6 mt-10">
-                        <div>
-                            <EyeIcon className="h-14 w-14 text-yellow-700"/>
-                        </div>
-                        <div>
-                            <h2 className="text-xl font-bold text-default-950">Mission</h2>
-                            <p className="text-base font-medium text-default-800 mt-4">
-                             {" La Vision D\'ALARM c\'est L\'Afrique sans conflits tribaux et religieux violents"}
-                            </p>
-                        </div>
-                    </div>
-                    {/* <!-- flex End--> */}
+                  <div className="bg-white shadow rounded-lg p-5">
+                      <h2 className="text-3xl font-medium text-default-950">African Leadership And Reconciliation Ministies Vision and Mission</h2>
+                      <div className="flex items-center justify-center gap-6 mt-10">
+                          <div>
+                              <EyeIcon className="h-14 w-14 text-yellow-700"/>
+                          </div>
+                          <div>
+                              <h2 className="text-xl font-bold text-default-950">Mission</h2>
+                              <p className="text-base font-medium text-default-800 mt-4">
+                              {" La Vision D\'ALARM c\'est L\'Afrique sans conflits tribaux et religieux violents"}
+                              </p>
+                          </div>
+                      </div>
+                      {/* <!-- flex End--> */}
 
-                    <div className="flex items-center justify-center gap-6 my-10">
-                        <div>
-                            <Layers className="h-14 w-14 text-yellow-700"/>
-                        </div>
-                        <div>
-                            <h2 className="text-xl font-bold text-default-950">Vision</h2>
-                            <p className="text-base font-medium text-default-800 mt-4">
-                              {
-                                "La Mission  D\'ALARM est de développer les Leaders Serviteurs au sein de l\'Eglise et la communauté Africaine ; des Leaders qui réconsilient et transforment les vies affectées par les conflicts et l\'injustice"
-                              }
-                            </p>
-                        </div>
-                    </div>
-                    {/* <!-- flex End--> */}
+                      <div className="flex items-center justify-center gap-6 my-10">
+                          <div>
+                              <Layers className="h-14 w-14 text-yellow-700"/>
+                          </div>
+                          <div>
+                              <h2 className="text-xl font-bold text-default-950">Vision</h2>
+                              <p className="text-base font-medium text-default-800 mt-4">
+                                {
+                                  "La Mission  D\'ALARM est de développer les Leaders Serviteurs au sein de l\'Eglise et la communauté Africaine ; des Leaders qui réconsilient et transforment les vies affectées par les conflicts et l\'injustice"
+                                }
+                              </p>
+                          </div>
+                      </div>
+                      {/* <!-- flex End--> */}
 
-                    {/* <a href="#" className="inline-flex items-center justify-center gap-2 border border-default-200 text-default-950 py-2 px-6 rounded-md hover:bg-primary hover:text-white transition-all duration-500">View All Our News
-                        <i data-lucide="arrow-up-right" className="h-6 w-6"></i>
-                    </a> */}
-                </div>
-                {/* <!-- col End--> */}
-            </div>
-            {/* <!-- grid End--> */}
-        </div>
-    </section>
+                      {/* <a href="#" className="inline-flex items-center justify-center gap-2 border border-default-200 text-default-950 py-2 px-6 rounded-md hover:bg-primary hover:text-white transition-all duration-500">View All Our News
+                          <i data-lucide="arrow-up-right" className="h-6 w-6"></i>
+                      </a> */}
+                  </div>
+                  {/* <!-- col End--> */}
+              </div>
+              {/* <!-- grid End--> */}
+          </div>
+      </section>
+    </div>
     
 
   );

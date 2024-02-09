@@ -38,7 +38,7 @@ const Partenaire = () => {
     ]
     return (
 
-        <section id="benefits" className="py-10 lg:py-20">
+        <section id="partenaires" className="py-10 lg:py-20">
         <div className="container">
             <div className="max-w-2xl mx-auto text-center">
                 <span className="py-1 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-400/50 text-default-950">Partenaires</span>

@@ -69,7 +69,7 @@ const Departements = () => {
     ]
     return ( 
         <div>
-            <section id="pricing" className="lg:py-20 py-10">
+            <section id="departements" className="lg:py-20 py-10">
         <div className="container">
             <div className="grid xl:grid-cols-5 gap-6">
 
@@ -78,10 +78,10 @@ const Departements = () => {
                 <div className=" text-center">
                     <span className="py-1 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-300 text-default-950">Departement</span>
                     <h2 className="text-4xl font-bold text-default-950 mt-6">ALARM RDC. Departements.</h2>
-                    <hr className="my-6 border border-dashed text-default-800 hidden xl:block"/>
+                    <hr className="my-6 border border-dashed text-default-800"/>
                  
                 </div>
-                        <div className="grid md:grid-cols-3 grid-cols-1 gap-x-10 gap-y-6">
+                        <div className="grid md:grid-cols-2 grid-cols-1 gap-x-10 gap-y-6">
                             { departements.map((item, index)=>( 
                             <div key={index} className="group relative shadow rounded-md z-2 bg-default-100 dark:bg-default-50">
                                 <div className="  flex py-2 justify-center">
