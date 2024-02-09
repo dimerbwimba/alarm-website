@@ -77,6 +77,11 @@ const Agents = () => {
                     </div>
                 {/* <!-- end col --> */}
             </div>
+            <div className="">
+                <a>
+                    Voir la list de tout nos agents
+                </a>
+            </div>
         </div>
     );
 }

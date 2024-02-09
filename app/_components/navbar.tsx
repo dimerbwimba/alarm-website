@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { Dialog } from '@headlessui/react'
-import { ArrowDown, Camera, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Contact, Hammer, HandHeart, HandHelpingIcon, Home, ListChecks, Locate, MapPin, Menu, MenuIcon, PhoneIncomingIcon, XCircle, XCircleIcon } from 'lucide-react';
+import { ArrowDown, Camera, ChevronDown, ChevronRight, ChevronUp, Contact, Hammer, HandHeart, HandHelpingIcon, Home, ListChecks, Locate, MapPin, Menu, MenuIcon, PhoneIncomingIcon, XCircle, XCircleIcon } from 'lucide-react';
 import Image from 'next/image';
 
 const navigation = [
@@ -31,7 +31,7 @@ const navigation = [
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [ menu, setMenu] = useState(false)
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const handleOutSideClick = (event:any) => {
       if (!ref.current?.contains(event.target)) {
@@ -82,7 +82,7 @@ export default function Example() {
                   {item.icon}<a className="inline-flex items-center text-sm lg:text-base font-bold py-0.5 px-2 rounded-full capitalize" href={item.href}>{item.name} </a>
                 </li>
               )}
-              <li  ref={ref} className="menu-item cursor-pointer text-sm text-default-800 mx-2 transition-all duration-300 hover:text-primary [&.active]:text-primary">
+              <div  ref={ref} className="menu-item cursor-pointer text-sm text-default-800 mx-2 transition-all duration-300 hover:text-primary [&.active]:text-primary">
                 <a onClick={() => setMenu( !menu)} className="inline-flex items-center text-sm lg:text-base font-bold py-0.5 px-2 rounded-full capitalize">
                  { !menu ? <ChevronRight className='h-4 w-4' /> : <ChevronDown className='h-4 w-4'/>}  <span className='px-2'>Menu</span>
                 </a>
@@ -97,7 +97,7 @@ export default function Example() {
                   )}
 
                 </div>}
-              </li>
+              </div>
             </ul>
 
             <div className="ms-auto shrink inline-flex gap-2">
