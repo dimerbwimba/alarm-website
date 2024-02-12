@@ -4,6 +4,7 @@ import "./globals.css";
 import "./style.css"
 import NavBarAlarm from "./_components/navbar";
 import FooterAlarm from "./_components/footer";
+import FloatingChat from "./_components/flowting-chat";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
           {children}
         </div>
         <FooterAlarm/>
+        <FloatingChat/>
       </body>
     </html>
   );

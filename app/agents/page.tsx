@@ -1,21 +1,22 @@
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight, Image, ListChecks } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import HeroWithBG from "@/app/_components/hero_bg";
 
-const Agents = () => {
 
+const AgentsPages = () => {
     const agents = [
         {
             photo: "https://i.ibb.co/CKZWwDQ/agent-1-compressed.jpg",
             nom: "NZABONIMPA SEZIBERA Apollinaire",
             post: "Directeur National",
-            slug: "NZABONIMPA-SEZIBERA-Apollinaire"
+            slug: "/info/NZABONIMPA-SEZIBERA-Apollinaire"
         },
         {
             photo: "https://i.ibb.co/J7zFNXf/agent-2-compressed.jpg",
             nom: "  BANGAMWABO NYANDWI JULES",
             post: "Assistant Administratif et Comptable",
-            slug: "BANGAMWABO-NYANDWI-JULES"
+            slug: "/info/BANGAMWABO-NYANDWI-JULES"
         },
         {
             photo: "",
@@ -23,16 +24,33 @@ const Agents = () => {
             post: "Coordinateur de Peace Building",
             slug: "Me-Daniel-KILANGALANGA-Opondjo"
         },
+        {
+            photo: "",
+            nom: "NAKURE NEEMA Zebuliya",
+            post: "Encadreur au centre Brenda",
+            slug: "#"
+        },
+
+        {
+            photo: "",
+            nom: "KYAKIMWA KALEYIRWE Aziza",
+            post: "Encadreur au centre Brenda",
+            slug: "#"
+        },
+         {
+            photo: "",
+            nom: "SIBOMANA BAKIJIJE Luc",
+            post: "Gardien",
+            slug: "#"
+        },
     ]
     return (
-        <div className="py-5">
-            <div className="flex items-end justify-between mb-10">
-                <div className="max-w-2xl mx-auto text-center">
-                    <span className="py-1 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-300 text-default-950">Nos Agents</span>
-                    <h2 className="text-4xl font-bold capitalize text-default-950 my-4"> Nos agents Cardre</h2>
-                </div>
+        <div>
+            <div className="w-full ">
+                <HeroWithBG image_url="https://i.ibb.co/y4TR8Fc/DSC-0834-compressed.jpg" span_title="Alarm RDC" title={``} />
             </div>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-2 gap-x-2 gap-y-5 items-center rounded-md overflow-hidden">
+            <div className="flex py-10 bg-white min-h-screen flex-col items-center justify-between">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-2 gap-x-2 gap-y-5 items-center rounded-md overflow-hidden">
                     {agents.map((agent, index) => <div key={index} className="group">
                         <div className="md:w-64 h-64 rounded-t-lg overflow-hidden">
                             <img src={agent.photo} alt={agent.nom} className=" object-cover " />
@@ -55,18 +73,9 @@ const Agents = () => {
                     </div>)}
                     {/* <!-- end col --> */}
                 </div>
-            <Link href={"/agents"} className=" py-16 flex justify-center items-center">
-                <Button>
-                    <ListChecks className="mx-2" />
-                    <span className=" text-xl">
-                        Voir la list de tout nos agents
-                    </span>
-                    <ArrowRight className="h-4 w-6" />
-
-                </Button>
-            </Link>
+            </div>
         </div>
     );
 }
 
-export default Agents;
+export default AgentsPages;

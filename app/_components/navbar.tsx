@@ -26,6 +26,10 @@ const navigation = [
     name: "Centre D'interet", href: "/#centre_interet"
   },
 
+  {
+    name: "Rapport annuel", href: "/annual-report"
+  },
+
 ]
 
 export default function Example() {
@@ -69,7 +73,7 @@ export default function Example() {
             <div className=' md:w-20'></div>
             <div className="shrink absolute">
               {/* <!-- Navbar Brand Logo --> */}
-              <a href="index.html">
+              <a href="/">
                 <img src="/alarm.png" alt="logo" className=" h-10 sm:h-10 md:h-24 lg:h-24 xl:h-24 flex dark:hidden" />
                 {/* <img src="/logo-light-82928a21.png" alt="logo" className="h-10 hidden dark:flex" /> */}
               </a>
