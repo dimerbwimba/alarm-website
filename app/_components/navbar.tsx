@@ -31,7 +31,7 @@ const navigation = [
   },
 
   {
-    name: "Gerer mon site", href: "/admin"
+    name: "Gerer mon site", href: "/login"
   },
 
 ]
