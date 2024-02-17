@@ -30,6 +30,10 @@ const navigation = [
     name: "Rapport annuel", href: "/annual-report"
   },
 
+  {
+    name: "Gerer mon site", href: "/admin"
+  },
+
 ]
 
 export default function Example() {

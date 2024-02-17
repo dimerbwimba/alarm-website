@@ -1,6 +1,6 @@
 "use client"
 
-import HeroWithBG from "../_components/hero_bg";
+import HeroWithBG from "../../_components/hero_bg";
 
 
 const Projects = () => {

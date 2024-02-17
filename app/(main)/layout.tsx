@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import "./style.css"
-import NavBarAlarm from "./_components/navbar";
-import FooterAlarm from "./_components/footer";
-import FloatingChat from "./_components/flowting-chat";
+import "./../globals.css";
+import "./../style.css"
+import NavBarAlarm from "../_components/navbar";
+import FooterAlarm from "../_components/footer";
+import FloatingChat from "../_components/flowting-chat";
 
 const inter = Inter({ subsets: ["latin"] });
 
