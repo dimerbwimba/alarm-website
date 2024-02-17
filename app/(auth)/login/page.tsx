@@ -24,7 +24,7 @@ const AdminHome = () => {
 
             <UserAuthForm />
               <p className=" text-center">
-                If you don't have an account , <Link href={"/register"}> <span className=" underline text-blue-700"> click here</span> </Link>
+                If you don&apos;t have an account , <Link href={"/register"}> <span className=" underline text-blue-700"> click here</span> </Link>
               </p>
             <p className="px-8 text-center text-sm text-muted-foreground">
               By clicking continue, you agree to our{" "}
