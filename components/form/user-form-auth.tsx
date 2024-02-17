@@ -31,9 +31,9 @@ type UserFormValue = z.infer<typeof formSchema>;
 
 export default function UserAuthForm() {
 
-  const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get("callbackUrl");
-  const error = searchParams.get("error")
+  // const searchParams = useSearchParams();
+  // const callbackUrl = searchParams.get("callbackUrl");
+  // const error = searchParams.get("error")
   const [loading, setLoading] = useState(false);
   const defaultValues = {
     email: "",
@@ -48,7 +48,7 @@ export default function UserAuthForm() {
     signIn("credentials", {
       email: data.email,
       password:data.password,
-      callbackUrl: callbackUrl ?? "/dashboard",
+      callbackUrl: "/dashboard",
       // redirect: false,
     });
   };
@@ -96,7 +96,7 @@ export default function UserAuthForm() {
               </FormItem>
             )}
           />
-        {error &&  <div className=" text-center my-1 bg-red-500 text-white rounded-md py-2">{error}</div>}
+        {/* {error &&  <div className=" text-center my-1 bg-red-500 text-white rounded-md py-2">{error}</div>} */}
           <Button disabled={loading} variant={"outline"} className="ml-auto bg-red-500 w-full" type="submit">
             Continue With Email
           </Button>
