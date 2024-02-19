@@ -155,7 +155,7 @@ export const ManageUserForm: React.FC<ProductFormProps> = ({
                                 name="name"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel className="text-bold py-1 text-black">Nom de l'utilisateur</FormLabel>
+                                        <FormLabel className="text-bold py-1 text-black">Nom de l&apos;utilisateur</FormLabel>
                                         <FormControl>
                                             <Input
                                                 disabled={loading}
@@ -189,7 +189,7 @@ export const ManageUserForm: React.FC<ProductFormProps> = ({
                                 name="company"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel className="text-bold py-1 text-black">L'entreprise affilier</FormLabel>
+                                        <FormLabel className="text-bold py-1 text-black">L&apos;entreprise affilier</FormLabel>
                                         <FormControl>
                                             <Input
                                                 placeholder="Entreprise"
