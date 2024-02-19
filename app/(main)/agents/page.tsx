@@ -22,23 +22,23 @@ const AgentsPages = () => {
             photo: "",
             nom: "Me. Daniel KILANGALANGA Opondjo",
             post: "Coordinateur de Peace Building",
-            slug: "Me-Daniel-KILANGALANGA-Opondjo"
+            slug: "/info/Me-Daniel-KILANGALANGA-Opondjo"
         },
         {
-            photo: "",
+            photo: "https://i.ibb.co/1dP30j9/jpeg-optimizer-IMG-9291.jpg",
             nom: "NAKURE NEEMA Zebuliya",
             post: "Encadreur au centre Brenda",
             slug: "#"
         },
 
         {
-            photo: "",
+            photo: "https://i.ibb.co/dW9zSsq/jpeg-optimizer-IMG-9292.jpg",
             nom: "KYAKIMWA KALEYIRWE Aziza",
             post: "Encadreur au centre Brenda",
             slug: "#"
         },
          {
-            photo: "",
+            photo: "https://i.ibb.co/kH3Z87t/jpeg-optimizer-IMG-9302.jpg",
             nom: "SIBOMANA BAKIJIJE Luc",
             post: "Gardien",
             slug: "#"

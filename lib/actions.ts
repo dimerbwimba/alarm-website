@@ -142,13 +142,13 @@ export async function signInWithCredentials ({
 
   const user = await User.findOne({email})
 
-  console.log(user);
+ 
   
   if (!user) {
     throw new Error("Invalid user!")
   }
 
-  const passwordIsValid = !!(password === user.password)
+  const passwordIsValid = await bcrypt.compare(password,user.password)
 
   if (!passwordIsValid) {
     throw new Error("Invalid email or password")

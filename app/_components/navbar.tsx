@@ -75,10 +75,10 @@ export default function Example() {
         <div className="container">
           <div className="flex items-center relative justify-between gap-4">
             <div className=' md:w-20'></div>
-            <div className="shrink absolute">
+            <div className="">
               {/* <!-- Navbar Brand Logo --> */}
-              <a href="/">
-                <img src="/alarm.png" alt="logo" className=" h-10 sm:h-10 md:h-24 lg:h-24 xl:h-24 flex dark:hidden" />
+              <a href="/" className=' absolute -top-3'>
+                <img src="/alarm.png" alt="logo" className=" h-14 sm:h-20" />
                 {/* <img src="/logo-light-82928a21.png" alt="logo" className="h-10 hidden dark:flex" /> */}
               </a>
             </div>
@@ -103,7 +103,6 @@ export default function Example() {
                     </a>
 
                   )}
-
                 </div>}
               </div>
             </ul>

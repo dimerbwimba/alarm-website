@@ -13,6 +13,9 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String
   },
+  company: {
+    type: String
+  },
   image: {
     type: String
   },

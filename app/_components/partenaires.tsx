@@ -57,7 +57,7 @@ const Partenaire = () => {
                             <ul role="list" className="mt-4 mb-5 -ms-3 text-sm text-default-white">
                                 { partenaires[0].items.map((partenaire, index)=>( <li  key={index} className="flex items-center gap-2 py-1">
                                     {/* <!-- svg icon --> */}
-                                    <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="dot" className="lucide lucide-dot inline-block h-8 w-8 stroke-primary"><circle cx="12.1" cy="12.1" r="1"></circle></svg>
+                                    <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" data-lucide="dot" className="lucide lucide-dot inline-block h-8 w-8 stroke-primary"><circle cx="12.1" cy="12.1" r="1"></circle></svg>
                                     <span className="text-base text-default-950">{partenaire.title}</span>
                                 </li>))}
                                 
@@ -79,7 +79,7 @@ const Partenaire = () => {
                             <ul role="list" className="mt-4 mb-5 -ms-3 text-sm text-default-white">
                                 { partenaires[1].items.map((partenaire, index)=>( <li  key={index} className="flex items-center gap-2 py-1">
                                     {/* <!-- svg icon --> */}
-                                    <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="dot" className="lucide lucide-dot inline-block h-8 w-8 stroke-primary"><circle cx="12.1" cy="12.1" r="1"></circle></svg>
+                                    <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" data-lucide="dot" className="lucide lucide-dot inline-block h-8 w-8 stroke-primary"><circle cx="12.1" cy="12.1" r="1"></circle></svg>
                                     <span className="text-base text-default-950">{partenaire.title}</span>
                                 </li>))}
                                 
@@ -92,7 +92,7 @@ const Partenaire = () => {
 
             <div className="flex justify-center mt-10">
                 <a href="#" className="inline-flex items-center justify-center gap-2 text-base py-3 px-8 rounded-md text-yellow-800 hover:text-white  hover:bg-yellow-700 transition-all duration-700">Apprendre Plus
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="move-right" className="lucide lucide-move-right h-6 w-6"><path d="M18 8L22 12L18 16"></path><path d="M2 12H22"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" data-lucide="move-right" className="lucide lucide-move-right h-6 w-6"><path d="M18 8L22 12L18 16"></path><path d="M2 12H22"></path></svg>
                 </a>
             </div>
         </div>
