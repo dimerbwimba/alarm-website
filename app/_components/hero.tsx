@@ -22,17 +22,23 @@ interface CardsProps {
 export default function HeroAlarm() {
   const [images, setImages] = useState([])
   const [cards, setCards] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    response()
+    getCards()
+    getImages()
   }, [])
   
-  const response = async () => {
-    setLoading(true)
-    await axios.get("/api/public/hero-section-elements").then(({ data }) => {
-      setImages(data.hero_section_images)
+  const getCards = async () => {
+    await axios.get("/api/public/hero-section-cards").then(({ data }) => {
       setCards(data.hero_section_cards)
+      setLoading(false)
+    })
+  }
+
+  const getImages = async () => {
+    await axios.get("/api/public/hero-section-images").then(({ data }) => {
+      setImages(data.hero_section_images)
       setLoading(false)
     })
   }
