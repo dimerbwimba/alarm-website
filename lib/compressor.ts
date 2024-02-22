@@ -1,13 +1,13 @@
 // utils/compressImage.ts
 import imageCompression from 'browser-image-compression';
 
-const compressImage = async (file: any, options:any): Promise<File | null> => {
+const compressImage = async (file: any, options:any): Promise<File | String> => {
   try {
     const compressedFile = await imageCompression(file, options);
     return compressedFile;
   } catch (error) {
     console.error('Image compression error:', error);
-    return null;
+    return "null";
   }
 };
 
