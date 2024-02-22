@@ -1,7 +1,16 @@
 import { Icons } from "@/components/icons";
 
 
-export interface SessionProps  {
+export interface HeroSectionProps {
+  section: {
+    _id: string;
+    small_title: string;
+    company_name: string;
+    slogan_title: string;
+    button_title: string
+  }
+};
+export interface SessionProps {
   session: any;
   token: any;
 };
@@ -13,13 +22,13 @@ export interface NavItem {
   icon?: keyof typeof Icons;
   label?: string;
   description?: string;
-  submenu?:[
+  submenu?: [
     {
-    title: string;
-    href: string;
-    icon:  keyof typeof Icons;
-    label:string;
-    disabled:boolean;
+      title: string;
+      href: string;
+      icon: keyof typeof Icons;
+      label: string;
+      disabled: boolean;
     }
   ]
 }

@@ -1,5 +1,13 @@
 import { NavItem } from "@/types/";
 
+
+  export type User = {
+    _id: number;
+    name: string;
+    company: string;
+    role: string;
+  };
+  
 export const navItems: NavItem[] = [
     {
       title: "Acceille",
@@ -15,18 +23,9 @@ export const navItems: NavItem[] = [
     },
     {
       title: "Gerer mon Site",
-      href: "/dashboard/site",
+      href: "/dashboard/my-site",
       icon: "world",
-      label: "employee",
-      submenu:[
-        {
-          title: "Site Page",
-          href: "/dashboard/site/page",
-          icon: "ChevronR",
-          label: "user",
-          disabled:false
-        }
-      ]
+      label: "website management",
     },
     {
       title: "Mon assistant",
@@ -47,12 +46,56 @@ export const navItems: NavItem[] = [
       label: "login",
     },
   ];
-
-  export type User = {
-    _id: number;
-    name: string;
-    company: string;
-    role: string;
-  };
   
-  
+ export  const WebsitePages = [
+    {
+        title:"Page D'acceuille",
+        link:"/dashboard/my-site/home"        
+    },
+    {
+        title:"Nos Projets",
+        link:"/dashboard/my-site/home"       
+    },
+    {
+        title:"Nos agents",
+        link:"/dashboard/my-site/home"       
+    },
+    {
+        title:"Page de Contact",
+        link:"/dashboard/my-site/home"       
+    },
+    {
+        title:"Rapport Annual",
+        link:"/dashboard/my-site/home"       
+    }
+]
+export  const HomePageSections = [
+  {
+      title:"Hero section",
+      link:"/dashboard/my-site/home/hero-section"        
+  },
+  {
+      title:"Mission & Vision",
+      link:"/dashboard/my-site/home"       
+  },
+  {
+      title:"Nos Agents",
+      link:"/dashboard/my-site/home"       
+  },
+  {
+      title:"Centre D'interet Strategique",
+      link:"/dashboard/my-site/home"       
+  },
+  {
+      title:"Nos Valeurs Fondamentales",
+      link:"/dashboard/my-site/home"       
+  },
+  {
+    title:"ALARM RDC. Departements.",
+    link:"/dashboard/my-site/home"       
+  },
+  {
+    title:"Nos Partenaires",
+    link:"/dashboard/my-site/home"       
+  }
+]

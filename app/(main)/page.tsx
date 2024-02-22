@@ -1,4 +1,5 @@
-'use client';
+"use client"
+
 import HeroAlarm from "../_components/hero";
 import ValeurFodamental from "../_components/valeur_fondamental";
 import CentreDinterer from "../_components/centre_dinteret";
@@ -14,7 +15,8 @@ export default function Home() {
   return (
     <main className="flex bg-white min-h-screen flex-col items-center justify-between">
       <HeroAlarm />
-      <MissionVision />
+       <MissionVision />
+       
       <Agents/>
       <HeroWithBG  title="Renforcer les leaders africains pour la réconciliation des communautés africaines." span_title="ALARM RDC"/>
       <MarqSection/>

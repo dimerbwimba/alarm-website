@@ -4,6 +4,8 @@ import "./../style.css"
 import SideBar from "./_components/sidebar";
 import NavMenu from "./_components/nav-menu";
 import { Toaster } from "@/components/ui/toaster";
+import { ReduxProviders } from "@/components/layouts/redux-provider";
+import { EdgeStoreProvider } from "@/lib/edgestore";
 
 export const metadata = {
   title: 'Alarm | Administration',
@@ -15,20 +17,25 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
- 
+
   return (
     <html lang="en">
       <body>
-
-       <AuthProvider>
-        <NavMenu/>
-       <div className="flex h-screen overflow-hidden">
-          <SideBar/>
-          <Toaster />
-          <main className="w-full pt-16">{children}</main>
-
-        </div>
-        </AuthProvider>
+        <ReduxProviders>
+          <AuthProvider>
+              <EdgeStoreProvider>
+            <NavMenu />
+              
+            <div className="flex h-screen overflow-hidden">
+              <SideBar />
+              <Toaster />
+              <main className="w-full pt-16">
+                {children}
+              </main>
+            </div>
+              </EdgeStoreProvider>  
+          </AuthProvider>
+        </ReduxProviders>
       </body>
     </html>
   )

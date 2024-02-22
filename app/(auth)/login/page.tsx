@@ -83,7 +83,7 @@ const AdminHome = () => {
         {status === "authenticated" &&
           <div className=" flex flex-col items-center justify-center">
             <h2 className="text-xl text-center font-bold tracking-tight">
-              Bonjour 👋,<br /> votre compte est toujour active .
+              Bonjour 👋,<br /> votre compte est toujour actif .
             </h2>
             <Link href={"/dashboard"}>
               <Button

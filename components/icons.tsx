@@ -31,6 +31,7 @@ import {
     WholeWord,
     UserX2Icon,
     X,
+    Home,
     ChevronsRight
   } from "lucide-react";
   
@@ -43,6 +44,7 @@ import {
     personsmile:Smile,
     login: LogIn,
     close: X,
+    home:Home,
     ChevronR: ChevronsRight,
     profile: User2Icon,
     spinner: Loader2,
