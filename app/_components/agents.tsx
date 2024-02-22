@@ -45,7 +45,7 @@ const Agents = () => {
                             <div className=" text-gray-600 font-bold text-sm py-2">
                                 {agent.post}
                             </div>
-                            <Link href={`${agent.slug}`} className=" py-4">
+                            <Link href={`/info/${agent.slug}`} className=" py-4">
                                 <Button variant={"link"} className=" my-2 font-boldspace-x-2" >
                                     <span>Apprendre Plus</span>
                                     <ArrowRight className="w-4 h-5" />

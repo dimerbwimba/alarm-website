@@ -24,7 +24,7 @@ const HomePageMySite = () => {
                 <div className=" flex justify-center items-center ">
                     <div className="w-3/4 grid gap-4 md:grid-cols-2 lg:grid-cols-2">
                         {HomePageSections.map((item, index) => ( 
-                            <Link href={item.link}>
+                            <Link key={index} href={item.link}>
                                 <Card key={index} className=" hover:bg-gray-100 ease-in-out transition duration-500">
                                     <CardContent className=" text-center">
                                         <div className="text-xl font-bold mt-5">{item.title}</div>
