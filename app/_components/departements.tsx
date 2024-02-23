@@ -69,7 +69,7 @@ const Departements = () => {
     ]
     return (
         <div>
-            <section id="departements" className="lg:py-20 py-10">
+            <section id="departements" className="lg:py-20 py-10 bg-gradient-to-b from-blue-100 to-gray-50">
                 <div className="container">
                     <div className="grid xl:grid-cols-5 gap-6">
 
@@ -81,7 +81,7 @@ const Departements = () => {
                                     <hr className="my-6 border border-dashed text-default-800" />
 
                                 </div>
-                                <div className="grid md:grid-cols-2 grid-cols-1 gap-x-10 gap-y-6">
+                                <div className="grid md:grid-cols-3 grid-cols-1 gap-x-10 gap-y-6">
                                     {departements.map((item, index) => (
                                         <div key={index} className="group relative shadow rounded-md z-2 bg-default-100 dark:bg-default-50">
                                             <div className="  flex py-2 justify-center">

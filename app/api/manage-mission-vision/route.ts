@@ -33,3 +33,19 @@ export async function POST(req: Request) {
 
 
 }
+
+export async function PUT(req: Request) {
+    const session = await getServerSession()
+
+
+    if (session) {
+        const body = await req.json()
+        const updatedSection = await MissionVision.findByIdAndUpdate({ _id: body._id }, { $set: { ...body} }, { new: true },).select("-_id")
+
+        return NextResponse.json({updatedSection, message: "Votre modification a été enregistré avec succès", error: false })
+    }
+
+    return NextResponse.json({ message: "Something went wrong on the server", error: true })
+
+
+}

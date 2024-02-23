@@ -1,21 +1,58 @@
-import { Check, EyeIcon, Globe, Layers, TrendingUp } from "lucide-react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-const features = [
-  {
-    name: 'Vision',
-    description:
-      'La Vision D\'ALARM c\'est L\'Afrique sans conflits tribaux et religieux violents',
-    icon: Globe,
-  },
-  {
-    name: 'Mission',
-    description:
-      'La Mission  D\'ALARM est de développer les Leaders Serviteurs au sein de l\'Eglise et la communauté Africaine ; des Leaders qui réconsilient et transforment les vies affectées par les conflicts et l\'injustice',
-    icon: Check,
-  },
-]
+interface MissionVisionProps{
+  title:string,
+  title_description:string;
+  mission_title:string;
+  mission_description:string;
+  vision_title:string;
+  vision_description:string;
+  image:string;
+}
 
 const MissionVision = () => {
+  const [misionvision,SetMissionvision] = useState<MissionVisionProps>()
+  const [loading, setLoading] = useState(true)
+
+
+  const getMissionVision = async () => {
+    try {
+      await axios.get("/api/public/mission-vision").then(({ data }) => {
+        SetMissionvision(data.mission_vision)
+        setLoading(false)
+      })
+    } catch (error) {
+      
+    }
+  }
+
+  useEffect(()=>{
+    getMissionVision()
+  },[])
+
+  if (loading) {
+    return (<div aria-label="Loading..." role="status" className="flex items-center h-screen space-x-2">
+      <svg className="h-20 w-20 animate-spin stroke-gray-500" viewBox="0 0 256 256">
+        <line x1="128" y1="32" x2="128" y2="64" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+        <line x1="195.9" y1="60.1" x2="173.3" y2="82.7" stroke-linecap="round" stroke-linejoin="round"
+          stroke-width="24"></line>
+        <line x1="224" y1="128" x2="192" y2="128" stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
+        </line>
+        <line x1="195.9" y1="195.9" x2="173.3" y2="173.3" stroke-linecap="round" stroke-linejoin="round"
+          stroke-width="24"></line>
+        <line x1="128" y1="224" x2="128" y2="192" stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
+        </line>
+        <line x1="60.1" y1="195.9" x2="82.7" y2="173.3" stroke-linecap="round" stroke-linejoin="round"
+          stroke-width="24"></line>
+        <line x1="32" y1="128" x2="64" y2="128" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+        <line x1="60.1" y1="60.1" x2="82.7" y2="82.7" stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
+        </line>
+      </svg>
+      <span className="text-4xl font-medium text-gray-500">Loading...</span>
+    </div>)
+  }
+
   return (
     <div id="mission_vision" className=" w-full bg-gray-50">
       <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
@@ -25,46 +62,44 @@ const MissionVision = () => {
               {/* <div className="absolute bottom-0 right-0 bg-blue-500 w-full sm:w-4/6 overflow-hidden flex flex-col justify-center rounded-xl group-hover:bg-sky-600 transition-all shadow-2xl">
                 <img src="https://picsum.photos/800/800" alt="" />
               </div> */}
-              <div className="h-2/3 sm:h-full rounded-xl overflow-hidden">
-                <img src="https://picsum.photos/800/800" className="h-full" alt="" />
+              <div className="h-2/3 sm:h-full rounded-xl w-full overflow-hidden">
+                <img src={misionvision?.image} className="h-full object-cover " alt="" />
               </div>
               <a className="-rotate-90 font-bold mt-8 mb-8 r gap-2 h-16 text-2xl leading-7" href="">
                 <span>15 ans <br /> <span className=" text-lg">D&apos;expérience</span></span>
               </a>
               <a className="absolute h-20 bg-blue-500 w-20 flex items-center justify-center rounded-full bottom-10 left-10 text-white before:block before:absolute before:h-20 before:w-20 before:bg-sky-100 before:rounded-full group-hover:before:animate-ping before:-z-10 hover:bg-sky-600" href="">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-8 h-8">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
                 </svg>
               </a>
             </div>
             <div className="pl-12">
-              <h2 className="text-3xl sm:text-5xl text-black font-medium mb-6">Mission & Vision</h2>
+              <h2 className="text-3xl sm:text-5xl text-black font-medium mb-6">{misionvision?.title}</h2>
               <p className="mb-6 text-gray-800">
-                African Leadership And Reconciliation Ministies Vision and Mission
+                {misionvision?.title_description}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 justify-between mb-3">
                 <a href="" className="items-center gap-3 hover:text-blue-300">
                   <span className="h-10 w-10 rounded-full bg-blue-300 flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                     </svg>
                   </span>
-                  <span className="font-semibold text-black text-xl">Mission</span>
+                  <span className="font-semibold text-black text-xl">{misionvision?.mission_title}</span>
                   <p className="mb-6 text-gray-800">
-                    {" La Vision D\'ALARM c\'est L\'Afrique sans conflits tribaux et religieux violents"}
+                    {misionvision?.mission_description}
                   </p>
                 </a>
                 <a href="" className=" items-center gap-3 hover:text-blue-300">
                   <span className="h-10 w-10 rounded-full bg-blue-300 flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                     </svg>
                   </span>
-                  <span className="font-semibold text-black text-xl">Vision</span>
+                  <span className="font-semibold text-black text-xl">{misionvision?.vision_title}</span>
                   <p className="mb-6 text-gray-800">
-                    {
-                      "La Mission  D\'ALARM est de développer les Leaders Serviteurs au sein de l\'Eglise et la communauté Africaine ; des Leaders qui réconsilient et transforment les vies affectées par les conflicts et l\'injustice"
-                    }
+                   {misionvision?.vision_description}
                   </p>
                 </a>
               </div>
@@ -80,33 +115,3 @@ const MissionVision = () => {
 }
 
 export default MissionVision;
-
-{/* // <section className="max-w-7xl w-full py-16  md:px-20 bg-green-50" id="mission_vision">
-    //   <div className=" grid md:grid-cols-2 gap-4">
-    //     <div className="w-full flex justify-end items-center ml-auto mr-auto">
-    //       <img alt="..." className=" md:w-2/3 w-full mx-2 h-4/5 object-cover rounded-lg shadow-lg" src="https://i.ibb.co/1qfg6zJ/DSC-0834-compressed-1.jpg" />
-    //     </div>
-    //     <div className="w-full  ml-auto mr-auto px-4">
-    //       <div className="md:pr-12">
-            
-    //         <h3 className="text-3xl font-semibold">African Leadership And Reconciliation Ministies Vision and Mission</h3>
-
-    //         <div className="mx-auto mt-16 max-w-xl sm:mt-20 lg:mt-10 lg:max-w-4xl flex justify-center">
-    //           <dl className=" space-y-10">
-    //             {features.map((feature) => ( */}
-{/* //               <div key={feature.name} className="relative pl-16">
-    //                 <dt className="text-base font-semibold leading-7 text-gray-900">
-    //                   <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-yellow-700">
-    //                     <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
-    //                   </div>
-    //                   {feature.name}
-    //                 </dt>
-    //                 <dd className="mt-2 text-base leading-7 text-gray-600">{feature.description}</dd>
-    //               </div>
-    //             ))}
-    //           </dl>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section> */}
