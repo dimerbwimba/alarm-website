@@ -1,7 +1,9 @@
+import { connectToMongoDB } from "@/lib/mongodb"
 import MissionVision from "@/models/mission_vission.model"
 import { getServerSession } from "next-auth"
 import { NextResponse } from "next/server"
 
+connectToMongoDB()
 
 export async function GET() {
     const session = await getServerSession()

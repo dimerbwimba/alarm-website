@@ -1,7 +1,9 @@
+import { connectToMongoDB } from "@/lib/mongodb"
 import HeroImages from "@/models/hero_images.model"
 import { getServerSession } from "next-auth"
 import { NextRequest, NextResponse } from "next/server"
 
+connectToMongoDB()
 
 export async function GET(req:Request){
     const session = await getServerSession()
