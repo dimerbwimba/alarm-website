@@ -1,7 +1,7 @@
-import HeroImages from "@/models/hero_images";
+import { connectToMongoDB } from "@/lib/mongodb";
 import HeroSection from "@/models/hero_section.model";
 import { NextResponse } from "next/server";
-
+connectToMongoDB()
 export async function GET(req:Request){
 
     try {

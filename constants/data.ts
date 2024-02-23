@@ -76,7 +76,7 @@ export  const HomePageSections = [
   },
   {
       title:"Mission & Vision",
-      link:"/dashboard/my-site/home"       
+      link:"/dashboard/my-site/home/mission-vision"       
   },
   {
       title:"Nos Agents",

@@ -11,18 +11,17 @@ import Departements from "../_components/departements";
 import Agents from "../_components/agents";
 
 export default function Home() {
-  
+
   return (
     <main className="flex bg-white min-h-screen flex-col items-center justify-between">
       <HeroAlarm />
-       <MissionVision />
-       
-      <Agents/>
-      <HeroWithBG  title="Renforcer les leaders africains pour la réconciliation des communautés africaines." span_title="ALARM RDC"/>
-      <MarqSection/>
+      <MarqSection />
+      <MissionVision />
+      <HeroWithBG title="Renforcer les leaders africains pour la réconciliation des communautés africaines." span_title="ALARM RDC" />
+      <Agents />
+      <Departements />
       <CentreDinterer />
       <ValeurFodamental />
-      <Departements/>
       <Partenaires />
     </main>
   );

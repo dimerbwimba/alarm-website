@@ -1,4 +1,4 @@
-import HeroImages from "@/models/hero_images"
+import HeroImages from "@/models/hero_images.model"
 import { getServerSession } from "next-auth"
 import { NextRequest, NextResponse } from "next/server"
 

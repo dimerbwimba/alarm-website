@@ -10,6 +10,18 @@ export interface HeroSectionProps {
     button_title: string
   }
 };
+
+export interface MissionVisionProps{
+  section:{
+    _id:string;
+    title:string;
+    title_description:string;
+    mission_title:string;
+    mission_description:string;
+    vision_title:string;
+    vision_description:string;
+  }
+}
 export interface SessionProps {
   session: any;
   token: any;
