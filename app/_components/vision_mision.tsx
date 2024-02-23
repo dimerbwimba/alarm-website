@@ -29,7 +29,7 @@ const MissionVision = () => {
                 <img src="https://picsum.photos/800/800" className="h-full" alt="" />
               </div>
               <a className="-rotate-90 font-bold mt-8 mb-8 r gap-2 h-16 text-2xl leading-7" href="">
-                <span>15 ans <br /> <span className=" text-lg">D'expérience</span></span>
+                <span>15 ans <br /> <span className=" text-lg">D&apos;expérience</span></span>
               </a>
               <a className="absolute h-20 bg-blue-500 w-20 flex items-center justify-center rounded-full bottom-10 left-10 text-white before:block before:absolute before:h-20 before:w-20 before:bg-sky-100 before:rounded-full group-hover:before:animate-ping before:-z-10 hover:bg-sky-600" href="">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-8 h-8">
