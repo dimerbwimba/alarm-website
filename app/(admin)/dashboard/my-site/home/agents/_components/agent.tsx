@@ -106,7 +106,7 @@ const SingelAgent = ({ agent }: AgentProps) => {
                             <p className="pl-5 text-center text-gray-700 hover:text-gray-900">
                                 <a target="_blank" >
                                     <FolderCheck className="w-4 h-4 mx-2 inline-block" />
-                                    <span className=" text-sm">Type D'agent : </span>
+                                    <span className=" text-sm">Type D&apos;agent : </span>
                                     &nbsp;<span className=" underline" style={{ fontSize: ".8em", fontStyle: "italic" }}>{type_agent || "..."}</span>
                                 </a>
                             </p>
@@ -123,7 +123,7 @@ const SingelAgent = ({ agent }: AgentProps) => {
                                 <div className=" flex justify-center items-center h-full">
                                     <Button onClick={()=> setModifier(true)}>
                                         <p className=" line-clamp-1 flex items-center">
-                                            <Edit className="mx-2"/> Modifier L'agent : {agent.name}
+                                            <Edit className="mx-2"/> Modifier L&apos;agent : {agent.name}
                                         </p>
                                     </Button>
 

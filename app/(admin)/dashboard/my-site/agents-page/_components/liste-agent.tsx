@@ -25,7 +25,7 @@ const AgentsList = () => {
         <div className=" grid grid-cols-2 space-y-4 justify-center">
             {
                 agents.map((agent, index) => (
-                    <div className=" border-b py-2 lg:flex">
+                    <div key={index} className=" border-b py-2 lg:flex">
                         <div className="h-48 lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style={{ backgroundImage: `url(${agent.image})` }} title="Woman holding a mug">
                         </div>
                         <div className=" border-gray-400  lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
