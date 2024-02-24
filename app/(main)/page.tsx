@@ -18,8 +18,8 @@ export default function Home() {
       <MarqSection />
       <MissionVision />
       <HeroWithBG title="Renforcer les leaders africains pour la réconciliation des communautés africaines." span_title="ALARM RDC" />
-      <Agents />
       <Departements />
+      <Agents />
       <CentreDinterer />
       <ValeurFodamental />
       <Partenaires />

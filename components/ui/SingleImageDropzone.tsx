@@ -152,7 +152,7 @@ const SingleImageDropzone = React.forwardRef<HTMLInputElement, InputProps>(
           )}
 
           {/* Remove Image Icon */}
-          {imageUrl && !disabled && (
+          {/* {imageUrl && !disabled && (
             <div
               className="group absolute right-0 top-0 -translate-y-1/4 translate-x-1/4 transform"
               onClick={(e) => {
@@ -168,7 +168,7 @@ const SingleImageDropzone = React.forwardRef<HTMLInputElement, InputProps>(
                 />
               </div>
             </div>
-          )}
+          )} */}
         </div>
 
         {/* Error Text */}

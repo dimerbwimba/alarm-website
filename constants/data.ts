@@ -53,19 +53,19 @@ export const navItems: NavItem[] = [
         link:"/dashboard/my-site/home"        
     },
     {
-        title:"Nos Projets",
+        title:"Page des Projets",
         link:"/dashboard/my-site/home"       
     },
     {
-        title:"Nos agents",
-        link:"/dashboard/my-site/home"       
+        title:"Page des  agents",
+        link:"/dashboard/my-site/agents-page"       
     },
     {
         title:"Page de Contact",
         link:"/dashboard/my-site/home"       
     },
     {
-        title:"Rapport Annual",
+        title:"Page pour le Rapport Annual",
         link:"/dashboard/my-site/home"       
     }
 ]
@@ -80,7 +80,7 @@ export  const HomePageSections = [
   },
   {
       title:"Nos Agents",
-      link:"/dashboard/my-site/home"       
+      link:"/dashboard/my-site/home/agents"       
   },
   {
       title:"Centre D'interet Strategique",

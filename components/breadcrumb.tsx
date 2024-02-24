@@ -27,9 +27,9 @@ export default function BreadCrumb({ items }: BreadCrumbPropsType) {
           <Link
             href={item.link}
             className={cn(
-              "font-medium",
+              "font-bold text-black",
               index === items.length - 1
-                ? "text-foreground pointer-events-none"
+                ? "text-foreground text-yellow-700 pointer-events-none"
                 : "text-muted-foreground",
             )}
           >

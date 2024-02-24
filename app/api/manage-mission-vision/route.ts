@@ -21,10 +21,10 @@ export async function POST(req: Request) {
     const session = await getServerSession()
     if (session) {
         const body = await req.json()
-        const heroSection = {
+        const mission_vission = {
             ...body,
         }
-        const newVisionMission = await MissionVision.create(heroSection)
+        const newVisionMission = await MissionVision.create(mission_vission)
 
         return NextResponse.json({ newVisionMission: newVisionMission, message: "Tu vien de crée une nouvel Vision & Section", error: false })
     }

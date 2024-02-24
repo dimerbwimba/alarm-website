@@ -11,6 +11,30 @@ export interface HeroSectionProps {
   }
 };
 
+export interface AgentListProps{
+  agents:[
+      {
+        _id:string,
+          name:string,
+          image:string,
+          email:string,
+          fonction:string,
+          type_agent:string,
+      }
+  ]
+}
+
+export interface AgentProps{
+        agent : {  
+          _id:string,
+          name:string,
+          image:string,
+          email:string,
+          fonction:string,
+          type_agent:string
+        }
+      
+}
 export interface MissionVisionProps{
   section:{
     _id:string;

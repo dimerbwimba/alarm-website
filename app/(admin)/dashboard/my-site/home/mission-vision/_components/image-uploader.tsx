@@ -32,9 +32,9 @@ export function SingleImageDropzoneUsage({onSetFile, _id, image}:any) {
           }}
         />
       </div>
-      <div className="h-3 w-full rounded-lg overflow-hidden my-5 bg-neutral-200 dark:bg-neutral-600">
+      {open && <div className="h-3 w-full rounded-lg overflow-hidden my-5 bg-neutral-200 dark:bg-neutral-600">
         <div className="h-3 bg-primary" style={{width: `${progress}%`}}></div>
-      </div>
+      </div>}
       <Button
       disabled={open}
       variant={"default"}
@@ -65,7 +65,7 @@ export function SingleImageDropzoneUsage({onSetFile, _id, image}:any) {
           }
         }}
       >
-        <UploadCloudIcon className='mx-3'/> Upload {progress}
+        <UploadCloudIcon className='mx-3'/> Téléchargement
       </Button>
     </div>
   );
