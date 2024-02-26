@@ -1,87 +1,67 @@
 import { Check, Component, HandHelping, Layers, LayoutGrid, TrendingUp } from "lucide-react";
 
 const CentreDinterer = () => {
-    return ( 
+    return (
 
-      // <!-- Start Services -->
-    <section id="centre_interet" className="lg:py-20 py-10">
-        <div className="container">
-            <div className="flex items-end justify-between mb-10">
-                <div className="max-w-2xl mx-auto text-center">
-                    <span className="py-1 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-300 text-default-950">Strategie</span>
-                    <h2 className="text-4xl font-bold capitalize text-default-950 my-4"> Centre D&apos;interet Strategique</h2>
+        // <!-- Start Services -->
+        <section id="centre_interet" className="">
+            <div className="container relative bg-yellow-700  py-20 mt-10">
+                {/* <!-- flex End--> */}
+                <div className="max-w-2xl  mx-auto text-center">
+                    <div className=" my-4 relative border rounded-xl bg-white shadow text-start p-3">
+                        <div className=" ">
+                            <span className="rounded-xl border bg-white px-2 py-1 absolute -top-3"> ⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <h2 className="capitalize text-default-950 my-4">
+                            ALARM est une organisation passionnée qui croit en la puissance de la réconciliation pour bâtir des communautés fortes et durables en République Démocratique du Congo (RDC). Notre engagement envers le développement local et la paix communautaire guide chacune de nos actions.
+                        </h2>
+                    </div>
                 </div>
+                <div className="flex items-end justify-between mb-10">
+                    <div className="max-w-2xl mx-auto text-center">
+                        <span className="py-1 px-3 rounded-md bg-white text-xs font-medium uppercase tracking-wider border border-default-300 text-default-950">Strategie</span>
+                        <h2 className="text-4xl font-bold capitalize text-gray-50 my-4"> Centre D&apos;interet Strategique</h2>
+                    </div>
+                </div>
+                <div className="grid lg:grid-cols-3 grid-cols-1 shadow-xl items-center rounded-md overflow-hidden bg-default-100 dark:bg-default-50 divide-y lg:divide-y-0 lg:divide-x divide-default-200">
+                    <div className="group">
+                        <div className="sm:p-10 p-8">  
+                            <div className=" flex justify-center">
+                                <img className=" h-20" src="/svg-1.svg"></img>
+                            </div>
+                            <h2 className="text-2xl text-default-950 font-medium mb-4 mt-8">Réconcilier les relations</h2>
+                        </div>
+                    </div>
+                    {/* <!-- end col --> */}
+
+                    <div className="group">
+
+                        <div className="sm:p-10 p-8">
+                            <div className=" flex justify-center">
+                                <img className=" h-20" src="/svg-5.svg"></img>
+                            </div>
+                            <h2 className="text-2xl text-default-950 font-medium mb-4 mt-8">Developper les Leaders Serviteurs</h2>
+
+                        </div>
+                    </div>
+                    {/* <!-- end col --> */}
+
+                    <div className="group">
+                        <div className="sm:p-10 p-8">
+                            <div className=" flex justify-center">
+                                <img className=" h-20" src="/svg-4.svg"></img>
+                            </div>
+                            <h2 className="text-2xl text-default-950 font-medium mb-4 mt-8">Tranformer les communautés</h2>
+
+                        </div>
+                    </div>
+                    {/* <!-- end col --> */}
+                </div>
+                {/* <!-- grid End--> */}
             </div>
-            {/* <!-- flex End--> */}
-
-            <div className="grid lg:grid-cols-3 grid-cols-1 items-center rounded-md overflow-hidden bg-default-100 dark:bg-default-50 divide-y lg:divide-y-0 lg:divide-x divide-default-200">
-                <div className="group">
-                    <div className="sm:p-10 p-8">
-                        <span>
-                            <Component className="h-14 w-14 text-yellow-700"/>
-                        </span>
-                        <h2 className="text-2xl text-default-950 font-medium mb-4 mt-8">Réconcilier les relations</h2>
-                        
-                    </div>
-                </div>
-                {/* <!-- end col --> */}
-
-                <div className="group">
-                    <div className="sm:p-10 p-8">
-                        <span>
-                            <Layers className="h-14 w-14 text-yellow-700"/>
-                        </span>
-                        <h2 className="text-2xl text-default-950 font-medium mb-4 mt-8">Developper les Leaders Serviteurs</h2>
-                        
-                    </div>
-                </div>
-                {/* <!-- end col --> */}
-
-                <div className="group">
-                    <div className="sm:p-10 p-8">
-                        <span className="">
-                            <LayoutGrid className="h-14 w-14 text-yellow-700"/>
-                        </span>
-                        <h2 className="text-2xl text-default-950 font-medium mb-4 mt-8">Tranformer les communautés</h2>
-                        
-                    </div>
-                </div>
-                {/* <!-- end col --> */}
-            </div>
-            {/* <!-- grid End--> */}
-        </div>
-        {/* <!-- container End--> */}
-    </section>
-
-      //   <div className="max-w-7xl w-full  py-10 sm:py-10" id="centre_interet">
-      //       <div className="mx-auto px-6 lg:px-8">
-      //   <div className="mx-auto w-full  lg:px-8">
-      //     <div className="mx-auto max-w-2xl lg:text-center">
-      //       <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-      //         Centre D&apos;interet Strategique
-      //       </p>
-      //     </div>
-      //     <div className="mx-auto mt-4 max-w-xl sm:mt-8 lg:mt-16 lg:max-w-4xl">
-      //       <div className=" flex justify-center">
-      //           <dl className=" md:w-1/2 space-y-5">
-      //           {interest.map((feature) => (
-      //               <div key={feature.name} className=" border p-1 rounded-lg bg-white/80 px-4 ">
-      //                   <div className="text-base flex justify-start space-x-4 items-center font-semibold leading-7 text-gray-900">
-      //                       <div className=" left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-700">
-      //                       <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
-      //                       </div>
-      //                       <div>{feature.name}</div>
-      //                   </div>
-      //               </div>
-      //           ))}
-      //           </dl>
-
-      //       </div>
-      //     </div>
-      //   </div>
-      // </div>
-      //   </div>
-     );
+            {/* <!-- container End--> */}
+        </section>
+    );
 }
- 
+
 export default CentreDinterer;

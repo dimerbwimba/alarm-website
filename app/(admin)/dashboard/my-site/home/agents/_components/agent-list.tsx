@@ -13,12 +13,14 @@ const AgentList = () => {
     const { toast } = useToast()
     const dispatch = useDispatch()
     const [error, setError] = useState()
-    const agents = useSelector((state: AgentListProps) => state.agents)
+    const [loading , setLoading] = useState(true)
+    const agents = useSelector((state: AgentListProps) => state.agents) || []
     const getAllAgents = async () => {
         try {
             await axios.get("/api/manage-agent").then(({ data }) => {
                 if (!data.error) {
                     dispatch(getAgents(data.agents))
+                    setLoading(false)
                 }
             })
         } catch (error: any) {
@@ -34,7 +36,7 @@ const AgentList = () => {
     useEffect(() => {
         getAllAgents()
     }, [])
-    if (!agents.length) {
+    if (loading) {
         return (
             <div className="flex-1 space-y-4  p-4 md:p-8 pt-6">
 

@@ -11,6 +11,7 @@ export interface HeroSectionProps {
   }
 };
 
+
 export interface AgentListProps{
   agents:[
       {
@@ -35,6 +36,18 @@ export interface AgentProps{
         }
       
 }
+
+export interface AgentDataProps{
+ 
+    _id:string,
+    name:string,
+    image:string,
+    email:string,
+    fonction:string,
+    type_agent:string
+ 
+}
+
 export interface MissionVisionProps{
   section:{
     _id:string;
@@ -85,6 +98,24 @@ export interface FooterItem {
     external?: boolean;
   }[];
 }
+
+export interface DepartementsTypes{
+  departement :{
+    _id:string,
+    name:string,
+    updated:boolean,
+    roles:Role
+  }
+}
+export interface SingleDepartementType{
+
+    _id:string,
+    name:string,
+    updated:boolean,
+    roles:Role
+  
+}
+type Role = []
 
 export type MainNavItem = NavItemWithOptionalChildren;
 

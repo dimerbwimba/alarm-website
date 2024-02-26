@@ -8,12 +8,17 @@ connectToMongoDB()
 
 export async function GET(req:Request){
     const session = await getServerSession()
-    if (session) {
-        const agents = await Agent.find()
-        return NextResponse.json({ agents, message: "Tu vien de recevoi tout les agents avec success", error: false })
+    try {
+        if (session) {
+            const agents = await Agent.find()
+            return NextResponse.json({ agents, message: "Tu vien de recevoi tout les agents avec success", error: false })
+        }
+    
+        return NextResponse.json({ message: "Anauthorized ", error: true })
+        
+    } catch (error:any) {
+        return NextResponse.json({ message: error.message, error: true })
     }
-
-    return NextResponse.json({ message: "Anauthorized ", error: true })
 }
 
 

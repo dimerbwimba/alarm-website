@@ -1,26 +1,41 @@
 "use client"
 
 import { getAgents } from "@/app/redux/slice/agent-slice";
+import SkeletonLoader from "@/components/skeleton-loader";
 import { AgentListProps } from "@/types";
 import axios from "axios";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 
 const AgentsList = () => {
+    const [loading, setLoading] = useState(true)
+    const [error, setError ] = useState("")
     const dispatch = useDispatch()
     const agents = useSelector((state: AgentListProps) => state.agents)
     const getAllAgents = async () => {
         await axios.get("/api/manage-agent").then(({ data }) => {
             if (!data.error) {
+                setLoading(false)
+
                 dispatch(getAgents(data.agents))
+            }else{
+                setError(data.message)
             }
         })
     }
     useEffect(() => {
         getAllAgents()
     }, [])
+
+    if (loading) {
+        return <div>
+            <div className="py-2">{ !error ? "Chargement ..." : <div  className="">
+                <span className=" bg-red-600 rounded-lg px-2 text-white">Error:{error}</span></div>}</div>
+            <SkeletonLoader r={1} />
+        </div>
+    }
     return (
         <div className=" grid grid-cols-2 space-y-4 justify-center">
             {
@@ -40,7 +55,7 @@ const AgentsList = () => {
                                 <p className="text-gray-700 text-base">{agent.name}</p>
                                 <div className=" flex flex-col space-y-2 text-center">
                                     <Link className=" border rounded-lg p-1 text-white bg-yellow-700" href={`/dashboard/my-site/home/agents#${agent._id}`}>Modifier agent</Link>
-                                    <Link className="border rounded-lg p-1 text-white bg-green-700" href={`/dashboard/my-site/agents-page/cv/${agent._id}`}>Rediger un CV</Link>
+                                    <a className="border rounded-lg p-1 text-white bg-green-700" href={`/dashboard/my-site/agents-page/cv/${agent._id}`}>Modifier CV</a>
                                 </div>
 
                             </div>

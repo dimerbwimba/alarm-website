@@ -31,15 +31,20 @@ export default function HeroAlarm() {
 
   const getCards = async () => {
     await axios.get("/api/public/hero-section-cards").then(({ data }) => {
-      setCards(data.hero_section_cards)
-      setLoading(false)
+      if (!data.error) {
+        setCards(data.hero_section_cards)
+        setLoading(false)
+      }
     })
   }
 
   const getImages = async () => {
     await axios.get("/api/public/hero-section-images").then(({ data }) => {
-      setImages(data.hero_section_images)
-      setLoading(false)
+      if (!data.error) {
+        setImages(data.hero_section_images)
+        setLoading(false)
+        
+      }
     })
   }
   if (loading) {
@@ -82,7 +87,7 @@ export default function HeroAlarm() {
             pagination={{ clickable: true }}
           >
             <div className="max-w-xl mx-auto border xl:ms-auto xl:me-0 rounded-xl bg-default-100 dark:bg-default-50">
-              {cards.map((card: CardsProps, index) => <SwiperSlide key={index}>
+              {cards?.map((card: CardsProps, index) => <SwiperSlide key={index}>
                 <div className=" px-16 shadow py-2  rounded-r-lg bg-white">
                   <div className="flex-col flex items-start justify-end xl:h-full">
                     <span className="text-base font-medium uppercase tracking-wider text-default-800">{card.small_title}</span>
@@ -110,7 +115,7 @@ export default function HeroAlarm() {
             effect="fade"
             autoplay={{ delay: 3000 }}
           >
-            {images.map((image: { url: string }, index) => (<SwiperSlide key={index}>
+            {images?.map((image: { url: string }, index) => (<SwiperSlide key={index}>
               <div className="relative">
                 <img src={image.url} className="  h-96 object-cover w-full" />
                 <div className="absolute inset-0 bg-black/25"></div>

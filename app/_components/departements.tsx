@@ -69,8 +69,8 @@ const Departements = () => {
     ]
     return (
         <div>
-            <section id="departements" className="lg:py-20 py-10 bg-gradient-to-b from-blue-100 to-gray-50">
-                <div className="container">
+            <section id="departements" className="lg:py-20 py-10 w-full bg-gradient-to-b from-blue-100 to-gray-50">
+                <div className="container w-full">
                     <div className="grid xl:grid-cols-5 gap-6">
 
                         <div className="xl:col-span-5 mt-8 lg:mt-0">

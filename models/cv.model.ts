@@ -3,7 +3,6 @@ import mongoose from "mongoose"
 const CvSchema = new mongoose.Schema({
   image: {
     type: String,
-    unique: true ,
   },
   name_cv:{
     type:String
@@ -12,9 +11,12 @@ const CvSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "Agent"
   },
-  body: {
+  html_body: {
     type: String,
   },
+  json_body:{
+    type:String
+  }
 
 }, { timestamps: true })
 

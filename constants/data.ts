@@ -61,11 +61,7 @@ export const navItems: NavItem[] = [
         link:"/dashboard/my-site/agents-page"       
     },
     {
-        title:"Page de Contact",
-        link:"/dashboard/my-site/home"       
-    },
-    {
-        title:"Page pour le Rapport Annual",
+        title:"Page  Rapport Annual",
         link:"/dashboard/my-site/home"       
     }
 ]
@@ -82,17 +78,17 @@ export  const HomePageSections = [
       title:"Nos Agents",
       link:"/dashboard/my-site/home/agents"       
   },
-  {
-      title:"Centre D'interet Strategique",
-      link:"/dashboard/my-site/home"       
-  },
-  {
-      title:"Nos Valeurs Fondamentales",
-      link:"/dashboard/my-site/home"       
-  },
+  // {
+  //     title:"Centre D'interet Strategique",
+  //     link:"/dashboard/my-site/home"       
+  // },
+  // {
+  //     title:"Nos Valeurs Fondamentales",
+  //     link:"/dashboard/my-site/home"       
+  // },
   {
     title:"ALARM RDC. Departements.",
-    link:"/dashboard/my-site/home"       
+    link:"/dashboard/my-site/home/departements"       
   },
   {
     title:"Nos Partenaires",
