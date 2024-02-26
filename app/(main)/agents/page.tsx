@@ -63,7 +63,7 @@ const AgentsPages = () => {
             <div className="flex  my-10 bg-white min-h-screen flex-col items-center justify-between">
                 <div className=" grid grid-cols-2 px-2 gap-x-2 gap-y-5 items-center rounded-md overflow-hidden">
                     {agents.map((agent: AgentDataProps, index) =>
-                        <div className="bg-white rounded-xl my-5 p-4 shadow mt-4">
+                        <div key={index} className="bg-white rounded-xl my-5 p-4 shadow mt-4">
                             <div className="flex flex-col justify-center items-center">
                                 <img src={agent.image} className="w-auto h-52  rounded-lg" />
                                 <p className="font-semibold mt-1">{agent.name}</p>

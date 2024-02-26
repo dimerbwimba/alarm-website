@@ -53,7 +53,7 @@ const Agents = () => {
                         <div className=" ">
                             <span className="rounded-xl border bg-white px-2 py-1 absolute -top-3"> ⭐⭐⭐⭐⭐</span>   
                         </div>
-                        <h2 className="capitalize text-default-950 my-4">Grâce aux efforts combinés de nos agents, ALARM a réalisé un impact positif dans de nombreuses régions de la RDC. Des zones autrefois déchirées par le conflit voient maintenant des signes de guérison et de progrès, grâce à la présence et à l'engagement constants de nos équipes.</h2>
+                        <h2 className="capitalize text-default-950 my-4">Grâce aux efforts combinés de nos agents, ALARM a réalisé un impact positif dans de nombreuses régions de la RDC. Des zones autrefois déchirées par le conflit voient maintenant des signes de guérison et de progrès, grâce à la présence et à l&lsquo;engagement constants de nos équipes.</h2>
                     </div>
                 </div>
             </div>
