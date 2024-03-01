@@ -51,8 +51,8 @@ const AgentList = () => {
     }
     return (
         <div>
-            {agents.map((agent, index) => (<SingelAgent key={index} agent={agent} />))}
             <AddAgent />
+            {agents.map((agent, index) => (<SingelAgent key={index} agent={agent} />))}
         </div>
     );
 }

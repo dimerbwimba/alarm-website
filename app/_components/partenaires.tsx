@@ -1,41 +1,33 @@
-const Partenaire = () => {
+"use client"
+import { SinglePartenaireProps } from "@/types"
+import axios from "axios"
+import Image from "next/image"
+import { useEffect, useState } from "react"
 
-    const partenaires = [
-        {
-            type: " Partenaire Internationaux",
-            items: [
-                {
-                    title: " IBC (Irving Bible Church) "
-                },
-                {
-                    title: "  Water is Basic (WIB) "
-                },
-                {
-                    title: "  Women Initiative Rise Up "
-                },
-                {
-                    title: " Cornerston Trust "
-                },
-                {
-                    title: "   River Stone "
-                }
-            ]
-        },
-        {
-            type: "  Partenaire Locaux  ",
-            items: [
-                {
-                    title: " Division des affaires sociales"
-                },
-                {
-                    title: "  ECC/Nord-Kivu "
-                },
-                {
-                    title: " Ministère Provincial de Genre "
-                },
-            ]
-        }
-    ]
+const Partenaire = () => {
+    const [data, setData] = useState([])
+    const [loading, setLoading] = useState(true)
+    const onGetPartenaires = async () => {
+        await axios.get("/api/public/partenaires").then(({ data }) => {
+            if (!data.error) {
+                setLoading(false)
+                setData(data.partenaires)
+            }
+        })
+    }
+
+    useEffect(() => {
+        onGetPartenaires()
+    }, [])
+
+    if (loading) {
+        return (
+            <div className=" w-full my-10 bg-gray-400">
+
+            </div>
+        )
+    }
+
     return (
 
         <section id="partenaires" className="py-10 lg:py-20">
@@ -48,48 +40,27 @@ const Partenaire = () => {
                     </p>
                 </div>
 
+                    <div className="space-y-6">
+                        <div>
                 <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 mt-10">
-                    <div className="space-y-6">
-                        <div>
-                            <div className="p-6 group rounded-xl drop-shadow-md bg-white dark:bg-default-50">
-
-                                <h2 className="text-2xl font-medium text-default-950 mt-5">{partenaires[0].type}</h2>
-                                <ul role="list" className="mt-4 mb-5 -ms-3 text-sm text-default-white">
-                                    {partenaires[0].items.map((partenaire, index) => (<li key={index} className="flex items-center gap-2 py-1">
-                                        {/* <!-- svg icon --> */}
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" data-lucide="dot" className="lucide lucide-dot inline-block h-8 w-8 stroke-primary"><circle cx="12.1" cy="12.1" r="1"></circle></svg>
-                                        <span className="text-base text-default-950">{partenaire.title}</span>
-                                    </li>))}
-
-                                </ul>
+                            {data.map((partenaire:SinglePartenaireProps, index:number) => 
+                            <div key={index} className=" p-5 group flex justify-center items-center rounded-xl border  bg-white">
+                                <div>
+                                    <Image
+                                        src={partenaire.image}
+                                        alt={partenaire.name}
+                                        height={150}
+                                        width={150}
+                                        // layout="fill" // required
+                                        objectFit="fill" // change to suit your needs
+                                        className="rounded-md" // just an example
+                                    />
+                                </div>
                             </div>
+                            )}
                         </div>
 
                     </div>
-
-                    <div className="space-y-6">
-                        <div>
-                            <div className="p-6 group rounded-xl drop-shadow-md bg-white dark:bg-default-50">
-
-                                <h2 className="text-2xl font-medium text-default-950 mt-5">{partenaires[1].type}</h2>
-                                <ul role="list" className="mt-4 mb-5 -ms-3 text-sm text-default-white">
-                                    {partenaires[1].items.map((partenaire, index) => (<li key={index} className="flex items-center gap-2 py-1">
-                                        {/* <!-- svg icon --> */}
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" data-lucide="dot" className="lucide lucide-dot inline-block h-8 w-8 stroke-primary"><circle cx="12.1" cy="12.1" r="1"></circle></svg>
-                                        <span className="text-base text-default-950">{partenaire.title}</span>
-                                    </li>))}
-
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div className="flex justify-center mt-10">
-                    <a href="#" className="inline-flex items-center justify-center gap-2 text-base py-3 px-8 rounded-md text-yellow-800 hover:text-white  hover:bg-yellow-700 transition-all duration-700">Apprendre Plus
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" data-lucide="move-right" className="lucide lucide-move-right h-6 w-6"><path d="M18 8L22 12L18 16"></path><path d="M2 12H22"></path></svg>
-                    </a>
                 </div>
             </div>
         </section>

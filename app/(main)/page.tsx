@@ -17,11 +17,11 @@ export default function Home() {
       <HeroAlarm />
       <MarqSection />
       <MissionVision />
-      <HeroWithBG title="Renforcer les leaders africains pour la réconciliation des communautés africaines." span_title="ALARM RDC" />
       <Departements />
       <Agents />
       <CentreDinterer />
       <ValeurFodamental />
+      <HeroWithBG title="Renforcer les leaders africains pour la réconciliation des communautés africaines." span_title="ALARM RDC" />
       <Partenaires />
     </main>
   );

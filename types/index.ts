@@ -12,51 +12,51 @@ export interface HeroSectionProps {
 };
 
 
-export interface AgentListProps{
-  agents:[
-      {
-        _id:string,
-          name:string,
-          image:string,
-          email:string,
-          fonction:string,
-          type_agent:string,
-      }
+export interface AgentListProps {
+  agents: [
+    {
+      _id: string,
+      name: string,
+      image: string,
+      email: string,
+      fonction: string,
+      type_agent: string,
+    }
   ]
 }
 
-export interface AgentProps{
-        agent : {  
-          _id:string,
-          name:string,
-          image:string,
-          email:string,
-          fonction:string,
-          type_agent:string
-        }
-      
+export interface AgentProps {
+  agent: {
+    _id: string,
+    name: string,
+    image: string,
+    email: string,
+    fonction: string,
+    type_agent: string
+  }
+
 }
 
-export interface AgentDataProps{
- 
-    _id:string,
-    name:string,
-    image:string,
-    email:string,
-    fonction:string,
-    type_agent:string
- 
+export interface AgentDataProps {
+
+  _id: string,
+  name: string,
+  image: string,
+  email: string,
+  fonction: string,
+  type_agent: string
+
 }
 
-export interface MissionVisionProps{
-  section:{
-    _id:string;
-    title:string;
-    title_description:string;
-    mission_title:string;
-    mission_description:string;
-    vision_title:string;
-    vision_description:string;
+export interface MissionVisionProps {
+  section: {
+    _id: string;
+    title: string;
+    title_description: string;
+    mission_title: string;
+    mission_description: string;
+    vision_title: string;
+    vision_description: string;
   }
 }
 export interface SessionProps {
@@ -99,21 +99,33 @@ export interface FooterItem {
   }[];
 }
 
-export interface DepartementsTypes{
-  departement :{
-    _id:string,
-    name:string,
-    updated:boolean,
-    roles:Role
+export interface DepRoleType {
+  item: string
+
+}
+export interface DepartementsTypes {
+  departement: {
+    _id: string,
+    name: string,
+    updated: boolean,
+    roles: Role
   }
 }
-export interface SingleDepartementType{
+export interface SingleDepartementType {
 
-    _id:string,
-    name:string,
-    updated:boolean,
-    roles:Role
-  
+  _id: string,
+  name: string,
+  updated: boolean,
+  roles: Role
+
+}
+
+export interface SinglePartenaireProps {
+  _id: string,
+  image: string,
+  isUpdated:string,
+  type_partenaire: string,
+  name: string,
 }
 type Role = []
 

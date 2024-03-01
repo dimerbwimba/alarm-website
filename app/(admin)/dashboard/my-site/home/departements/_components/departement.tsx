@@ -10,14 +10,16 @@ import { addRole, isExistOnTheDB, updateName } from "@/app/redux/slice/departeme
 import SingleRole from "./single-role";
 import { Separator } from "@/components/ui/separator";
 import axios from "axios";
+import Loader from "@/components/loader";
+import { useToast } from "@/components/ui/use-toast";
 interface DepartementProps {
     departement : SingleDepartementType,
     onChangeIndex:(i:number)=> void,
     PIndex:number
 }
 const Departement = ({departement, onChangeIndex , PIndex}:DepartementProps) => {
-
-    const [loading, setLoading] = useState(true)
+    const {toast} = useToast()
+    const [loading, setLoading] = useState(false)
     const dispatch = useDispatch()
 
     const addNewRole = () =>{
@@ -28,6 +30,7 @@ const Departement = ({departement, onChangeIndex , PIndex}:DepartementProps) => 
         dispatch(updateName({_id:departement._id, name: e.target.value}))
     }
     const onSave = async () => {
+        setLoading(true)
         if (!departement.updated) {
             await axios.post("/api/manage-department",{
                 updated:true,
@@ -40,13 +43,18 @@ const Departement = ({departement, onChangeIndex , PIndex}:DepartementProps) => 
                 }
             })
         }else{
-            setLoading(true)
             await axios.put(`/api/manage-department`,{
                 _id:departement._id,
                 roles:departement.roles,
                 name:departement.name
             }).then(({data})=>{
                 if (!data.error) {
+                    toast({
+                        variant: "default",
+                        type: "background",
+                        title: "Modification sauvegarder avec success",
+                        description: data.message
+                    })
                     setLoading(false)
                 }
             })
@@ -74,8 +82,8 @@ const Departement = ({departement, onChangeIndex , PIndex}:DepartementProps) => 
             </div>
             <Separator/>
             <div className="my-5">
-                <Button disabled={ departement.name && departement.roles.length > 2  ? false : true} onClick={onSave} variant={"default"} className=" w-full">
-                    <CheckCircle className="h-4 w-4 mx-2"/>    { !departement.updated ? "Sauvegarder" :"Modifier"}
+                <Button disabled={ departement.name && departement.roles.length > 2 && !loading  ? false : true} onClick={onSave} variant={"default"} className=" w-full">
+                     {!loading  ? <CheckCircle className="h-4 w-4 mx-2"/> : <Loader/> }   { !loading ? !departement.updated ? "Sauvegarder" :"Modifier" : "Chargement..."}
                 </Button>
             </div>
         </div>

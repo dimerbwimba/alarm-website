@@ -1,6 +1,7 @@
+import Carousel from "./carousel";
 
 
-const valeur = [
+const valeurs = [
     {
         description: "Nous sommes convaincus que sans le leadership pastoral fort , l\'Eglise Africaine restera superficielle, syncrétique et sans vraie transformation, sans croissance spirituelle et sans maturité."
     },
@@ -20,7 +21,7 @@ const ValeurFodamental = () => {
     return (
 
         // <!-- Start Services -->
-        <section id="valeur_fondamentales" className="lg:py-20 py-10">
+        <section id="valeur_fondamentales" className="lg:py-20 py-10 flex flex-col justify-center items-center border-b">
             <div className="container">
                 <div className="flex items-end justify-between">
                     <div className="max-w-2xl mx-auto text-center">
@@ -34,31 +35,10 @@ const ValeurFodamental = () => {
                     <hr className="my-6 border border-dashed text-default-800 hidden xl:block"/>
                 {/* <!-- flex End--> */}
     
-                <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 items-center">
-                    <div className="relative z-0">
-                        <img src="https://i.ibb.co/1qfg6zJ/DSC-0834-compressed-1.jpg" className="rounded-md h-full w-full" alt=""/>
-                        <div className="absolute inset-0 rounded-md bg-black/40"></div>
-                    </div>
-                    {/* <!-- col End--> */}
-    
-                    <div className="lg:-ms-20 z-20">
-                        <div className="divide-y divide-default-200 bg-default-50 rounded-md shadow">
-                           { valeur.map((item, index)=> 
-                           <div key={index} className="p-6 flex flex-wrap sm:flex-nowrap items-center gap-6">
-                                <div>
-                                    <div className="h-12 w-12 rounded-md flex items-center justify-center transition-all duration-500 text-xl border border-yellow-700 bg-yellow-700 text-default-950 hover:text-primary text-white ">0{index+1}</div>
-                                </div>
-                                <div>
-                                    <p className="text-base font-medium text-default-800 mt-3"> {item.description}</p>
-                                </div>
-                            </div>)}
-                         
-                        </div>
-                    </div>
-                    {/* <!-- col End--> */}
-                </div>
+                
                 {/* <!-- grid End--> */}
             </div>
+                <Carousel items={valeurs}/>
             {/* <!-- container End--> */}
         </section>
 

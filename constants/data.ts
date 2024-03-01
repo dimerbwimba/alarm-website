@@ -54,7 +54,7 @@ export const navItems: NavItem[] = [
     },
     {
         title:"Page des Projets",
-        link:"/dashboard/my-site/home"       
+        link:"/dashboard/my-site/projects"       
     },
     {
         title:"Page des  agents",
@@ -67,7 +67,7 @@ export const navItems: NavItem[] = [
 ]
 export  const HomePageSections = [
   {
-      title:"Hero section",
+      title:"Photo & Message d'acceuille",
       link:"/dashboard/my-site/home/hero-section"        
   },
   {
@@ -92,6 +92,6 @@ export  const HomePageSections = [
   },
   {
     title:"Nos Partenaires",
-    link:"/dashboard/my-site/home"       
+    link:"/dashboard/my-site/home/partenaires"       
   }
 ]

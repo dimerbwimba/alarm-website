@@ -45,11 +45,11 @@ const Agents = () => {
         </div>)
       }
     return (
-        <div className="py-5 bg-gradient-to-b w-full">
+        <div className="py-5 bg-gradient-to-b w-full to-gray-50">
             <div className="flex items-end justify-between mb-10">
-                <div className="max-w-2xl mx-auto text-center">
+                <div className="max-w-2xl  mx-auto text-center">
                     <span className="py-1 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-300 text-default-950">Nos Agents</span>
-                    <div className=" my-4 relative border rounded-xl shadow text-start p-3">
+                    <div className="bg-white my-4 relative border rounded-xl shadow text-start p-3">
                         <div className=" ">
                             <span className="rounded-xl border bg-white px-2 py-1 absolute -top-3"> ⭐⭐⭐⭐⭐</span>   
                         </div>
@@ -75,11 +75,11 @@ const Agents = () => {
 
                             </div>
                             <p className="pl-5 text-gray-700 text-center hover:text-gray-900">
-                                <a target="_blank" href={`/info/${agent._id}`}>
+                                <Link href={`/info/${agent._id}`}>
                                 <button className=" mt-4 flex hover:bg-yellow-800 ease-in-out transition duration-500 hover:text-white items-center space-x-3 border py-2 px-4 rounded">
                                     <span>Apprendre plus</span>  <Link2 className="w-4 h-4" />
                                 </button>
-                                </a>
+                                </Link>
                             </p>
 
                             <div

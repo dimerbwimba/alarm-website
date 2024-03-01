@@ -10,6 +10,10 @@ const config = {
   ],
   prefix: "",
   theme: {
+    fontFamily:{
+      'display': ['Oswald',],
+      'body': ['"Open Sans"',],
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -18,6 +22,10 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        'footer-pattern': "url('/bg-footer.jpg')",
+      },
+
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

@@ -5,7 +5,7 @@ const CentreDinterer = () => {
 
         // <!-- Start Services -->
         <section id="centre_interet" className="">
-            <div className="container relative bg-yellow-700  py-20 mt-10">
+            <div className="container relative bg-yellow-700  py-20">
                 {/* <!-- flex End--> */}
                 <div className="max-w-2xl  mx-auto text-center">
                     <div className=" my-4 relative border rounded-xl bg-white shadow text-start p-3">

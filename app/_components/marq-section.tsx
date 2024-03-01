@@ -1,51 +1,60 @@
-const MarqSection = () => {
-    return ( 
-        <section className=" w-screen">
-        <div className="relative gap-28 m-auto flex overflow-hidden border border-default-200 py-2">
-            <div className="marquee__group gap-2 flex items-center justify-around flex-shrink-0 min-w-full">
-                <div className="py-2">
-                    <h2 className="text-xl border text-white bg-yellow-700 px-2 rounded-md  font-bold uppercase text-default-950">Nos Partenaire Internationaux</h2>
-                </div>
-               
-                <div className="py-2">
-                    <h2 className="text-xl border px-2 rounded-md  font-bold uppercase text-default-950">IBC (Irving Bible Church)</h2>
-                </div>
-                <div className="py-2">
-                    <h2 className="text-xl border px-2 rounded-md  font-bold uppercase text-default-950">Water is Basic (WIB)</h2>
-                </div>
-                <div className="py-2">
-                    <h2 className="text-xl border px-2 rounded-md  font-bold uppercase text-default-950">Women Initiative Rise Up</h2>
-                </div>
-                <div className="py-2">
-                    <h2 className="text-xl border px-2 rounded-md  font-bold uppercase text-default-950">Cornerston Trust</h2>
-                </div>
-                <div className="py-2">
-                    <h2 className="text-xl border px-2 rounded-md  font-bold uppercase text-default-950">River Stone</h2>
-                </div>
-            </div>
-            {/* <!-- marquee__group End--> */}
+"use client"
+import { SinglePartenaireProps } from "@/types";
+import axios from "axios";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import Marquee from "react-fast-marquee";
 
-            <div aria-hidden="true" className="marquee__group gap-28 flex items-center justify-around flex-shrink-0 min-w-full">
-                <div className="py-2">
-                    <h2 className="text-xl border bg-yellow-700 px-2 rounded-md text-white  font-bold uppercase text-default-950">Nos Partenaire Internationaux</h2>
-                </div>
-                
-                <div className="py-2">
-                    <h2 className="text-xl border px-2 rounded-md  font-bold uppercase text-default-950">Division des affaires sociales</h2>
-                </div>
-                <div className="py-2">
-                    <h2 className="text-xl border px-2 rounded-md  font-bold uppercase text-default-950">ECC/Nord-Kivu</h2>
-                </div>
-                <div className="py-2">
-                    <h2 className="text-xl border px-2 rounded-md  font-bold uppercase text-default-950">Ministère Provincial de Genre</h2>
-                </div>
+const MarqSection = () => {
+    const [data, setData] = useState([])
+    const [loading, setLoading] = useState(true)
+    const onGetPartenaires = async () => {
+        await axios.get("/api/public/partenaires").then(({ data }) => {
+            if (!data.error) {
+                setLoading(false)
+                setData(data.partenaires)
+            }
+        })
+    }
+
+    useEffect(() => {
+        onGetPartenaires()
+    }, [])
+
+    if (loading) {
+        return (
+            <div className=" w-full my-10 bg-gray-400">
+
             </div>
-            {/* <!-- marquee__group End--> */}
-        </div>
-        {/* <!-- flex End --> */}
-    </section>
-    // <!-- End marq Section -->
-     );
+        )
+    }
+    return (
+        <section className=" w-screen">
+            <div className="relative gap-28 m-auto flex overflow-hidden border border-default-200 py-2">
+                    <Marquee pauseOnHover speed={30}>
+                <div className="  gap-2 flex items-center justify-around flex-shrink-0 min-w-full">
+                        {data.map((partenaire: SinglePartenaireProps, index: number) => <div key={index} className="py-2">
+                            <div className=" mx-10">
+                                <Image
+                                    src={partenaire.image}
+                                    alt={partenaire.name}
+                                    height={120}
+                                    width={120}
+                                    // layout="fill" // required
+                                    objectFit="fill" // change to suit your needs
+                                    className="rounded-md" // just an example
+                                />
+
+                            </div>
+                        </div>)}
+                </div>
+                    </Marquee>
+
+            </div>
+            {/* <!-- flex End --> */}
+        </section>
+        // <!-- End marq Section -->
+    );
 }
- 
+
 export default MarqSection;

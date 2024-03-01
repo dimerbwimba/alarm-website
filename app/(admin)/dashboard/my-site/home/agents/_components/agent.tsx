@@ -96,7 +96,7 @@ const SingelAgent = ({ agent }: AgentProps) => {
             <div className="relative flex my-5 flex-col justify-center overflow-hidden">
                 <div className="w-full mx-auto max-w-screen-lg">
                     <div className="group grid w-full grid-cols-1 sm:grid-cols-2">
-                        <div className="group flex flex-col gap-1 rounded-lg p-5 bg-gray-50 text-gray">
+                        <div className="group flex flex-col gap-1 m-5 rounded-lg p-5 bg-gray-50 text-gray">
                             <div style={{ width: "320px" }} className="group relative m-0 flex h-72 w-72 rounded-xl ring-gray-900/5 sm:mx-auto sm:max-w-lg">
                                 <div className="z-10 h-full w-full overflow-hidden rounded-t-xl  border border-gray-200 opacity-80 transition duration-300 ease-in-out group-hover:opacity-100 dark:border-gray-700 dark:opacity-70">
                                     <img src={image} className="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110" alt="" />

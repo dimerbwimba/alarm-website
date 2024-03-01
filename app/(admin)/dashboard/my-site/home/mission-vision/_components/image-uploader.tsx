@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import compressImage from '@/lib/compressor';
 import { useEdgeStore } from '@/lib/edgestore';
 import axios from 'axios';
-import { UploadCloudIcon } from 'lucide-react';
+import { Check, MousePointerSquare, UploadCloudIcon } from 'lucide-react';
 import { useState } from 'react';
 
 export function SingleImageDropzoneUsage({onSetFile, _id, image}:any) {
@@ -32,9 +32,19 @@ export function SingleImageDropzoneUsage({onSetFile, _id, image}:any) {
           }}
         />
       </div>
-      {open && <div className="h-3 w-full rounded-lg overflow-hidden my-5 bg-neutral-200 dark:bg-neutral-600">
-        <div className="h-3 bg-primary" style={{width: `${progress}%`}}></div>
-      </div>}
+      {open ?<div className=" ease-in-out transition duration-500">
+                    <div className="w-full text-center rounded-lg overflow-hidden bg-neutral-200 dark:bg-neutral-600">
+                        <span>{progress}%</span> <div className="h-3 bg-primary" style={{ width: `${progress}%` }}></div>
+                    </div>
+                    <span>Telechargement encour ...</span>
+                </div> : ""}
+      {
+                progress === 100 && 
+                <div className=" flex items-center border-t my-1 border-b w-full"> 
+                <span className=" flex items-center text-center text-green-600 font-bold text-sm ">Telechargement terminer. <span> <Check className="mx-2 w-4 h-4"/></span> </span> 
+                <span className="mx-2 border-l border-r px-3 "><MousePointerSquare /></span> 
+                <span className=" text-sm">Cliquer sur l'image pour telecharger une image differente</span>
+                </div>}
       <Button
       disabled={open}
       variant={"default"}

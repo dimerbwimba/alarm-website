@@ -1,6 +1,9 @@
+import { connectToMongoDB } from "@/lib/mongodb";
 import Cv from "@/models/cv.model";
 import mongoose from "mongoose";
 import { NextRequest, NextResponse } from "next/server";
+
+connectToMongoDB()
 
 export async function GET(req: NextRequest) {
     const id = req.nextUrl.searchParams.get('id') as string;

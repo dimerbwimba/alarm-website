@@ -2,7 +2,9 @@ import { connectToMongoDB } from "@/lib/mongodb";
 import Agent from "@/models/agent.model";
 import MissionVision from "@/models/mission_vission.model";
 import { NextResponse } from "next/server";
+
 connectToMongoDB()
+
 export async function GET(req:Request){
 
     try {

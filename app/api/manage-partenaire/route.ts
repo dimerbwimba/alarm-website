@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import Departement from "@/models/departement.model";
 import { getServerSession } from "next-auth";
 import { connectToMongoDB } from "@/lib/mongodb";
+import Partenaire from "@/models/partenaire.model";
 
 
 connectToMongoDB()
@@ -10,9 +11,9 @@ export async function GET() {
     try {
         const session = await getServerSession()
         if (session) {
-            const departements = await Departement.find()
+            const partenaires = await Partenaire.find()
 
-            return NextResponse.json({ departements, message: "Data Uploaded successfully", error: false })
+            return NextResponse.json({ partenaires, message: "Data Uploaded successfully", error: false })
         }
         return NextResponse.json({ message: "Unauthorized", error: true })
     } catch (error: any) {
@@ -32,13 +33,14 @@ export async function POST(req: Request) {
         }
 
         const body = await req.json();
-        const departement = {
+        const partenaire = {
             ...body,
         };
+        delete partenaire._id
+        partenaire.isUpdated = true
+        const newPartenaire = await new Partenaire(partenaire).save();
 
-        const newDepartement = await new Departement(departement).save();
-
-        return NextResponse.json({ departement: newDepartement, message: "Tu viens de créer une nouvelle section", error: false });
+        return NextResponse.json({ partenaire: newPartenaire, message: "Tu viens de créer un nouveau partenaire", error: false });
     } catch (error: any) {
         return NextResponse.json({ message: error.message, error: true });
     }
@@ -52,20 +54,23 @@ export async function PUT(req: Request) {
         }
 
         const body = await req.json();
-        const departement = {
+        const partenaire = {
             ...body,
         };
 
-        const newDepartement = await Departement.findOneAndUpdate(
-            { _id: departement._id },
+        const pId = partenaire._id
+
+        delete partenaire._id
+
+        const newPartenaire = await Partenaire.findOneAndUpdate(
+            { _id: pId },
             {
-                name: departement.name,
-                roles: departement.roles
+               ...partenaire
             },
             { new: true, upsert: true }
         )
 
-        return NextResponse.json({ departement: newDepartement, message: "Tu viens de modifié un departement avec success ", error: false });
+        return NextResponse.json({ newPartenaire, message: "Tu viens de modifié un departement avec success ", error: false });
     } catch (error: any) {
         return NextResponse.json({ message: error.message, error: true });
     }
