@@ -5,7 +5,7 @@ import { navItems } from "@/constants/data";
 const SideBar = () => {
     return (
         <nav
-            className={cn(`relative hidden h-screen border-r pt-16 lg:block w-72`)}
+            className={cn(`relative hidden h-screen border-r pt-16 lg:block w-72 bg-gray-100`)}
         >
             <div className="space-y-4 py-4">
                 <div className="px-3 py-2">
