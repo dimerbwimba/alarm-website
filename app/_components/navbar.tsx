@@ -74,7 +74,6 @@ export default function Example() {
       <header id="navbar" className="sticky bg-white inset-x-0 top-0 z-60 transition-all duration-500 py-4 flex items-center [&.nav-sticky]:bg-white/90 [&.nav-sticky]:backdrop-blur-3xl [&.nav-sticky]:shadow-md dark:[&.nav-sticky]:bg-default-50/80">
         <div className="container">
           <div className="flex items-center relative justify-between gap-4">
-            <div className=' md:w-20'></div>
             <div className="">
               {/* <!-- Navbar Brand Logo --> */}
               <a href="/" className=' absolute -top-3'>

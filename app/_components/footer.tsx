@@ -6,8 +6,8 @@ const FooterAlarm = () => {
         
         <footer>
         <div className="border-y text-white border-default-200 bg-footer-pattern">
-            <div className="container py-20 bg-yellow-900 opacity-80">
-                <div className="grid xl:grid-cols-5 md:grid-cols-3 gap-10 lg:gap-16">
+            <div className="p-20 py-20 bg-yellow-900 opacity-80">
+                <div className="grid xl:grid-cols-5 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-16">
                     <div className="xl:col-span-2 md:col-span-2">
                         <div className=" border-r-2 p-4 border-white">
                             <a href="#">

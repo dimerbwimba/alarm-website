@@ -56,12 +56,9 @@ const Departements = () => {
         <div>
             <section
                 id="departements"
-                className="lg:py-20 py-10 w-full bg-gradient-to-b bg-yellow-800 "
             >
-                <div className="container w-full">
-                    <div className="grid xl:grid-cols-5 gap-6">
-                        <div className="xl:col-span-5 mt-8 lg:mt-0">
-                            <div className="lg:ms-8">
+                <div className=" p-20 lg:py-20 py-10  w-full bg-gradient-to-b bg-yellow-800">
+                   
                                 <div className="text-center text-gray-100">
                                     <span className="py-1 text-gray-100 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-300 text-default-950">
                                         Departement
@@ -71,7 +68,7 @@ const Departements = () => {
                                     </h2>
                                     <hr className="my-6 border border-dashed text-default-800" />
                                 </div>
-                                <div className="grid md:grid-cols-3 grid-cols-1 gap-x-10 gap-y-6">
+                                <div className="grid w-full md:grid-cols-3 grid-cols-1 gap-x-10 gap-y-6">
                                     {departements?.map((item: SingleDepartementType, index) => (
                                         <div
                                             key={index}
@@ -116,9 +113,7 @@ const Departements = () => {
                                         </div>
                                     ))}
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                           
                 </div>
             </section>
         </div>

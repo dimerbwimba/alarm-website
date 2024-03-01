@@ -75,9 +75,9 @@ export default function HeroAlarm() {
   return (
     // <!-- Hero Section Start ../images/other/bg-lines-1.svg -->
     <section id="home" className="bg-cover border-b bg-no-repeat bg-[url('/bg-lines-1.svg')]">
-      <div className="grid lg:grid-cols-1 xl:grid-cols-5 grid-cols-1 items-center relative">
+      <div className="grid lg:grid-cols-2 xl:grid-cols-5 grid-cols-1 items-center relative">
         {/* <!-- Swiper for Text --> */}
-        <div className="relative xl:col-span-2 p-6 xl:p-0 xl:-me-24 xl:mt-0 -mt-24 z-10 order-2 xl:order-none">
+        <div className="relative xl:col-span-2 p-4 xl:p-0 xl:-me-24 xl:mt-0  z-10 order-2 xl:order-none">
           <Swiper
             spaceBetween={30}
             slidesPerView={1}
