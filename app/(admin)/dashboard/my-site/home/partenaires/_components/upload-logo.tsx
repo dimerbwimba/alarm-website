@@ -47,11 +47,11 @@ const UploadLogo = ({ onSetFile, image }: UploadLogoProps) => {
                 <div className=" flex items-center border-t my-1 border-b w-full"> 
                 <span className=" flex items-center text-center text-green-600 font-bold text-sm ">Telechargement terminer. <span> <Check className="mx-2 w-4 h-4"/></span> </span> 
                 <span className="mx-2 border-l border-r px-3 "><MousePointerSquare /></span> 
-                <span className=" text-sm">Cliquer sur l'image pour telecharger un logo different</span>
+                <span className=" text-sm">Cliquer sur l&apos;image pour telecharger un logo different</span>
                 </div>}
                 {
                     error && <div className="grid grid-cols-12 bg-red-600 text-white px-2 items-center border-t my-1 border-b w-full"> 
-                    <span className=" text-sm col-span-6">Cliquer sur l'image pour telecharger un logo different</span>
+                    <span className=" text-sm col-span-6">Cliquer sur l&apos;image pour telecharger un logo different</span>
                     <span className=" border-l border-r flex justify-center col-span-2">
                         <AlertCircle/>
                     </span>
