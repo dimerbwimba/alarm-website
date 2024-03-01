@@ -29,7 +29,6 @@ const ValeurFodamental = () => {
                         <h2 className="text-4xl text-default-800 font-bold mt-5">
                             Nos Valeurs Fondamentales
                         </h2>
-                        
                     </div>
                 </div>
                     <hr className="my-6 border border-dashed text-default-800 hidden xl:block"/>
