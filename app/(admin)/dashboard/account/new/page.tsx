@@ -12,7 +12,7 @@ const CreateNewAccount = () => {
         <ScrollArea className="h-full">
             <div className="flex-1 space-y-4 p-5">
                 <BreadCrumb items={breadcrumbItems} />
-                <Separator/>
+              
                 <ManageUserForm                     
                     initialData={null}
                 />

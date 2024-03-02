@@ -123,11 +123,21 @@ export interface SingleDepartementType {
 export interface SinglePartenaireProps {
   _id: string,
   image: string,
-  isUpdated:string,
+  isUpdated: string,
   type_partenaire: string,
   name: string,
 }
 type Role = []
+
+
+export interface SingleRapport {
+  file_name: string,
+  full_file_title: string,
+  file_description: string,
+  file_type: string,
+  file_size: number,
+  file_path: string
+}
 
 export type MainNavItem = NavItemWithOptionalChildren;
 

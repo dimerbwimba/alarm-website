@@ -39,7 +39,7 @@ const AccountPage = () => {
         return (
             <div className="flex-1 space-y-4  p-4 md:p-8 pt-6">
                  <BreadCrumb items={breadcrumbItems} />
-                 <Separator/>
+                
                  <div className=" py-1">
                     <div className=" text-black">{!error ? "Loading..." : 
                     <span className=" p-1 bg-red-600 text-white rounded">{error}</span>}</div>

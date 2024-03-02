@@ -17,7 +17,7 @@ export const Agentslice = createSlice({
         return state;
       },
       addAgents(state, action) {
-        state = [ action.payload,...state,];
+        state = [...state,action.payload];
         return state;
     },
     },

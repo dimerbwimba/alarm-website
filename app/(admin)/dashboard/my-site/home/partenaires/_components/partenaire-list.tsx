@@ -27,10 +27,10 @@ const PartenaireList = () => {
 
     return ( 
         <div>
+           {partenaires.map((partenaire:SinglePartenaireProps, index:number) => <Partenaire partenaire={partenaire} Pindex={index} onPindexChange={updatePindex} key={index}/> )}
             <Button onClick={addNewPartenaire} variant={"outline"} className=" border-2 mt-2 mb-10 border-dashed w-full">
                <PlusCircle className="w-4 h-4 mx-1"/> Ajouter un partenaire
             </Button>
-           {partenaires.map((partenaire:SinglePartenaireProps, index:number) => <Partenaire partenaire={partenaire} Pindex={index} onPindexChange={updatePindex} key={index}/> )}
         </div>
 
      );

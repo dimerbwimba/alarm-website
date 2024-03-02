@@ -4,8 +4,9 @@ import { useEffect, useRef, useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { ArrowDown, Camera, ChevronDown, ChevronRight, ChevronUp, Contact, Hammer, HandHeart, HandHelpingIcon, Home, ListChecks, Locate, MapPin, Menu, MenuIcon, PhoneIncomingIcon, XCircle, XCircleIcon } from 'lucide-react';
 import Image from 'next/image';
+import { MobileSidebar } from './mobile-nav';
 
-const navigation = [
+const navigations = [
   { name: "Accueille", href: '/', icon:<Home className='h-4 w-4'/> },
   { name: "Projects", href: '/projects', icon:<Hammer className='h-4 w-4'/> },
   { name: "Agents", href: '/agents', icon:<HandHeart className='h-4 w-4'/> },
@@ -55,7 +56,7 @@ export default function Example() {
   }, [ref]);
   return (
     <div className=" top-0 sticky z-50 shadow">
-      <div className='flex md:hidden -b  z-50 px-4 bg-white  items-center md:space-x-4  justify-center'>
+      <div className='flex md:hidden -b  z-50 px-4 bg-yellow-700 text-white  items-center md:space-x-4  justify-center'>
         <div className='hidden lg:inline-flex'>
           <div className='  md:mb-0 rounded py-1 my-2  px-2  md:space-x-4 flex items-center justify-center'>
             <PhoneIncomingIcon className='h-4 w-4' />
@@ -72,61 +73,58 @@ export default function Example() {
       </div>
       <hr className="border border-dashed text-default-800 hidden xl:block" />
       <header id="navbar" className="sticky bg-white inset-x-0 top-0 z-60 transition-all duration-500 py-4 flex items-center [&.nav-sticky]:bg-white/90 [&.nav-sticky]:backdrop-blur-3xl [&.nav-sticky]:shadow-md dark:[&.nav-sticky]:bg-default-50/80">
-        <div className="container">
+        <div className="w-full flex justify-center">
           <div className="flex items-center relative justify-between gap-4">
-            <div className="">
+            <div className=" relative">
               {/* <!-- Navbar Brand Logo --> */}
-              <a href="/" className=' absolute -top-3'>
-                <img src="/alarm.png" alt="logo" className=" h-14 sm:h-20" />
+              <a href="/" className=''>
+                <img src="/alarm.png" alt="logo" className=" h-12 sm:h-20" />
                 {/* <img src="/logo-light-82928a21.png" alt="logo" className="h-10 hidden dark:flex" /> */}
               </a>
             </div>
-
             {/* <!-- Nevigation Menu --> */}
-            <ul className="menu lg:flex items-center justify-center hidden relative mx-auto grow">
-              {navigation.slice(0, 3).map((item) => 
-                <li key={item.name} className="menu-item flex items-baseline text-sm text-default-800 mx-2 transition-all duration-300 hover:text-primary [&.active]:text-primary">
-                  {item.icon}<a className="inline-flex items-center text-sm lg:text-base font-bold py-0.5 px-2 rounded-full capitalize" href={item.href}>{item.name} </a>
-                </li>
-              )}
-              <div  ref={ref} className="menu-item cursor-pointer text-sm text-default-800 mx-2 transition-all duration-300 hover:text-primary [&.active]:text-primary">
-                <a onClick={() => setMenu( !menu)} className="inline-flex items-center text-sm lg:text-base font-bold py-0.5 px-2 rounded-full capitalize">
-                 { !menu ? <ChevronRight className='h-4 w-4' /> : <ChevronDown className='h-4 w-4'/>}  <span className='px-2'>Menu</span>
-                </a>
-                { menu && <div className="absolute rounded-lg bg-white shadow-md mt-2 py-2 w-64">
+            <div>
+              <ul className="menu lg:flex items-center justify-center hidden relative mx-auto grow">
+                {navigations.slice(0, 3).map((item) => 
+                  <li key={item.name} className="menu-item flex items-baseline text-sm text-default-800 mx-2 transition-all duration-300 hover:text-primary [&.active]:text-primary">
+                    {item.icon}<a className="inline-flex items-center text-sm lg:text-base font-bold py-0.5 px-2 rounded-full capitalize" href={item.href}>{item.name} </a>
+                  </li>
+                )}
+                <div  ref={ref} className="menu-item cursor-pointer text-sm text-default-800 mx-2 transition-all duration-300 hover:text-primary [&.active]:text-primary">
+                  <a onClick={() => setMenu( !menu)} className="inline-flex items-center text-sm lg:text-base font-bold py-0.5 px-2 rounded-full capitalize">
+                  { !menu ? <ChevronRight className='h-4 w-4' /> : <ChevronDown className='h-4 w-4'/>}  <span className='px-2'>Menu</span>
+                  </a>
+                  { menu && <div className="absolute rounded-lg bg-white shadow-md mt-2 py-2 w-64">
 
-                  {navigation.slice(1).map((item, index) =>
+                    {navigations.slice(1).map((item, index) =>
 
-                    <a href={item.href} key={index} className="block font-bold px-4 py-2 text-gray-800 hover:bg-yellow-800 hover:text-white">
-                      {item.name}
-                    </a>
+                      <a href={item.href} key={index} className="block font-bold px-4 py-2 text-gray-800 hover:bg-yellow-800 hover:text-white">
+                        {item.name}
+                      </a>
 
-                  )}
-                </div>}
-              </div>
-            </ul>
+                    )}
+                  </div>}
+                </div>
+              </ul>
+            </div>
 
             <div className="ms-auto shrink inline-flex gap-2">
               <a href="/contactez-nous" className="py-1.5 px-6 inline-flex items-center gap-2 rounded-lg text-base text-white bg-yellow-700 hover:bg-primary-700 transition-all duration-500">
                 <Contact className="h-4 w-4 fill-white/40" />
-                <span className="hidden sm:block">Contactez Nous</span>
+                <span className="">Contactez Nous</span>
               </a>
-              {/* <!-- Mobile Menu Toggle Button --> */}
-              {!mobileMenuOpen ? <button onClick={() => setMobileMenuOpen(true)} className="lg:hidden inline-block" data-hs-overlay="#mobile-menu">
-                <Menu className="w-7 h-7 text-default-600 hover:text-default-900" />
-              </button> : <button onClick={() => setMobileMenuOpen(false)} className="lg:hidden inline-block" data-hs-overlay="#mobile-menu">
-                <XCircleIcon className="w-7 h-7 text-default-600 hover:text-default-900" />
-              </button>}
+              
+            </div>
+            <div className=" lg:hidden flex">
+             <MobileSidebar navigations={navigations} />
             </div>
           </div>
         </div>
-
       </header>
 
-      <div id="mobile-menu" className={`${!mobileMenuOpen ? "hidden" : "open"} hs-overlay hs-overlay-open:translate-x-0 -translate-x-full fixed top-0 bottom-0 left-0 transition-all transform h-screen max-w-[270px] w-full z-[61]  border-r border-default-200 bg-white dark:bg-default-50`} tabIndex={1}>
+      {/* <div id="mobile-menu" className={`${!mobileMenuOpen ? "hidden" : "open"} hs-overlay hs-overlay-open:translate-x-0 -translate-x-full fixed top-0 bottom-0 left-0 transition-all transform h-screen max-w-[270px] w-full z-[61]  border-r border-default-200 bg-white dark:bg-default-50`} tabIndex={1}>
         <div className="flex justify-center items-center border-b border-dashed border-default-200 h-16 transition-all duration-300">
           <a href="index.html">
-            {/* <img src="assets/logo-dark-dc129ba6.png" alt="logo" className="h-10 flex dark:hidden"/> */}
             <img src="/alarm.png" alt="logo" className="h-10" />
           </a>
         </div>
@@ -139,7 +137,7 @@ export default function Example() {
             </ul>
           </nav>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

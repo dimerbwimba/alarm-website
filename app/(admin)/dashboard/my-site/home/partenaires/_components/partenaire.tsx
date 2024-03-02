@@ -64,7 +64,7 @@ const Partenaire = ({Pindex,partenaire, onPindexChange}:PartenaireProps) => {
             <Preview partenaire={partenaire} />
             <div className="border-2 p-4 rounded-lg  mx-2 my-2  border-dashed">
                 <div>
-                    <label className="text-black">Nom du partenaire {Pindex+1}</label>
+                    <label className="text-black">Nom du partenaire</label>
                     <Input value={partenaire.name} onChange={onUpdateName} />
                 </div>
                 <div className="py-1">

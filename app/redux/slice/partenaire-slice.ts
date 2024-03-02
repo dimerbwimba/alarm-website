@@ -16,7 +16,7 @@ export const partenaireSlice = createSlice({
         return state
     },
     addPartenaire(state, action) {
-        state = [action.payload, ...state]
+        state = [...state, action.payload]
         return state
     },
     updateName(state, action){
