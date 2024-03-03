@@ -110,7 +110,7 @@ const AgentInfo: FC = () => {
                 </div>
               </div>
             </div>
-            <div className=" bg-gray-50 py-2 rounded-lg md:col-span-7 ">
+            <div className=" bg-gray-50 lg:pl-5 border-l-4 border-yellow-700 py-2 md:col-span-7 ">
               <div className="prose  prose-a:text-blue-600 prose-md prose-td:border prose-td:px-2 prose-td:py-1 prose-td:text-sm prose-th:bg-blue-400 md:p-5 p-2" dangerouslySetInnerHTML={{ __html: `${cvData?.html_body}` }}></div>
             </div>
           </div>

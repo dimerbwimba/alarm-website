@@ -28,18 +28,6 @@ export const navItems: NavItem[] = [
       label: "website management",
     },
     {
-      title: "Mon assistant",
-      href: "/dashboard/profile",
-      icon: "profile",
-      label: "profile",
-    },
-    {
-      title: "Mes projets",
-      href: "/dashboard/kanban",
-      icon: "kanban",
-      label: "kanban",
-    },
-    {
       title: "Login",
       href: "/login",
       icon: "login",

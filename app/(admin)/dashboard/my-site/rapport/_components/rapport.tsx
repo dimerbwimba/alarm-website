@@ -10,7 +10,7 @@ const Rapport = ({rapport}:{rapport:SingleRapport}) => {
     const onClose = () =>{
         setOpen(false)
     }
-    const onConfirm = () =>{
+    const onConfirm = async () =>{
         setLoading(true)
     }
     return ( 
