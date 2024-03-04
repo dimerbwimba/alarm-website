@@ -75,11 +75,11 @@ const Agents = () => {
 
                             </div>
                             <p className="pl-5 text-gray-700 text-center hover:text-gray-900">
-                                <Link href={`/info/${agent._id}`}>
+                                <a href={`/info/${agent._id}`}>
                                 <button className=" mt-4 flex hover:bg-yellow-800 ease-in-out transition duration-500 hover:text-white items-center space-x-3 border py-2 px-4 rounded">
                                     <span>Apprendre plus</span>  <Link2 className="w-4 h-4" />
                                 </button>
-                                </Link>
+                                </a>
                             </p>
 
                             <div

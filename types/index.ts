@@ -139,6 +139,10 @@ export interface SingleRapport {
   file_path: string
 }
 
+export interface ProjetProps{
+  title:string, description:string, budget:string, startDate:string, endDate:string, status:string
+}
+
 export type MainNavItem = NavItemWithOptionalChildren;
 
 export type SidebarNavItem = NavItemWithChildren;

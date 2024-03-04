@@ -10,11 +10,10 @@ const AnnualReportPage = () => {
     const [loading, setLoading] = useState(true)
     const getReports = async () => {
 
-        await axios.get("/api/file/get-file").then(({ data }) => {
+        await axios.get("/api/public/rapports").then(({ data }) => {
             setRapports(data.rapports)
             setLoading(false)
         })
-
     }
 
     useEffect(() => {

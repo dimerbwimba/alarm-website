@@ -17,7 +17,7 @@ const HomePage = ({data}:any) => {
         <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
           <div className="flex items-center justify-between space-y-2">
             <h2 className="text-3xl font-bold tracking-tight">
-              Hi {data.name}, Welcome back 👋
+              Bonjour {data.name}, Bienvenu 👋
             </h2>
             <div className="hidden md:flex items-center space-x-2">
               {/* <CalendarDateRangePicker /> */}
@@ -36,7 +36,7 @@ const HomePage = ({data}:any) => {
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">
-                      Total Visitors
+                    Nombre total de visiteurs
                     </CardTitle>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ const HomePage = ({data}:any) => {
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">
-                      Totals Agent
+                    Agent de totaux
                     </CardTitle>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,7 @@ const HomePage = ({data}:any) => {
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">
-                      People Helped
+                    Personnes aidées
                     </CardTitle>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +116,7 @@ const HomePage = ({data}:any) => {
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">
-                      Active Projects
+                      Projets actifs
                     </CardTitle>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

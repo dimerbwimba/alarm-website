@@ -42,7 +42,7 @@ export const navItems: NavItem[] = [
     },
     {
         title:"Page des Projets",
-        link:"/dashboard/my-site/projects"       
+        link:"/dashboard/my-site/projets"       
     },
     {
         title:"Page des  agents",

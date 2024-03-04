@@ -18,10 +18,10 @@ const FooterAlarm = () => {
                             </p>
                             <Separator/>
                             <div className=" flex items-center space-x-3 mt-2"> 
-                                <Mail/> <span className="font-bold">email@gmail.com</span>
+                                <Mail/> <a href="mailto:info@alarm-congo.org"><span className="font-bold">info@alarm-congo.org</span></a> 
                             </div> 
                             <div className=" flex items-center space-x-3 mt-2"> 
-                                <LucidePhoneCall/> <span className="font-bold">+243 853282801</span>
+                                <LucidePhoneCall/> <a href="tel:+243853282801"><span className="font-bold">+243 853282801</span></a>
                             </div> 
                           
                         </div>
@@ -32,13 +32,16 @@ const FooterAlarm = () => {
                         <ul className="flex flex-col gap-3">
                             <h5 className="xl:text-xl lg:text-lg font-bold  mb-2">Accès Rapide</h5>
                             <li>
-                                <a href="" className="text-base  transition-all">Acceuille</a>
+                                <a href="/" className="text-base  transition-all">Acceuille</a>
                             </li>
                             <li>
-                                <a href="" className="text-base  transition-all">Contactez Nous</a>
+                                <a href="/contactez-nous" className="text-base  transition-all">Contactez Nous</a>
                             </li>
                             <li>
-                                <a href="" className="text-base  transition-all">Departements</a>
+                                <a href="/annual-report" className="text-base  transition-all">Rapport annuel</a>
+                            </li>
+                            <li>
+                                <a href="/agents" className="text-base  transition-all">Nos agents</a>
                             </li>
                             
                         </ul>
@@ -62,7 +65,7 @@ const FooterAlarm = () => {
                     </div>
                     {/* <!-- col End --> */}
 
-                    <div className="">
+                    {/* <div className="">
                         <ul className="flex flex-col gap-3">
                             <h5 className="xl:text-xl lg:text-lg font-bold mb-2">Legal &amp; Press</h5>
                             <li>
@@ -75,7 +78,7 @@ const FooterAlarm = () => {
                                 <a href="" className="text-base  transition-all">Presskit</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
                     {/* <!-- col End --> */}
                 </div>
                 {/* <!-- grid End --> */}
