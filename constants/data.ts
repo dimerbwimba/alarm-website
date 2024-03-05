@@ -28,6 +28,12 @@ export const navItems: NavItem[] = [
       label: "website management",
     },
     {
+      title: "Blog/Actualite",
+      href: "/dashboard/blog",
+      icon: "media",
+      label: "website management",
+    },
+    {
       title: "Login",
       href: "/login",
       icon: "login",

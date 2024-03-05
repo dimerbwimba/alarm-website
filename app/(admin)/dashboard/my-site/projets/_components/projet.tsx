@@ -1,10 +1,12 @@
 import { ProjetProps } from "@/types";
-
+import Markdown from 'react-markdown'
 const Projet = ({projet}:{ projet:ProjetProps}) => {
     return ( 
         <div className=" border-l-4 px-2">
             <h2 className=" text-xl uppercase font-bold">{projet.title}</h2>
-            <p>{projet.description}</p>
+            <div className="  line-clamp-3 ">
+                <Markdown>{projet.description}</Markdown>
+            </div>
             <div>
                 <span>
                     {projet.startDate} a {projet.endDate}

@@ -14,7 +14,7 @@ const ProjetList = () => {
         getProjects()
     },[])
     return ( 
-        <div className=" grid grid-cols-3">
+        <div className=" grid grid-cols-2">
            { projets.map((projet, index) => <Projet key={index} projet={projet}/>)}
         </div>
      );

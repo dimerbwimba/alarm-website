@@ -29,13 +29,13 @@ export async function POST(req: Request) {
         }
 
         const body = await req.json();
-        const rapport = {
+        const projet = {
             ...body,
         };
-        console.log(rapport)
-        const newRapport = await new Projet(rapport).save();
+        console.log(projet)
+        const newprojet = await new Projet(projet).save();
 
-        return NextResponse.json({ rapport: newRapport, message: "Tu viens de créer un nouveau partenaire", error: false });
+        return NextResponse.json({ projet: newprojet, message: "Tu viens de créer un nouveau partenaire", error: false });
     } catch (error: any) {
         return NextResponse.json({ message: error.message, error: true });
     }
