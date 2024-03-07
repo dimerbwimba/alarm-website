@@ -61,7 +61,7 @@ const Blog = () => {
                         </div>
                         <div className="z-10 py-3 ">
                             <h2 className="z-10 px-5 text-white">
-                                <a rel="noopener noreferrer" href={`/blog/${blog._id}`} className="font-bold text-xl line-clamp-2 hover:underline dark:text-gray-100">{blog.title}</a>
+                                <a rel="noopener noreferrer" href={`/blog/${blog.slug}`} className="font-bold text-xl line-clamp-2 hover:underline dark:text-gray-100">{blog.title}</a>
                             </h2>
                             <p className="z-10 px-5 text-sm line-clamp-2 text-gray-100 ">
                                 {blog.description}

@@ -12,7 +12,7 @@ const Blog = () => {
     const [blog, setBlog] = useState<any>({})
     const params = useParams()
     const getBlog = async () => {
-        await axios.get(`/api/public/blogs/blog?_id=${params.blog_id}`).then(({data})=>{
+        await axios.get(`/api/public/blogs/blog?slug=${params.slug}`).then(({data})=>{
             if (!data.error) {
                 
                 setBlog(data.blog)
@@ -46,8 +46,9 @@ const Blog = () => {
             <span className="text-4xl font-medium text-gray-500">Loading...</span>
         </div>)
     }
+    
     const breadcrumbItems = [
-        { title: blog.title, link: `/blog/${blog._id}` }
+        { title: blog.title, link: `/blog/${blog?._id}` }
     ];
     
     return ( 

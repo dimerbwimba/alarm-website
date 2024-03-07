@@ -1,6 +1,7 @@
 import Blog from "@/models/blog.model"
 import { getServerSession } from "next-auth"
 import { NextRequest, NextResponse } from "next/server"
+import slugify from "slugify";
 
 
 
@@ -25,7 +26,9 @@ export async function POST(req: Request) {
     const session = await getServerSession()
     if (session) {
         const body = await req.json()
+        const slug =  slugify(body.title, { lower: true, strict: true });
         const agent = {
+            slug:slug,
             ...body,
         }
         const blog = await Blog.create(agent)
@@ -61,7 +64,8 @@ export async function PUT(req: Request) {
 
     if (session) {
         const body = await req.json()
-        const updatedSection = await Blog.findByIdAndUpdate({ _id: body._id }, { $set: { ...body} }, { new: true },).select("-_id")
+        const slug =  slugify(body.title, { lower: true, strict: true });
+        const updatedSection = await Blog.findByIdAndUpdate({ _id: body._id }, { $set: {slug:slug, ...body} }, { new: true },).select("-_id")
 
         return NextResponse.json({updatedSection, message: "Votre modification a été enregistré avec succès", error: false })
     }

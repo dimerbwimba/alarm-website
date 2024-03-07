@@ -1,11 +1,16 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
+import slugify from "slugify";
 
 const BlogSchema = new mongoose.Schema({
     image: {
         type: String
     },
+    slug: {
+        type: String
+    },
     title: {
         type: String,
+        required: true
     },
     description: {
         type: String
@@ -16,9 +21,8 @@ const BlogSchema = new mongoose.Schema({
     json_content: {
         type: String
     }
+}, { timestamps: true });
 
-}, { timestamps: true })
+const Blog = mongoose.models.Blog || mongoose.model("Blog", BlogSchema);
 
-const Blog = mongoose.models.Blog || mongoose.model("Blog", BlogSchema)
-
-export default Blog
+export default Blog;
