@@ -7,10 +7,10 @@ import { object } from "zod";
 connectToMongoDB()
 
 export async function GET(req:NextRequest){
-    try {
-        const { searchParams } = new URL(req.url)
-        const slug = searchParams.get('slug')
-        
+    const { searchParams } = new URL(req.url)
+    const slug = searchParams.get('slug')
+    
+    try {    
         const blog = await Blog.findOne({slug:slug})
         return NextResponse.json({blog, error:false})
     } catch (error:any) {
