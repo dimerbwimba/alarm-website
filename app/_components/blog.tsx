@@ -43,7 +43,7 @@ const Blog = () => {
         <div className="bg-slate-200">
             <div className="text-center mt-5 text-gray-100">
                 <span className="py-1 text-gray-800 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-300 text-default-950">
-                    Toute l'actualité
+                    Toute l&apos;actualité
                 </span>
                 <h2 className="text-4xl text-gray-800 font-bold text-default-950 mt-6">
                     Dernières Actualités
