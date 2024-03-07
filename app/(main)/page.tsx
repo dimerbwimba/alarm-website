@@ -9,6 +9,7 @@ import HeroWithBG from "../_components/hero_bg";
 import MarqSection from "../_components/marq-section";
 import Departements from "../_components/departements";
 import Agents from "../_components/agents";
+import Blog from "../_components/blog";
 
 export default function Home() {
 
@@ -23,6 +24,7 @@ export default function Home() {
       <ValeurFodamental />
       <HeroWithBG title="Renforcer les leaders africains pour la réconciliation des communautés africaines." span_title="ALARM RDC" />
       <Partenaires />
+      <Blog/>
     </main>
   );
 }

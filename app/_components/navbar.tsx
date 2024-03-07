@@ -111,7 +111,7 @@ export default function Example() {
             <div className="ms-auto shrink inline-flex gap-2">
               <a href="/contactez-nous" className="py-1.5 px-6 inline-flex items-center gap-2 rounded-lg text-base text-white bg-yellow-700 hover:bg-primary-700 transition-all duration-500">
                 <Contact className="h-4 w-4 fill-white/40" />
-                <span className="">Contactez Nous</span>
+                <span className="lg:flex hidden">Contactez Nous</span>
               </a>
               
             </div>

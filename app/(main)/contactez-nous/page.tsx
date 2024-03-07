@@ -1,4 +1,6 @@
 "use client"
+import Loader from "@/components/loader";
+import axios from "axios";
 import { useState } from "react";
 
 const ContactPage = () => {
@@ -7,12 +9,17 @@ const ContactPage = () => {
     const [email, setEmail] = useState("")
     const [subject, setSubject] = useState("")
     const [message, setMessge] = useState("")
+    const [loading, setLoading] = useState(false)
 
-    const onSubmiteForm= ()=>{
-
-      console.log(name, email, subject, message);
+    const onSubmiteForm= async(event:React.MouseEvent<HTMLElement>)=>{
+        event.preventDefault()
+        setLoading(true)
       
+         const data = {name, email, subject, message}
       
+      await axios.post("/api/email", {...data}).then(({data})=>{
+        setLoading(false)
+      })
 
 
     }
@@ -47,28 +54,30 @@ const ContactPage = () => {
                                 <p className="py-2">{"N\'hésitez pas à utiliser le formulaire de contact ci-dessous pour nous envoyer un message :"}</p>
                                 <div className="space-y-6 my-6">
                                     <div>
-                                        <input type="text" className="py-3 px-4 block w-full text-base rounded-lg text-default-950 border-default-200 dark:bg-default-50 focus:border-default-300 focus:ring-transparent" id="formFirstName" placeholder="Nom complet" required={true}/>
+                                        <input onChange={(e)=> setName(e.target.value)} type="text" className="py-3 px-4 block w-full text-base rounded-lg text-default-950 border-default-200 dark:bg-default-50 focus:border-default-300 focus:ring-transparent" id="formFirstName" placeholder="Nom complet" required={true}/>
                                     </div>
                                     {/* <!-- col End --> */}
 
                                     <div>
-                                        <input type="email" className="py-3 px-4 block w-full text-base rounded-lg text-default-950 border-default-200 dark:bg-default-50 focus:border-default-300 focus:ring-transparent" id="formEmail" placeholder="Votre Email..." required={true}/>
+                                        <input onChange={(e) => setEmail(e.target.value)} type="email" className="py-3 px-4 block w-full text-base rounded-lg text-default-950 border-default-200 dark:bg-default-50 focus:border-default-300 focus:ring-transparent" id="formEmail" placeholder="Votre Email..." required={true}/>
                                     </div>
                                     {/* <!-- col End --> */}
 
                                     <div>
-                                        <input type="text" className="py-3 px-4 block w-full text-base rounded-lg text-default-950 border-default-200 dark:bg-default-50 focus:border-default-300 focus:ring-transparent" id="formSubject" placeholder="Le sujet de votre message" required={true}/>
+                                        <input onChange={(e) => setSubject(e.target.value)} type="text" className="py-3 px-4 block w-full text-base rounded-lg text-default-950 border-default-200 dark:bg-default-50 focus:border-default-300 focus:ring-transparent" id="formSubject" placeholder="Le sujet de votre message" required={true}/>
                                     </div>
                                     {/* <!-- col End --> */}
 
                                     <div>
-                                        <textarea rows={5} className="py-3 rounded-lg px-4 block w-full text-base text-default-950 border-default-200 dark:bg-default-50 focus:border-default-300 focus:ring-transparent" id="formSubject" placeholder="Type Your Requirements" required={true}/>
+                                        <textarea onChange={(e) => setMessge(e.target.value)} rows={5} className="py-3 rounded-lg px-4 block w-full text-base text-default-950 border-default-200 dark:bg-default-50 focus:border-default-300 focus:ring-transparent" id="formSubject" placeholder="Type Your Requirements" required={true}/>
                                     </div>
                                     {/* <!-- col End --> */}
                                 </div>
                                 {/* <!-- grid End --> */}
-
-                                <button type="submit" className="py-3 w-full flex items-center justify-center rounded-lg text-base text-white bg-primary hover:bg-primary-700 transition-all duration-500">Submit Now</button>
+                                
+                                <button onClick={onSubmiteForm} type="submit" className="py-3 w-full flex items-center justify-center rounded-lg text-base text-white bg-primary hover:bg-primary-700 transition-all duration-500">
+                                  {loading && <Loader/> }  Submit Now
+                                </button>
                             </form>
                             {/* <!-- From End --> */}
                         </div>

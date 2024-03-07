@@ -16,6 +16,12 @@ export const navItems: NavItem[] = [
       label: "Dashboard",
     },
     {
+      title: "Mail/Message",
+      href: "/message",
+      icon: "mail",
+      label: "website management",
+    },
+    {
       title: "Mon compte admin",
       href: "/dashboard/account",
       icon: "user",

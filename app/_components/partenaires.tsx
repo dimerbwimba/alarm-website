@@ -42,9 +42,9 @@ const Partenaire = () => {
 
                     <div className="space-y-6">
                         <div>
-                <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 mt-10">
+                <div className="grid lg:grid-cols-2 grid-cols-1 mt-10">
                             {data.map((partenaire:SinglePartenaireProps, index:number) => 
-                            <div key={index} className=" p-5 group flex justify-center items-center rounded-xl border  bg-white">
+                            <div key={index} className=" group flex justify-center items-center p-10 hover:bg-gray-100 ease-in-out transition duration-500 border  bg-white">
                                 <div>
                                     <Image
                                         src={partenaire.image}
