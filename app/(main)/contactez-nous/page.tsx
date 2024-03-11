@@ -1,10 +1,12 @@
 "use client"
 import Loader from "@/components/loader";
+import { useToast } from "@/components/ui/use-toast";
 import axios from "axios";
 import { useState } from "react";
 
 const ContactPage = () => {
 
+    const {toast} = useToast()
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [subject, setSubject] = useState("")
@@ -17,8 +19,14 @@ const ContactPage = () => {
       
          const data = {name, email, subject, message}
       
-      await axios.post("/api/email", {...data}).then(({data})=>{
+      await axios.post("/api/public/email", {...data}).then(({data})=>{
         setLoading(false)
+        toast({
+            variant: "default",
+            type: "foreground",
+            title: "Message",
+            description: "Message envoyer"
+        })
       })
 
 

@@ -56,7 +56,7 @@ const Blog = () => {
             </div>
             <div className=" flex justify-center">
                 <div className="lg:w-1/2 text-lg ">
-                <BreadCrumbFront items={breadcrumbItems}/>
+                {/* <BreadCrumbFront items={breadcrumbItems}/> */}
                     <div className=" mx-10">
                         <p className=" py-10"> {blog?.description}</p>
                     <img src={blog.image} className=" border p-2 h-96 rounded object-cover my-5 " />

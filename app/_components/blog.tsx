@@ -1,3 +1,4 @@
+import { formatDate } from "@/lib/utils";
 import axios from "axios";
 import { Timer, XCircle } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -53,24 +54,24 @@ const Blog = () => {
             <div className=" flex justify-center">
                 <div className=" lg:w-2/3">
                     <div className=" grid md:grid-cols-3 grid-cols-1 w-full mx-20 my-5">
-                    {blogs.map((blog: any, index: number) => 
-                    <div key={index} className="relative rounded-md overflow-hidden shadow-lg flex items-end justify-start w-full text-left bg-center bg-cover h-80 dark:bg-gray-500" style={{ backgroundImage: `url(${blog.image})` }}>
-                        <div className="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-t from-gray-800 "></div>
-                        <div className="absolute top-0 left-0 right-0 flex items-center justify-between mx-5 mt-3">
+                        {blogs.map((blog: any, index: number) =>
+                            <div key={index} className="relative rounded-md overflow-hidden shadow-lg flex items-end justify-start w-full text-left bg-center bg-cover h-80 dark:bg-gray-500" style={{ backgroundImage: `url(${blog.image})` }}>
+                                <div className="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-t from-gray-800 "></div>
+                                <div className="absolute top-0 left-0 right-0 flex items-center justify-between mx-5 mt-3">
 
-                        </div>
-                        <div className="z-10 py-3 ">
-                            <h2 className="z-10 px-5 text-white">
-                                <a rel="noopener noreferrer" href={`/blog/${blog.slug}`} className="font-bold text-xl line-clamp-2 hover:underline dark:text-gray-100">{blog.title}</a>
-                            </h2>
-                            <p className="z-10 px-5 text-sm line-clamp-2 text-gray-100 ">
-                                {blog.description}
-                            </p>
-                            <div className="flex space-x-2 text-center px-5 mt-2 text-white">
-                                <Timer className=" text-red-600 w-4 h-4" /> <span className="text-sm font-semibold leadi tracki">{blog.createdAt}</span>
-                            </div>
-                        </div>
-                    </div>)}
+                                </div>
+                                <div className="z-10 py-3 ">
+                                    <h2 className="z-10 px-5 text-white">
+                                        <a rel="noopener noreferrer" href={`/blog/${blog.slug}`} className="font-bold text-xl line-clamp-2 hover:underline dark:text-gray-100">{blog.title}</a>
+                                    </h2>
+                                    <p className="z-10 px-5 text-sm line-clamp-2 text-gray-100 ">
+                                        {blog.description}
+                                    </p>
+                                    <div className="flex space-x-2 text-center px-5 mt-2 text-white">
+                                        <Timer className=" text-red-600 w-4 h-4" /> <span className="text-sm font-semibold leadi tracki">{ formatDate(blog.createdAt)}</span>
+                                    </div>
+                                </div>
+                            </div>)}
 
                     </div>
                 </div>

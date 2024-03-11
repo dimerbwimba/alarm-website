@@ -16,8 +16,8 @@ export const navItems: NavItem[] = [
       label: "Dashboard",
     },
     {
-      title: "Mail/Message",
-      href: "/message",
+      title: "Boîte de réception",
+      href: "/dashboard/messages",
       icon: "mail",
       label: "website management",
     },

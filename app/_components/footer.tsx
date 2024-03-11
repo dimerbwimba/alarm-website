@@ -7,14 +7,14 @@ const FooterAlarm = () => {
         <footer>
         <div className="border-y text-white border-default-200 bg-footer-pattern">
             <div className="p-20 py-20 bg-yellow-900 opacity-80">
-                <div className="grid xl:grid-cols-5 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-16">
+                <div className="grid xl:grid-cols-4 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-16">
                     <div className="xl:col-span-2 md:col-span-2">
-                        <div className=" border-r-2 p-4 border-white">
+                        <div className=" p-4 ">
                             <a href="#">
-                                <img src="/alarm.png" alt="logo" className="h-24"/>
+                                <img src="/alarm.png" alt="logo" className="h-16"/>
                             </a>
-                            <p className="text-base font-bold  mt-6">
-                            L&quot;Afrique sans conflits tribaux et religieux violents
+                            <p className=" font-semibold text-lg  mt-6">
+                            " Renforcer les leaders africains pour la réconciliation des communautés africaines "
                             </p>
                             <Separator/>
                             <div className=" flex items-center space-x-3 mt-2"> 

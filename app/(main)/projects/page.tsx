@@ -32,7 +32,7 @@ const Projects = () => {
             <div>
                {loading && "Chargement..."}
             </div>
-                  <div className=" grid grid-cols-2 gap-3">
+                  <div className=" grid grid-cols-1 gap-3">
                      {projets?.map((projet, index) => <Projet key={index} projet={projet} />)}
                   </div>
                </div>

@@ -6,10 +6,14 @@ import agentReducer from "@/app/redux/slice/agent-slice"
 import cvReducer from "@/app/redux/slice/single-cv-slice"
 import departementReducer from "@/app/redux/slice/departement-slice"
 import  partenaireReducer from "@/app/redux/slice/partenaire-slice"
+import mailReducer from "@/app/redux/slice/mail-slice"
+import mailViewReducer from "@/app/redux/slice/mail-view-slice"
 const rootReducer = combineReducers({
   counter: counterReducer,
   heroSection:heroSectionReducer,
   agents:agentReducer,
+  mails:mailReducer,
+  mailView: mailViewReducer, 
   departements: departementReducer,
   partenaires:partenaireReducer,
   cv:cvReducer

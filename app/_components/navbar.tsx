@@ -10,7 +10,11 @@ const navigations = [
   { name: "Accueille", href: '/', icon:<Home className='h-4 w-4'/> },
   { name: "Projects", href: '/projects', icon:<Hammer className='h-4 w-4'/> },
   { name: "Agents", href: '/agents', icon:<HandHeart className='h-4 w-4'/> },
-
+  
+    {
+      name: "Ressources et publications", href: "/annual-report"
+    },
+  
   {
     name: "Mission & Vision", href: "/#mission_vision"  
   },
@@ -28,11 +32,7 @@ const navigations = [
   },
 
   {
-    name: "Rapport annuel", href: "/annual-report"
-  },
-
-  {
-    name: "Gerer mon site", href: "/login"
+    name: "Administration", href: "/login"
   },
 
 ]

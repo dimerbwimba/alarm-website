@@ -12,7 +12,6 @@ import Agents from "../_components/agents";
 import Blog from "../_components/blog";
 
 export default function Home() {
-
   return (
     <main className="flex bg-white min-h-screen flex-col items-center justify-between">
       <HeroAlarm />
@@ -28,3 +27,4 @@ export default function Home() {
     </main>
   );
 }
+  
