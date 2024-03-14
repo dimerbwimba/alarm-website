@@ -17,7 +17,7 @@ const FooterAlarm = () => {
                                         </a>
                                     </div>
                                     <p className=" text-white font-semibold text-lg  mt-6">
-                                        " Renforcer les leaders africains pour la réconciliation des communautés africaines "
+                                        {"Renforcer les leaders africains pour la réconciliation des communautés africaines"}
                                     </p>
                                     <Separator />
                                     <div className=" flex text-white items-center space-x-3 mt-2">
