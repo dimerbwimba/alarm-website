@@ -15,14 +15,14 @@ export default function Home() {
   return (
     <main className="flex bg-white min-h-screen flex-col items-center justify-between">
       <HeroAlarm />
-      <MarqSection />
       <MissionVision />
-      <Departements />
-      <Agents />
       <CentreDinterer />
+      <MarqSection />
       <ValeurFodamental />
-      <HeroWithBG title="Renforcer les leaders africains pour la réconciliation des communautés africaines." span_title="ALARM RDC" />
+      <Departements />
       <Partenaires />
+      <HeroWithBG title="Renforcer les leaders africains pour la réconciliation des communautés africaines." span_title="ALARM RDC" />
+      <Agents />
       <Blog/>
     </main>
   );

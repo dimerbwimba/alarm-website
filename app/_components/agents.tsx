@@ -57,11 +57,11 @@ const Agents = () => {
                     </div>
                 </div>
             </div>
-            <ul role="list" className="mt-3  grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 md:gap-x-3 ">
+            <ul role="list" className="mt-3  grid md:grid-cols-2 lg:grid-cols-3 xl:gap-x-4 md:gap-x-3 ">
                 {agents.map((agent:AgentDataProps, index) =>
-                    <div key={index} className="m-2 space-y-2">
+                    <div key={index} className="md:m-2 space-y-2">
                         <div
-                            className="group flex flex-col gap-1 rounded-lg p-5 text-gray"
+                            className="group flex flex-col gap-1 rounded-lg md:p-5 text-gray"
 
                         >
                             <div style={{ width: "320px" }} className="group relative m-0 flex h-72 w-72 rounded-xl ring-gray-900/5 sm:mx-auto sm:max-w-lg">
@@ -92,16 +92,6 @@ const Agents = () => {
                     </div>
                 )}
             </ul>
-            {/* <Link href={"/agents"} className=" py-16 flex justify-center items-center">
-                <Button>
-                    <ListChecks className="mx-2" />
-                    <span className=" text-xl">
-                        Voir la list de tout nos agents
-                    </span>
-                    <ArrowRight className="h-4 w-6" />
-
-                </Button>
-            </Link> */}
         </div>
     );
 }

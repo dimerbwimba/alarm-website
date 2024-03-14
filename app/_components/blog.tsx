@@ -53,7 +53,7 @@ const Blog = () => {
             </div>
             <div className=" flex justify-center">
                 <div className=" lg:w-2/3">
-                    <div className=" grid md:grid-cols-3 grid-cols-1 w-full mx-20 my-5">
+                    <div className=" grid md:grid-cols-3 grid-cols-1 w-full md:mx-20 my-5">
                         {blogs.map((blog: any, index: number) =>
                             <div key={index} className="relative rounded-md overflow-hidden shadow-lg flex items-end justify-start w-full text-left bg-center bg-cover h-80 dark:bg-gray-500" style={{ backgroundImage: `url(${blog.image})` }}>
                                 <div className="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-t from-gray-800 "></div>

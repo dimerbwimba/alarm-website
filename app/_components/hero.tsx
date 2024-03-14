@@ -88,7 +88,7 @@ export default function HeroAlarm() {
           >
             <div className="max-w-xl mx-auto border xl:ms-auto xl:me-0 rounded-xl bg-default-100 dark:bg-default-50">
               {cards?.map((card: CardsProps, index) => <SwiperSlide key={index}>
-                <div className=" px-16 shadow py-2  rounded-r-lg bg-white">
+                <div className=" md:px-16 shadow py-2  rounded-r-lg bg-white">
                   <div className="flex-col flex items-start justify-end xl:h-full">
                     <span className="text-base font-medium uppercase tracking-wider text-default-800">{card.small_title}</span>
                     <h2 className="md:text-4xl/snug text-3xl font-semibold  text-yellow-700 mt-6">{card.company_name}</h2>

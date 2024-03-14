@@ -76,32 +76,34 @@ const MissionVision = () => {
             </div>
             <div className="pl-12">
               <h2 className="text-3xl sm:text-5xl text-black font-medium mb-6">{misionvision?.title}</h2>
-              <p className="mb-6 text-gray-800">
+              <p className="mb-6 text-xl text-black">
                 {misionvision?.title_description}
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 justify-between mb-3">
-                <a href="" className="items-center gap-3 hover:text-blue-300">
-                  <span className="h-10 w-10 rounded-full bg-blue-300 flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                    </svg>
-                  </span>
-                  <span className="font-semibold text-black text-xl">{misionvision?.mission_title}</span>
-                  <p className="mb-6 text-gray-800">
-                    {misionvision?.mission_description}
-                  </p>
-                </a>
-                <a href="" className=" items-center gap-3 hover:text-blue-300">
-                  <span className="h-10 w-10 rounded-full bg-blue-300 flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                    </svg>
-                  </span>
-                  <span className="font-semibold text-black text-xl">{misionvision?.vision_title}</span>
-                  <p className="mb-6 text-gray-800">
-                   {misionvision?.vision_description}
-                  </p>
-                </a>
+              <div className="grid grid-cols-1 sm:grid-cols-1 justify-between mb-3">
+                <div className=" grid grid-cols-12 hover:text-blue-300">
+                  <div className=" col-span-2">
+                    <img src="/mission.png" width={50} height={50}/>
+                  </div>
+                  <div className=" col-span-10">
+                    <h2 className="font-semibold text-black text-2xl">{misionvision?.mission_title}</h2>
+                    <p className="mb-6 text-xl text-gray-800">
+                      {misionvision?.mission_description}
+                    </p>
+
+                  </div>
+                </div>
+                <div  className="  grid grid-cols-12  gap-3 hover:text-blue-300">
+                  <div className="col-span-2">
+                    <img src="/vision.png" width={50} height={50}/>
+                  </div>
+
+                  <div className="col-span-10">
+                    <h2 className="font-semibold text-black text-2xl">{misionvision?.vision_title}</h2>
+                    <h3 className="mb-6 text-xl text-gray-800">
+                    {misionvision?.vision_description}
+                    </h3>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

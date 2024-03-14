@@ -17,7 +17,7 @@ const Carousel = ({ items }:any) => {
   };
 
   return (
-    <div className="relative w-2/3 mx-20 py-10 overflow-hidden">
+    <div className="relative py-10 overflow-hidden">
       <div className="flex items-center transition-transform duration-500 " style={{ transform: `translateX(-${startIndex * 33.33}%)` }}>
         {items.map((item:ItemProps, index:number) => (
           <div key={index} className={`w-1/3 text-center px-10 flex-shrink-0 ${index === startIndex + 1 ? 'border ease-in-out -translate-y-3  h-80 font-bold flex items-center text-center duration-500 rounded-md shadow-lg bg-yellow-700 text-white text-md ' : ''}`}>

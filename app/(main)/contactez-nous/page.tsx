@@ -77,7 +77,7 @@ const ContactPage = () => {
                                     {/* <!-- col End --> */}
 
                                     <div>
-                                        <textarea onChange={(e) => setMessge(e.target.value)} rows={5} className="py-3 rounded-lg px-4 block w-full text-base text-default-950 border-default-200 dark:bg-default-50 focus:border-default-300 focus:ring-transparent" id="formSubject" placeholder="Type Your Requirements" required={true}/>
+                                        <textarea onChange={(e) => setMessge(e.target.value)} rows={5} className="py-3 rounded-lg px-4 block w-full text-base text-default-950 border-default-200 dark:bg-default-50 focus:border-default-300 focus:ring-transparent" id="formSubject" placeholder="Le contenu du message" required={true}/>
                                     </div>
                                     {/* <!-- col End --> */}
                                 </div>

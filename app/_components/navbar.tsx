@@ -8,13 +8,15 @@ import { MobileSidebar } from './mobile-nav';
 
 const navigations = [
   { name: "Accueille", href: '/', icon:<Home className='h-4 w-4'/> },
-  { name: "Projects", href: '/projects', icon:<Hammer className='h-4 w-4'/> },
   { name: "Agents", href: '/agents', icon:<HandHeart className='h-4 w-4'/> },
+  { name: "Projects", href: '/projects', icon:<Hammer className='h-4 w-4'/> }, 
+  {
+    name: "Ressources et publications", href: "/annual-report"
+  },
   
-    {
-      name: "Ressources et publications", href: "/annual-report"
-    },
-  
+  {
+    name: "Administration", href: "/login"
+  },
   {
     name: "Mission & Vision", href: "/#mission_vision"  
   },
@@ -31,9 +33,6 @@ const navigations = [
     name: "Centre D'interet", href: "/#centre_interet"
   },
 
-  {
-    name: "Administration", href: "/login"
-  },
 
 ]
 
@@ -96,7 +95,7 @@ export default function Example() {
                   </a>
                   { menu && <div className="absolute rounded-lg bg-white shadow-md mt-2 py-2 w-64">
 
-                    {navigations.slice(1).map((item, index) =>
+                    {navigations.slice(1,5).map((item, index) =>
 
                       <a href={item.href} key={index} className="block font-bold px-4 py-2 text-gray-800 hover:bg-yellow-800 hover:text-white">
                         {item.name}
