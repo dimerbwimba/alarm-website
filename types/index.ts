@@ -116,7 +116,8 @@ export interface SingleDepartementType {
   _id: string,
   name: string,
   updated: boolean,
-  roles: Role
+  roles: Role,
+  image:string,
 
 }
 
@@ -140,7 +141,7 @@ export interface SingleRapport {
 }
 
 export interface ProjetProps{
-  title:string, description:string, budget:string, startDate:string, endDate:string, status:string
+  description_html:string, title:string, description:string, budget:string, startDate:string, endDate:string, status:string,_id:string,
 }
 
 export type MainNavItem = NavItemWithOptionalChildren;

@@ -4,9 +4,11 @@ const Preview = ({data}:any) => {
     return ( 
         <div className="">
         <div className="group relative shadow rounded-md z-2 bg-default-100 dark:bg-default-50">
-            <div className="  flex py-2 justify-center">
-                <div className="h-12  w-12 rounded-md flex items-center justify-center transition-all duration-500 text-xl border border-default-200 text-default-950 hover:text-primary bg-white/5 hover:bg-white">{data.parentIndex+1}</div>
+            <div className="p-2">
+               
+                <img className=" rounded-md" alt="hello world" src={data.image} />
             </div>
+          
             <div className="p-6 py-8">
 
                 <div className="flex mb-2 text-default-950">

@@ -76,17 +76,17 @@ const MissionVision = () => {
             </div>
             <div className="pl-12">
               <h2 className="text-3xl sm:text-5xl text-black font-medium mb-6">{misionvision?.title}</h2>
-              <p className="mb-6 text-xl text-black">
+              <p className="mb-6 text-lg text-black">
                 {misionvision?.title_description}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-1 justify-between mb-3">
                 <div className=" grid grid-cols-12 hover:text-blue-300">
                   <div className=" col-span-2">
-                    <img src="/mission.png" width={50} height={50}/>
+                    <img src="/mission.png" width={40} height={40}/>
                   </div>
                   <div className=" col-span-10">
                     <h2 className="font-semibold text-black text-2xl">{misionvision?.mission_title}</h2>
-                    <p className="mb-6 text-xl text-gray-800">
+                    <p className="mb-6 text-lg text-gray-800">
                       {misionvision?.mission_description}
                     </p>
 
@@ -94,12 +94,12 @@ const MissionVision = () => {
                 </div>
                 <div  className="  grid grid-cols-12  gap-3 hover:text-blue-300">
                   <div className="col-span-2">
-                    <img src="/vision.png" width={50} height={50}/>
+                    <img src="/vision.png" width={40} height={40}/>
                   </div>
 
                   <div className="col-span-10">
                     <h2 className="font-semibold text-black text-2xl">{misionvision?.vision_title}</h2>
-                    <h3 className="mb-6 text-xl text-gray-800">
+                    <h3 className="mb-6 text-lg text-gray-800">
                     {misionvision?.vision_description}
                     </h3>
                   </div>

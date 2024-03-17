@@ -3,7 +3,6 @@ import { LucidePhoneCall, Mail } from "lucide-react";
 
 const FooterAlarm = () => {
     return (
-
         <footer>
             <div className=" grid md:grid-cols-12">
                 <div className=" col-span-4">

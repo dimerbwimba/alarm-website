@@ -1,10 +1,11 @@
+import { connectToMongoDB } from "@/lib/mongodb";
 import Blog from "@/models/blog.model"
 import { getServerSession } from "next-auth"
 import { NextRequest, NextResponse } from "next/server"
 import slugify from "slugify";
 
 
-
+connectToMongoDB()
 
 
 export async function GET(req:Request){

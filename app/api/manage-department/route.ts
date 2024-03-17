@@ -60,7 +60,8 @@ export async function PUT(req: Request) {
             { _id: departement._id },
             {
                 name: departement.name,
-                roles: departement.roles
+                roles: departement.roles,
+                image: departement.image
             },
             { new: true, upsert: true }
         )

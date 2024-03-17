@@ -11,7 +11,7 @@ const DepartementList = () => {
     const [indexNumber, setIndexNumber] = useState(0)
     const dispatch = useDispatch()
     const addNewDepartement = () =>{
-        dispatch(addDepartement({_id:`${indexNumber}`,name:"", updated:false,  roles:[]}))
+        dispatch(addDepartement({_id:`${indexNumber}`,name:"", updated:false,  roles:[], image:"", icon:""}))
     }
     const onChangeIndex = (index:number) =>{
        setIndexNumber(index+1)

@@ -7,6 +7,15 @@ const ProjetSchema = new mongoose.Schema({
       description: {
         type: String,
       },
+      image:{
+        type:String
+      },
+      description_json: {
+        type: String,
+      },
+      description_html: {
+        type: String,
+      },
       startDate: {
         type: String,
       },

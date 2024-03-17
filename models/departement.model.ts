@@ -4,6 +4,12 @@ const DepartementSchema = new mongoose.Schema({
   name: {
     type: String,
   },
+  image:{
+    type:String,
+  },
+  icon:{
+    type:String
+  },
   roles: [],
   updated:{
     type:Boolean

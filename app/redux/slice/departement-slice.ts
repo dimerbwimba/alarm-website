@@ -35,6 +35,13 @@ export const departmentSlice = createSlice({
         state[depIndex].name = name
       }
     },
+    updateImage(state, action){
+      const { _id, image} = action.payload
+      const depIndex = state.findIndex((dep:SingleDepartementType) => dep._id === `${_id}`);
+      if (depIndex !== -1) {
+        state[depIndex].image = image
+      }
+    },
     updateRole(state, action) {
       const { _id, roleIndex, role} = action.payload
       const depIndex = state.findIndex((dep:SingleDepartementType) => dep._id === `${_id}`);
@@ -60,6 +67,6 @@ export const departmentSlice = createSlice({
   },
 });
 
-export const { getDepartements,addDepartement, addRole , updateRole , updateName, deleteRole , isExistOnTheDB} = departmentSlice.actions
+export const { getDepartements,addDepartement, addRole , updateImage, updateRole , updateName, deleteRole , isExistOnTheDB} = departmentSlice.actions
 
 export default departmentSlice.reducer;
