@@ -1,8 +1,8 @@
 const DRCMAP = () => {
     return ( 
         <div className=" shadow-inner flex items-center justify-center w-full">
-            <div className="w-2/3 flex ">
-                <div className="relative w-[60rem]">
+            <div className="md:w-2/3 md:flex ">
+                <div className="relative md:w-[60rem]">
                     <img src="/world-map-drc.jpg" className=" h-72" />
                 </div>
                 <div className=" w-full">
