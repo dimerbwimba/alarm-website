@@ -3,7 +3,7 @@ const DRCMAP = () => {
         <div className=" shadow-inner flex items-center justify-center w-full">
             <div className="w-2/3 flex ">
                 <div className="relative w-[60rem]">
-                    <img src="/world-map-drc.jpg" className=" h-64" />
+                    <img src="/world-map-drc.jpg" className=" h-72" />
                 </div>
                 <div className=" w-full">
                     <div className=" flex items-center space-x-2 m-5 px-3 py-2 rounded-md bg-yellow-700 text-white ">

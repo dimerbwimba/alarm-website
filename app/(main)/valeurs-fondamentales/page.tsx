@@ -13,9 +13,7 @@ const ValeurFondamentale = () => {
             <div className="md:w-1/2">
                 <div className="relative h-full ml-0 mr-0 sm:mr-10">
                     <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
-                    <div className="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg">
-                        
-                        
+                    <div className="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg">                        
                         <p className="mb-2 text-xl text-gray-600">
                         Nous Sommes engagés à oeuvrer pour le pardon, la Réconsiliation et la Transformation des vies. 2Cor 5,18-20 Matthieu 6:9-15
                         </p>
@@ -28,7 +26,7 @@ const ValeurFondamentale = () => {
                     <div className="relative h-full p-5 bg-white border-2 border-purple-500 rounded-lg">
                         
                         <p className="mb-2 text-xl text-gray-600">
-                        Nous focalisons sur l'Eglise avec un coeur pour le Leadership Serviteur. l'évangelisation et le discipolat au sein de l'Eglise locale ; préparer le Peuple de Dieu à servir partout où il sera selon la grande Commission, Matthieu 28:18-20
+                        Nous focalisons sur l&lsquo;Eglise avec un coeur pour le Leadership Serviteur. l&lsquo;évangelisation et le discipolat au sein de l&lsquo;Eglise locale ; préparer le Peuple de Dieu à servir partout où il sera selon la grande Commission, Matthieu 28:18-20
                         </p>
                     </div>
                 </div>
@@ -40,7 +38,7 @@ const ValeurFondamentale = () => {
                     <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
                     <div className="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg">
                     <p className="mb-2 text-xl text-gray-600">
-                    Nous focalisons sur l'Eglise avec un coeur pour le Leadership Serviteur. l'évangelisation et le discipolat au sein de l'Eglise locale ; préparer le Peuple de Dieu à servir partout où il sera selon la grande Commission, Matthieu 28:18-20
+                    Nous focalisons sur l&lsquo;Eglise avec un coeur pour le Leadership Serviteur. l&lsquo;évangelisation et le discipolat au sein de l&lsquo;Eglise locale ; préparer le Peuple de Dieu à servir partout où il sera selon la grande Commission, Matthieu 28:18-20
 
                         </p>
                     </div>
@@ -52,7 +50,7 @@ const ValeurFondamentale = () => {
                     <div className="relative h-full p-5 bg-white border-2 border-yellow-400 rounded-lg">
                         
                         <p className="mb-2 text-xl text-gray-600">
-                        Nous sommes engagés à renforcer les capacités des l'Eglise Africaine, équiper les Pasteur et autres Leaders afin qu'ils éduquent les autre en matière de la foi chrétienne pour la transformationde leurs communautés.
+                        Nous sommes engagés à renforcer les capacités des l&lsquo;Eglise Africaine, équiper les Pasteur et autres Leaders afin qu&lsquo;ils éduquent les autre en matière de la foi chrétienne pour la transformationde leurs communautés.
                             
                         </p>
                     </div>
