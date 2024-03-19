@@ -70,8 +70,8 @@ export default function Example() {
   }, [ref]);
   return (
     <div className=" top-0 sticky z-50 shadow">
-      <div className='flex md:hidden -b  z-50 px-4 bg-yellow-700 text-white  items-center md:space-x-4  justify-center'>
-        <div className='hidden lg:inline-flex'>
+      <div className='flex  z-50 px-4 bg-yellow-700 text-white  items-center md:space-x-4  justify-center'>
+        <div className=' flex'>
           <div className='  md:mb-0 rounded py-1 my-2  px-2  md:space-x-4 flex items-center justify-center'>
             <PhoneIncomingIcon className='h-4 w-4' />
             <p className=' text-xs'>+243 853282801</p>
@@ -92,7 +92,7 @@ export default function Example() {
             <div className=" relative">
               {/* <!-- Navbar Brand Logo --> */}
               <a href="/" className=''>
-                <img src="/alarm.png" alt="logo" className=" h-12 sm:h-20" />
+                <img src="/alarm.png" alt="logo" className=" h-12" />
                 {/* <img src="/logo-light-82928a21.png" alt="logo" className="h-10 hidden dark:flex" /> */}
               </a>
             </div>
