@@ -41,10 +41,10 @@ const menuItems = [
     name: "Ressources et publications", href: "/annual-report"
   },
   {
-    name: "A propos de nous", href: "/annual-report"
+    name: "A propos de nous", href: "/a-propos-de-nous"
   },
   {
-    name: "Info & Actualite", href: "/blog"
+    name: "Info & Actualite", href: "/info-et-acualite"
   },
   {
     name: "Administration", href: "/login"

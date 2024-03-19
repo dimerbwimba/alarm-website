@@ -88,7 +88,7 @@ const AddProjectForm = ({ initialData }: any) => {
                     <ScrollArea className=" h-full">
                         <label>Description du projet</label>
                        <div className="my-4"></div>
-                        <ProjectEditor initialContent={description_json} onAddDescription={onChangeDescription} />
+                        {/* <ProjectEditor initialContent={description_json} onAddDescription={onChangeDescription} /> */}
                     </ScrollArea>
                 </div>
             </div>
