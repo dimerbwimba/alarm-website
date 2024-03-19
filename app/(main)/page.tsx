@@ -10,15 +10,17 @@ import MarqSection from "../_components/marq-section";
 import Departements from "../_components/departements";
 import Agents from "../_components/agents";
 import Blog from "../_components/blog";
+import DRCMAP from "../_components/drc_map";
 
 export default function Home() {
   return (
     <main className="flex bg-white min-h-screen flex-col items-center justify-between">
       <HeroAlarm />
-      <MissionVision />
-      <CentreDinterer />
       <MarqSection />
-      <ValeurFodamental />
+      <DRCMAP/>
+      <CentreDinterer />
+      <MissionVision />
+      {/* <ValeurFodamental /> */}
       <Departements />
       <Partenaires />
       <HeroWithBG title="Renforcer les leaders africains pour la réconciliation des communautés africaines." span_title="ALARM RDC" />

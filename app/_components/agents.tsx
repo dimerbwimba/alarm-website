@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { AgentDataProps } from "@/types";
 import axios from "axios";
-import { ArrowLeft, ArrowRight, Image, Link2, LinkIcon, ListChecks } from "lucide-react";
+import { ArrowLeft, ArrowRight, Facebook, Image, Link2, LinkIcon, ListChecks, Mail, Youtube } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -59,7 +59,7 @@ const Agents = () => {
             </div>
             <ul role="list" className="mt-3  grid md:grid-cols-2 lg:grid-cols-3 xl:gap-x-4 md:gap-x-3 ">
                 {agents.map((agent: AgentDataProps, index) =>
-                    <div className="relative flex flex-col justify-center overflow-hidden  py-6 sm:py-12">
+                    <div key={index} className="relative flex flex-col justify-center overflow-hidden  py-6 sm:py-12">
                         <div
                             className="group relative cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8  ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
                                 <div className=" z-20 absolute">
@@ -80,12 +80,23 @@ const Agents = () => {
                                 </div>
                                 <div className="pt-5 text-base font-semibold leading-7">
                                     <p>
-                                        <a href="#" className="text-sky-500 transition-all duration-300 group-hover:text-white">
+                                        <a href={`/info/${agent._id}`} className="text-sky-500 transition-all duration-300 group-hover:text-white">
                                             {agent.fonction}
                                             &rarr;
                                         </a>
                                     </p>
                                 </div>
+                                <div className=" pt-2 flex space-x-3">
+                                    <a className=" transition-all duration-300 group-hover:text-white/90 text-gray-50 p-2 rounded-full bg-red-800" href={"mailto:"+agent.email}>
+                                            <Mail className=" w-6 h-6"/>
+                                    </a>
+                                    <a className="group-hover:text-white/90 text-gray-50 p-2 rounded-full bg-slate-400">
+                                       <Youtube className=" w-6 h-6"/> 
+                                    </a>
+                                    <a className="group-hover:text-white/90 text-gray-50 p-2 rounded-full bg-slate-400">
+                                       <Facebook className=" w-6 h-6"/> 
+                                    </a>
+                               </div>
                             </div>
                         </div>
                     </div>

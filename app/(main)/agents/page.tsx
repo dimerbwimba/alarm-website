@@ -1,6 +1,6 @@
 "use client"
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Link2 } from "lucide-react";
+import { ArrowRight, Facebook, Link2, Mail, Youtube } from "lucide-react";
 import Link from "next/link";
 import HeroWithBG from "@/app/_components/hero_bg";
 import axios from "axios";
@@ -54,37 +54,55 @@ const AgentsPages = () => {
             <div className="w-full ">
                 <HeroWithBG image_url="https://files.edgestore.dev/6jpwoivpjaowfuhl/publicFiles/_public/8e066f2f-1765-4e0e-8b49-90850c59c138.JPG" span_title="Alarm RDC" title={`Les Agents D'ALARM: Engagés pour la Vision et la Mission de African Leadership And Reconciliation Ministries en RDC`} />
             </div>
-            <div className=" flex justify-center">
-                <div className=" p-5 border text-black shadow rounded-md my-10 clear-start w-1/2">
-                    ALARM jouent un rôle essentiel dans la promotion de la paix et de la réconciliation en République Démocratique du Congo (RDC). Au cœur de cette mission, se trouvent nos agents, dévoués à faire une différence significative. Plongeons ensemble dans le monde de la page des agents {"D\'ALARM"} , explorant leur contribution cruciale.
-                </div>
-            </div>
            
             <div className="flex  my-10 bg-white min-h-screen flex-col items-center justify-between">
                 <div className=" grid grid-cols-2 px-2 gap-x-2 gap-y-5 items-center rounded-md overflow-hidden">
                     {agents.map((agent: AgentDataProps, index) =>
-                        <div key={index} className="bg-white rounded-xl my-5 p-4 shadow mt-4">
-                            <div className="flex flex-col justify-center items-center">
-                                <img src={agent.image} className="w-auto h-52  rounded-lg" />
-                                <p className="font-semibold mt-1">{agent.name}</p>
-                                <p className=" text-black text-sm  text-center">💼 {agent.fonction}</p>
-                                <a target="_blank" href={`/info/${agent._id}`}>
-                                    <button className="hover:bg-yellow-800 ease-in-out transition duration-500 hover:text-white mt-4 flex items-center space-x-3 border py-2 px-4 rounded">
-                                        <span>Apprendre plus</span>  <Link2 className="w-4 h-4" />
-                                    </button>
-                                </a>
+                       <div key={index} className="relative flex flex-col justify-center overflow-hidden  py-6 sm:py-12">
+                       <div
+                           className="group relative cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8  ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
+                               <div className=" z-20 absolute">
+                                   <div className=" h-36 w-36 rounded-full border-2 border-yellow-700       overflow-hidden">
+                                       <img src={agent.image} className="" />
+                                   </div>
+                               </div>
+                           <span className="absolute top-10 z-0 h-20 w-20 rounded-full bg-yellow-700 transition-all duration-300 group-hover:scale-[10]"></span>
+                           <div className="relative z-10 mx-auto max-w-md">
+                              <div className=" h-36 w-36">
 
-                            </div>
-                        </div>
+                              </div>
+                               <div
+                                   className="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
+                                   <p>
+                                       {agent.name}
+                                   </p>
+                               </div>
+                               <div className="pt-5 text-base font-semibold leading-7">
+                                   <p>
+                                       <a href={`/info/${agent._id}`} className="text-sky-500 transition-all duration-300 group-hover:text-white">
+                                           {agent.fonction}
+                                           &rarr;
+                                       </a>
+                                   </p>
+                               </div>
+                               <div className=" pt-2 flex space-x-3">
+                                    <a className=" transition-all duration-300 group-hover:text-white/90 text-gray-50 p-2 rounded-full bg-red-800" href={"mailto:"+agent.email}>
+                                            <Mail className=" w-6 h-6"/>
+                                    </a>
+                                    <a className="group-hover:text-white/90 text-gray-50 p-2 rounded-full bg-slate-400">
+                                       <Youtube className=" w-6 h-6"/> 
+                                    </a>
+                                    <a className="group-hover:text-white/90 text-gray-50 p-2 rounded-full bg-slate-400">
+                                       <Facebook className=" w-6 h-6"/> 
+                                    </a>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
                     )}
                     {/* <!-- end col --> */}
                 </div>
             </div> 
-            <div className=" flex justify-center">
-                <div className=" p-5 border text-black shadow rounded-md my-2 clear-start w-1/2">
-                    Chaque agent ALARM a une histoire unique à raconter. Découvrez le parcours inspirant de ceux qui font face aux défis de la réconciliation avec courage et détermination. Leurs témoignages personnels vous donneront un aperçu du travail extraordinaire accompli sur le terrain.
-                </div>
-            </div>
         </div>
     );
 }

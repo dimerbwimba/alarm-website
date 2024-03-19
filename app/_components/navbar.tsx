@@ -8,8 +8,8 @@ import { MobileSidebar } from './mobile-nav';
 
 const navigations = [
   { name: "Accueille", href: '/', icon:<Home className='h-4 w-4'/> },
-  { name: "Agents", href: '/agents', icon:<HandHeart className='h-4 w-4'/> },
-  { name: "Projects", href: '/projects', icon:<Hammer className='h-4 w-4'/> }, 
+  { name: "Notre staff", href: '/agents', icon:<HandHeart className='h-4 w-4'/> },
+  { name: "Notre Travail", href: '/projects', icon:<Hammer className='h-4 w-4'/> }, 
   {
     name: "Ressources et publications", href: "/annual-report"
   },
@@ -19,9 +19,6 @@ const navigations = [
   },
   {
     name: "Mission & Vision", href: "/#mission_vision"  
-  },
-  {
-    name: "Valeurs Fondamentales", href: "/#valeur_fondamentales"
   },
   {
     name: "Nos Patenaires", href: "/#partenaires"
@@ -41,10 +38,13 @@ const menuItems = [
     name: "Ressources et publications", href: "/annual-report"
   },
   {
+    name: "Valeurs Fondamentales", href: "/valeurs-fondamentales"
+  },
+  {
     name: "A propos de nous", href: "/a-propos-de-nous"
   },
   {
-    name: "Info & Actualite", href: "/info-et-acualite"
+    name: "Info & Actualite", href: "/blog"
   },
   {
     name: "Administration", href: "/login"
