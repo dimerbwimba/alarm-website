@@ -4,9 +4,9 @@ import { LucidePhoneCall, Mail } from "lucide-react";
 const FooterAlarm = () => {
     return (
         <footer>
-            <div className=" grid md:grid-cols-12">
-                <div className=" col-span-4">
-                    <div className="w-full bg-cover bg-center" style={{ height: "100%", backgroundImage: "url(https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)" }}>
+            <div className=" md:grid md:grid-cols-12">
+                <div className=" col-span-4 w-full">
+                    <div className="w-full bg-cover bg-center" style={{ height: "100%", backgroundImage: "url(https://files.edgestore.dev/6jpwoivpjaowfuhl/publicFiles/_public/8e066f2f-1765-4e0e-8b49-90850c59c138.JPG)" }}>
                         <div className="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-50">
                             <div className="">
                                 <div className=" p-4 ">

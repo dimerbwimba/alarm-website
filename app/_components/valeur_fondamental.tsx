@@ -23,7 +23,7 @@ const ValeurFodamental = () => {
         // <!-- Start Services -->
         <div className="w-full bg-cover bg-center" style={{ height: "100%", backgroundImage: "url(/bg-2.png)" }}>
 
-            <section id="valeur_fondamentales" className="lg:py-20 py-10 flex flex-col justify-center items-center border-b">
+            <section id="valeur_fondamentales" className="lg:py-20 py-10 hidden lg:flex flex-col justify-center items-center border-b">
                 <div className="container">
                     <div className="flex items-end justify-between">
                         <div className="max-w-2xl mx-auto text-center">
@@ -48,6 +48,25 @@ const ValeurFodamental = () => {
                     <div className=" col-span-2"></div>
                 </div>
                 {/* <!-- container End--> */}
+            </section>
+
+            <section className=" lg:hidden flex">
+            <div className=" items-center flex flex-col justify-center text-center p-5 space-y-3 transition-transform duration-500 " >
+                    <div className="flex items-end justify-between">
+                        <div className="max-w-2xl mx-auto text-center">
+                            <span className="py-1 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-300 text-default-950">Valeurs</span>
+                            <h2 className="text-4xl text-default-800 font-bold mt-5">
+                                Nos Valeurs Fondamentales
+                            </h2>
+                        </div>
+                    </div>
+                
+                {valeurs.map((item:any, index:number) => (
+                    <div key={index} className={` text-white rounded-lg py-5 bg-yellow-700  text-center px-10 flex-shrink-0 `}>
+                        {item.description}
+                    </div>
+                ))}
+      </div>
             </section>
         </div>
 

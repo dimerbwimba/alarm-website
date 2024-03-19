@@ -23,7 +23,7 @@ const Projects = () => {
    return (
       <div>
          <div className=" flex justify-center">
-            <HeroWithBG image_url="/water_bg_2.jpg" title="Bienvenue sur le projet ALARM RDC, où nous travaillons inlassablement pour réaliser une vision audacieuse : une Afrique sans conflits tribaux et religieux violents. " span_title="ALRM DRC | PROJECTS" />
+            <HeroWithBG image_url="https://files.edgestore.dev/6jpwoivpjaowfuhl/publicFiles/_public/8e066f2f-1765-4e0e-8b49-90850c59c138.JPG" title="Bienvenue sur le projet ALARM RDC, où nous travaillons inlassablement pour réaliser une vision audacieuse : une Afrique sans conflits tribaux et religieux violents. " span_title="ALRM DRC | PROJECTS" />
          </div>
          <div>
             <div className=" flex justify-center">

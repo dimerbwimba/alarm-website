@@ -10,7 +10,7 @@ const ProjectEditor = ({ onAddDescription, initialContent}:ProjectEditorProps) =
     const Editor = useMemo(
         () =>
           dynamic(() => import("@/components/editor"), {
-            ssr: false,
+            ssr: true,
             loading: () => <div className=" flex">
               Chargement ...
             </div>,

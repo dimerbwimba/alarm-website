@@ -52,7 +52,7 @@ const AgentsPages = () => {
     return (
         <div>
             <div className="w-full ">
-                <HeroWithBG image_url="https://i.ibb.co/y4TR8Fc/DSC-0834-compressed.jpg" span_title="Alarm RDC" title={`Les Agents D'ALARM: Engagés pour la Vision et la Mission de African Leadership And Reconciliation Ministries en RDC`} />
+                <HeroWithBG image_url="https://files.edgestore.dev/6jpwoivpjaowfuhl/publicFiles/_public/8e066f2f-1765-4e0e-8b49-90850c59c138.JPG" span_title="Alarm RDC" title={`Les Agents D'ALARM: Engagés pour la Vision et la Mission de African Leadership And Reconciliation Ministries en RDC`} />
             </div>
             <div className=" flex justify-center">
                 <div className=" p-5 border text-black shadow rounded-md my-10 clear-start w-1/2">

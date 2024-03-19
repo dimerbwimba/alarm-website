@@ -36,6 +36,21 @@ const navigations = [
 
 ]
 
+const menuItems = [
+  {
+    name: "Ressources et publications", href: "/annual-report"
+  },
+  {
+    name: "A propos de nous", href: "/annual-report"
+  },
+  {
+    name: "Info & Actualite", href: "/blog"
+  },
+  {
+    name: "Administration", href: "/login"
+  },
+]
+
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [ menu, setMenu] = useState(false)
@@ -95,7 +110,7 @@ export default function Example() {
                   </a>
                   { menu && <div className="absolute rounded-lg bg-white shadow-md mt-2 py-2 w-64">
 
-                    {navigations.slice(1,5).map((item, index) =>
+                    {menuItems.map((item, index) =>
 
                       <a href={item.href} key={index} className="block font-bold px-4 py-2 text-gray-800 hover:bg-yellow-800 hover:text-white">
                         {item.name}

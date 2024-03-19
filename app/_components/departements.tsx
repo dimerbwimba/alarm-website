@@ -57,7 +57,7 @@ const Departements = () => {
             <section
                 id="departements"
             >
-                <div className="p-5 md:p-20 lg:py-20 py-10  w-full bg-gradient-to-b bg-yellow-800">
+                <div className="p-10 md:p-20 lg:py-20 py-10  w-full bg-gradient-to-b bg-yellow-800">
                    
                                 <div className="text-center text-gray-100">
                                     <span className="py-1 text-gray-100 px-3 rounded-md text-xs font-medium uppercase tracking-wider border border-default-300 text-default-950">
