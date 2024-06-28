@@ -71,7 +71,7 @@ export default function Example() {
   return (
     <div className=" top-0 sticky z-50 shadow">
       <div className='flex  z-50 px-4 bg-yellow-700 text-white  items-center md:space-x-4  justify-center'>
-        <div className=' flex'>
+        <div className='lg:flex'>
           <div className='  md:mb-0 rounded py-1 my-2  px-2  md:space-x-4 flex items-center justify-center'>
             <PhoneIncomingIcon className='h-4 w-4' />
             <p className=' text-xs'>+243 853282801</p>

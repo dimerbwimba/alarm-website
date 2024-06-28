@@ -30,7 +30,7 @@ const AdminHome = () => {
               Login in your an account
             </h1>
             <p className="text-sm pt-4 text-muted-foreground">
-              Enter your email below to create your account
+              Enter your email below to login
             </p>
           </div>
           <UserAuthForm />
